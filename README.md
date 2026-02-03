@@ -1,19 +1,18 @@
 <div align="center">
 
-# 🧠 Orquestación de Hardware: NXP LPC4337
-### Desarrollo de Sistemas Embebidos con Toolchain Independiente
+# 🧠 Edu-CIAA-LPC4337-LPCOpen-Lab
+### Orquestación de Sistemas Embebidos con Toolchain Independiente
 
 [![MCU](https://img.shields.io/badge/MCU-LPC4337_%28Cortex--M4%2FM0%29-blue?style=for-the-badge&logo=arm)](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc4300-cortex-m4-m0:MC_71430)
+[![Framework](https://img.shields.io/badge/Framework-LPCOpen-red?style=for-the-badge)](https://www.nxp.com/design/software/development-software/lpcopen-libraries:LPCOPEN)
 [![Toolchain](https://img.shields.io/badge/Toolchain-GCC_Arm_|_OpenOCD-orange?style=for-the-badge)](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+<img src="./assets/portada.png" width="800" alt="Edu-CIAA LPC4337 Lab Header">
 
 ---
 
 > *"La potencia de un desarrollo no reside en la interfaz del IDE, sino en la transparencia del Toolchain. Un entorno independiente es la garantía de que el conocimiento pertenece al desarrollador y no a la herramienta."*
 
-
-
----
 </div>
 
 # 🚀 Desarrollo de Sistemas Embebidos Profesionales: NXP LPC4337
