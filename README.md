@@ -11,7 +11,7 @@
 
 ---
 
-> *"La potencia de un desarrollo no reside en la interfaz del IDE, sino en la transparencia del Toolchain. Un entorno independiente es la garantía de que el conocimiento pertenece al desarrollador y no a la herramienta."*
+> *"La potencia de la EDU-CIAA no reside en la interfaz de un IDE, sino en la transparencia de su arquitectura abierta. Poseer un Toolchain independiente es la única garantía de que el dominio sobre el LPC4337 pertenece al desarrollador y no a una herramienta propietaria; es el paso necesario para transformar una placa de desarrollo en un instrumento de ingeniería soberana."*
 
 </div>
 
