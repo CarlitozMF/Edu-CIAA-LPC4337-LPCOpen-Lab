@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "EDU-CIAA-LOCAL",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/firmware_v3/libs/lpc_open/lpc_chip_43xx/inc",
+                "${workspaceFolder}/firmware_v3/libs/lpc_open/boards/edu_ciaa_nxp/inc",
+                "${workspaceFolder}/projects/01_Basico/01_GPIO_SCU_Mux/Core/Inc"
+            ],
+            "defines": [
+                "CORE_M4",
+                "CPU_LPC4337",
+                "__GNUC__"
+            ],
+            // Cambiamos la ruta absoluta por la relativa a tu carpeta tools
+            "compilerPath": "${workspaceFolder}/tools/gcc-arm/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "intelliSenseMode": "windows-gcc-arm", 
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ]
+        }
+    ],
+    "version": 4
+}
