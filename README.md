@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/portada.png" width="800" alt="Edu-CIAA LPC4337 Lab Header">
+
 # 🧠 Edu-CIAA-LPC4337-LPCOpen-Lab
 ### Orquestación de Sistemas Embebidos con Toolchain Independiente
 
@@ -7,11 +9,9 @@
 [![Framework](https://img.shields.io/badge/Framework-LPCOpen-red?style=for-the-badge)](https://www.nxp.com/design/software/development-software/lpcopen-libraries:LPCOPEN)
 [![Toolchain](https://img.shields.io/badge/Toolchain-GCC_Arm_|_OpenOCD-orange?style=for-the-badge)](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain)
 
-<img src="./assets/portada.png" width="800" alt="Edu-CIAA LPC4337 Lab Header">
-
 ---
 
-"La potencia de la EDU-CIAA reside en la transparencia de su arquitectura. Como autodidacta, entiendo que el verdadero dominio sobre el LPC4337 no se encuentra en manuales rígidos, sino en la libertad de explorar sus registros sin filtros. Es el paso necesario para transformar una placa de desarrollo en un instrumento de ingeniería propia."
+*"La potencia de la **EDU-CIAA** reside en la transparencia de su arquitectura. Como autodidacta, entiendo que el verdadero dominio sobre el **LPC4337** no se encuentra en manuales rígidos, sino en la libertad de explorar sus registros sin filtros. Es el paso necesario para transformar una placa de desarrollo en un instrumento de ingeniería propia."*
 
 </div>
 
