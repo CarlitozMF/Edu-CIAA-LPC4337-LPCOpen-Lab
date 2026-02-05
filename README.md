@@ -11,7 +11,7 @@
 
 ---
 
-> *"La potencia de la EDU-CIAA no reside en la interfaz de un IDE, sino en la transparencia de su arquitectura abierta. Poseer un Toolchain independiente es la única garantía de que el dominio sobre el LPC4337 pertenece al desarrollador y no a una herramienta propietaria; es el paso necesario para transformar una placa de desarrollo en un instrumento de ingeniería soberana."*
+"La potencia de la EDU-CIAA reside en la transparencia de su arquitectura. Como autodidacta, entiendo que el verdadero dominio sobre el LPC4337 no se encuentra en manuales rígidos, sino en la libertad de explorar sus registros sin filtros. Es el paso necesario para transformar una placa de desarrollo en un instrumento de ingeniería propia."
 
 </div>
 
