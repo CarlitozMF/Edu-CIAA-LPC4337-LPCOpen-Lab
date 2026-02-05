@@ -3,7 +3,6 @@
 <img src="./assets/portada.png" width="800" alt="Edu-CIAA LPC4337 Lab Header">
 
 # 🧠 Edu-CIAA-LPC4337-LPCOpen-Lab
-### Orquestación de Sistemas Embebidos con Toolchain Independiente
 
 [![MCU](https://img.shields.io/badge/MCU-LPC4337_%28Cortex--M4%2FM0%29-blue?style=for-the-badge&logo=arm)](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc4300-cortex-m4-m0:MC_71430)
 [![Framework](https://img.shields.io/badge/Framework-LPCOpen-red?style=for-the-badge)](https://www.nxp.com/design/software/development-software/lpcopen-libraries:LPCOPEN)
