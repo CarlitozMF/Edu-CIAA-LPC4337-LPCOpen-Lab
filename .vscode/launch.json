@@ -2,31 +2,37 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug EDU-CIAA (Local Toolchain)",
+"name": "🐞 DEBUG SOBERANO (VIA F6)",
             "type": "cortex-debug",
             "request": "launch",
-            "servertype": "openocd",
-            "executable": "${workspaceFolder}/out/01_GPIO_SCU_Mux.elf",
-            "serverpath": "${workspaceFolder}/tools/openocd/bin/openocd.exe",
+            "servertype": "external", // <--- CAMBIO CLAVE: VS Code ya no lanza OpenOCD
+            "gdbTarget": "localhost:3333", // <--- Se conecta al puente que abriste con F6
+            "executable": "${workspaceFolder}/out/${input:projectName}/${input:projectName}.elf",
             "armToolchainPath": "${workspaceFolder}/tools/gcc-arm/bin",
             "cwd": "${workspaceFolder}",
-            "configFiles": [
-                "${workspaceFolder}/lpc4337_new.cfg"
-            ],
-            "searchDir": [
-                "${workspaceFolder}/tools/openocd/openocd/scripts"
-            ],
             "svdFile": "${workspaceFolder}/misc/LPC43xx_43Sxx.svd",
-            // --- ELIMINAMOS EL RESET AUTOMÁTICO PARA EVITAR EL ERROR FC ---
+            "runToEntryPoint": "main",
+            "preLaunchTask": "🛠️ MAKE ALL", // <--- Sigue compilando antes de entrar
             "overrideLaunchCommands": [
                 "monitor halt",
                 "monitor targets lpc4337.m4",
                 "load",
                 "tbreak main"
             ],
-            "runToEntryPoint": "main",
-            "preLaunchTask": "MAKE ALL",
             "showDevDebugOutput": "none"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "projectName",
+            "type": "pickString",
+            "description": "Selecciona el proyecto para el laboratorio:",
+            "options": [
+                "01_GPIO",
+                "02_Timers",
+                "03_ADC"
+            ],
+            "default": "01_GPIO"
         }
     ]
 }

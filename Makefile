@@ -1,98 +1,99 @@
 # =============================================================================
-# 🏗️ CAPA 0: CONFIGURACIÓN DEL ENTORNO LOCAL (Blindaje de Rutas)
+# 🏗️  MAKEFILE MAESTRO - ECOSISTEMA SOBERANO EDU-CIAA (LPC4337)
 # =============================================================================
-# Obtenemos la ruta actual y normalizamos barras para evitar errores con espacios
-ROOT_DIR := $(subst \,/,$(CURDIR))
+# Autor: Carlitoz MF & Gemini
+# Descripción: Orquestador multianidado para compilación Bare Metal ARM.
+# =============================================================================
 
-# --- 1. RUTAS DEL PROYECTO ---
-PROJ_NAME = 01_GPIO_SCU_Mux
-PROJ_DIR  = projects/01_Basico/$(PROJ_NAME)
-FW_DIR    = firmware_v3
-OUT       = out
+# 🚀 1. SELECCIÓN DEL PROYECTO
+# Puedes cambiar el proyecto por defecto aquí o pasarlo por terminal:
+# Ejemplo: make PROJECT=02_Timers download
+PROJECT ?= 01_GPIO
 
-# --- 2. HERRAMIENTAS (Toolchain Local en /tools) ---
-# Forzamos el uso de los binarios que descargaste en Documentos
-BIN_PATH := $(ROOT_DIR)/tools/gcc-arm/bin/
-CROSS    := $(BIN_PATH)arm-none-eabi-
+# 📂 2. CAPA 0: BLINDAJE DE RUTAS (Estructura de Directorios)
+ROOT_DIR   := $(subst \,/,$(CURDIR))
+PROJ_DIR   := projects/$(PROJECT)
+LIBS_DIR   := libs
+MISC_DIR   := misc
+OUT        := out/$(PROJECT)
 
-CC      := $(CROSS)gcc
-OBJCOPY := $(CROSS)objcopy
-SIZE    := $(CROSS)size
+# 🛠️  3. CAPA 1: TOOLCHAIN (Herramientas Locales)
+# Usamos rutas relativas para garantizar la portabilidad total del laboratorio
+BIN_PATH   := $(ROOT_DIR)/tools/gcc-arm/bin/
+CROSS      := $(BIN_PATH)arm-none-eabi-
 
-# Configuración de OpenOCD (xPack)
-OOCD_BIN := $(ROOT_DIR)/tools/openocd/bin/openocd.exe
-OOCD_SCR := $(ROOT_DIR)/tools/openocd/openocd/scripts
-CFG_FILE := $(ROOT_DIR)/lpc4337_new.cfg
+CC         := $(CROSS)gcc
+OBJCOPY    := $(CROSS)objcopy
+SIZE       := $(CROSS)size
+OOCD       := $(ROOT_DIR)/tools/openocd/bin/openocd.exe
+OOCD_SCR   := $(ROOT_DIR)/tools/openocd/openocd/scripts
+
+# 🎼 4. CAPA 2: COMPOSICIÓN DE FUENTES (Orden de Enlace)
+# NOTA: startup.c DEBE ir primero para asegurar la Tabla de Vectores al inicio
+STARTUP    := $(LIBS_DIR)/startup/src/startup.c
+PROJ_SRC   := $(wildcard $(PROJ_DIR)/Core/Src/*.c)
+DRIVERS    := $(wildcard $(LIBS_DIR)/lpc_open/lpc_chip_43xx/src/*.c)
+BOARD      := $(wildcard $(LIBS_DIR)/lpc_open/boards/edu_ciaa_nxp/src/*.c)
+
+SRC        := $(STARTUP) $(PROJ_SRC) $(DRIVERS) $(BOARD)
+
+# 🚩 5. CAPA 3: BANDERAS DE INGENIERÍA (Hard-FP & Thumb)
+# -mfloat-abi=hard: Usa la unidad de punto flotante (FPU) por hardware
+# -fno-unwind-tables: Evita generar tablas de excepciones que rompen el binario
+ARCH_FLAGS := -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
+DEFINES    := -DCORE_M4 -DBOARD=edu_ciaa_nxp -D__USE_LPCOPEN -DCHIP_LPC43XX
+
+INCLUDES   := -I$(PROJ_DIR)/Core/Inc \
+              -I$(LIBS_DIR)/lpc_open/lpc_chip_43xx/inc \
+              -I$(LIBS_DIR)/lpc_open/boards/edu_ciaa_nxp/inc \
+              -I$(LIBS_DIR)/cmsis_core/inc
+
+CFLAGS     := $(ARCH_FLAGS) $(DEFINES) $(INCLUDES) -std=c99 -ggdb3 -O0 \
+              -fno-unwind-tables -fno-asynchronous-unwind-tables
+
+# 🔗 6. CAPA 4: LDFLAGS (El Mapa de Memoria)
+# -nostartfiles: Ignora los archivos de inicio estándar para usar nuestro startup.c
+# -T: Especifica el Linker Script sagrado en misc/
+LDFLAGS    := $(ARCH_FLAGS) -nostartfiles -T"$(MISC_DIR)/link.ld" \
+              -Wl,-Map=$(OUT)/$(PROJECT).map --specs=nano.specs
 
 # =============================================================================
-# 🏗️ CAPA 1: CONFIGURACIÓN DE HARDWARE Y COMPILACIÓN
+# ⚡ REGLAS DE EJECUCIÓN
 # =============================================================================
-ARCH_FLAGS = -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
-DEFINES    = -DCORE_M4 -DBOARD=edu_ciaa_nxp -D__USE_LPCOPEN -DCHIP_LPC43XX
 
-# --- INCLUDES (Capa 2: Abstracción de Hardware) ---
-INCLUDES = -I$(PROJ_DIR)/Core/Inc \
-           -I$(FW_DIR)/libs/lpc_open/lpc_chip_43xx/inc \
-           -I$(FW_DIR)/libs/lpc_open/lpc_chip_43xx/inc/cmsis \
-           -I$(FW_DIR)/libs/lpc_open/boards/edu_ciaa_nxp/inc \
-           -I$(FW_DIR)/libs/cmsis_core/inc
+all: $(OUT)/$(PROJECT).bin
 
-CFLAGS  = $(ARCH_FLAGS) $(DEFINES) $(INCLUDES) -std=c99 -ggdb3 -O0
-
-# --- LDFLAGS (Enlace y Memoria) ---
-LDFLAGS = $(ARCH_FLAGS) -nostartfiles -L$(FW_DIR)/libs/lpc_open/lib -Tlink.ld \
-          -Wl,-Map=$(OUT)/map.map --specs=nano.specs
-
-# =============================================================================
-# 🏗️ CAPA 2: GESTIÓN DE ARCHIVOS FUENTE
-# =============================================================================
-SRC = $(PROJ_DIR)/Core/Src/main.c \
-      $(PROJ_DIR)/Core/Src/leds.c \
-      $(PROJ_DIR)/Core/Src/startup_fix.c \
-      $(wildcard $(FW_DIR)/libs/lpc_open/lpc_chip_43xx/src/*.c) \
-      $(wildcard $(FW_DIR)/libs/lpc_open/boards/edu_ciaa_nxp/src/*.c)
-
-# =============================================================================
-# 🏗️ CAPA 3: REGLAS DE EJECUCIÓN (Output Limpio)
-# =============================================================================
-all: $(OUT)/$(PROJ_NAME).bin
-
-$(OUT)/$(PROJ_NAME).elf: $(SRC)
+$(OUT)/$(PROJECT).elf: $(SRC)
 	@mkdir -p $(OUT)
-	@echo "🛠️  Compilando el proyecto: $(PROJ_NAME)..."
+	@echo "🛠️  Compilando Proyecto Soberano: $(PROJECT)..."
+	@echo "   (Fuentes: $(words $(SRC)) archivos detectados)"
 	@"$(CC)" $(CFLAGS) $^ $(LDFLAGS) -o $@
-	@echo "📊 Tamaño del binario:"
+	@echo "📊 Reporte de Memoria:"
 	@"$(SIZE)" $@
 
-$(OUT)/$(PROJ_NAME).bin: $(OUT)/$(PROJ_NAME).elf
-	@echo "📦 Generando archivo .bin..."
+$(OUT)/$(PROJECT).bin: $(OUT)/$(PROJECT).elf
+	@echo "📦 Empaquetando binario final..."
 	@"$(OBJCOPY)" -O binary $< $@
-	@echo "✅ ¡Compilación Exitosa!"
+	@echo "✅ ¡Listo! Binario generado en: $@"
 
 clean:
-	@echo "🧹 Limpiando archivos temporales..."
+	@echo "🧹 Limpiando laboratorio del proyecto: $(PROJECT)..."
 	@rm -rf $(OUT)
 
-# =============================================================================
-# 🚀 CAPA 4: GRABACIÓN (Download)
-# =============================================================================
-download: all
-	@echo "🚀 Grabando en Flash A (0x1A000000) con OpenOCD Local..."
-	@"$(OOCD_BIN)" -s "$(OOCD_SCR)" -f "$(CFG_FILE)" \
-		-c "init" \
-		-c "halt" \
-		-c "flash write_image erase $(OUT)/$(PROJ_NAME).bin 0x1A000000 bin" \
-		-c "reset run" \
-		-c "shutdown"
+# 🚀 GRABACIÓN (Flash)
+flash: all
+	@echo "🚀 Grabando $(PROJECT) en la EDU-CIAA..."
+	@"$(OOCD)" -s "$(OOCD_SCR)" -f "$(MISC_DIR)/lpc4337.cfg" \
+		-c "init" -c "halt" \
+		-c "flash write_image erase $(OUT)/$(PROJECT).bin 0x1A000000 bin" \
+		-c "reset run" -c "shutdown" > NUL 2>&1
+	@echo "✨ ¡Grabación Exitosa! El micro se está reiniciando..."
 
-# =============================================================================
-# 🏗️ CAPA 5: DEPURACIÓN (GDB + OpenOCD)
-# =============================================================================
-GDB := "$(CROSS)gdb"
-
+# 🐞 DEPURACIÓN (Debug)
+# Esta regla lanza el servidor OpenOCD y lo deja a la espera de GDB.
 debug: all
-	@echo "🐞 Iniciando servidor de depuración y GDB..."
-	@echo "Presioná CTRL+C para cerrar el servidor cuando termines."
-	@"$(OOCD_BIN)" -s "$(OOCD_SCR)" -f "$(CFG_FILE)" \
-		-c "init" \
-		-c "halt"
+	@echo "🐞 Iniciando servidor de depuración para $(PROJECT)..."
+	@echo "   (Esperando conexión de VS Code / GDB en puerto 3333)"
+	@"$(OOCD)" -s "$(OOCD_SCR)" -f "$(MISC_DIR)/lpc4337.cfg"
+
+.PHONY: all clean flash debug
