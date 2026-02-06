@@ -24,7 +24,7 @@ El enfoque principal es el dominio del hardware mediante un **Toolchain Local In
 
 ## 🏗️ Arquitectura del Software (Modelo de 3 Capas)
 
-Para garantizar la robustez, portabilidad y facilidad de depuración, el firmware se organiza en tres niveles de abstracción:
+Para garantizar la robustez y portabilidad, el firmware se organiza en tres niveles de abstracción:
 
 ```mermaid
 graph TD
@@ -33,39 +33,54 @@ graph TD
     C -->|Registros / CMSIS-SVD| D[Hardware: NXP LPC4337]
 ```
 
-* **Capa 1 (Hardware Mapping):** Acceso directo a registros mediante el uso de máscaras y punteros. Implementa la validación bit a bit utilizando descriptores **SVD**, asegurando que la configuración del silicio sea exacta.
+---
+
+
+Para garantizar la robustez, portabilidad y facilidad de depuración, el firmware se organiza en tres niveles de abstracción:
+
+* **Capa 1 (Hardware Mapping):** Acceso directo a registros mediante el uso de máscaras y punteros. Implementa la validación bit a bit utilizando descriptores **SVD**, asegurando que el multiplexado del **SCU** y la configuración del silicio sean exactos.
 * **Capa 2 (Abstracción):** Creación de APIs y Drivers que encapsulan la complejidad del hardware (ej. `gpio_init()`, `timer_start()`). Esta capa permite que la aplicación sea agnóstica al pin físico, facilitando la migración y el mantenimiento.
 * **Capa 3 (Aplicación):** Lógica de alto nivel y **Máquinas de Estado Finitos (MEF)** que orquestan el comportamiento del sistema, interactuando exclusivamente con las APIs de la Capa 2.
 
 ---
 
-## 🛠️ Toolchain: Soberanía Técnica sin IDEs
+## 📋 Plan de Carrera: Laboratorios e Implementaciones
 
-La potencia de este flujo de trabajo reside en su **independencia**. Al prescindir de entornos "caja negra", el desarrollador recupera la soberanía sobre cada etapa del proceso crítico:
+Para dominar el **LPC4337**, el camino se divide en tres niveles de complejidad creciente, enfocados en la **Soberanía Técnica** y la **Arquitectura de 3 Capas**.
 
-* **Compilador (GCC Arm):** Gestión directa del proceso de *linking* y control total sobre los mapas de memoria (Flash y RAM).
-* **Depuración (OpenOCD + GDB):** Control total del protocolo **JTAG/SWD**. Se ha implementado un *bypass* de reset manual para estabilizar la comunicación con el núcleo **Cortex-M4**, mitigando errores de protocolo (como el recurrente **Error FC**) típicos de sistemas asimétricos.
-* **Introspección (CMSIS-SVD):** Visualización de periféricos en tiempo real y sin intermediarios. Esto permite auditar el estado del **SCU** (System Control Unit) y la matriz de registros del **LPC4337** de forma transparente.
+### 🏗️ Nivel Básico - Fundamentos y Registro Directo
+*El objetivo es dominar la Capa 1 y el ruteo interno del silicio mediante el SCU.*
 
-> *"La potencia de un desarrollo no reside en la interfaz del IDE, sino en la transparencia del Toolchain. Un entorno independiente es la garantía de que el conocimiento pertenece al desarrollador y no a la herramienta."*
+* **SCU & GPIO Mastery:** Configuración de la matriz de conmutación (pin muxing), Pull-ups, y Open-drain.
+* **Modularidad de Capas:** Separación estricta entre el mapeo de registros (**Capa 1**) y el driver funcional (**Capa 2**).
+* **Lógica No Bloqueante:** Implementación de MEFs (Máquinas de Estado) y antirebote (debounce) sin `delay()`.
+---
+
+### ⚙️ Nivel Intermedio - Eventos y Hardware Autónomo
+*Transición hacia el procesamiento basado en eventos y autonomía del hardware.*
+
+* **NVIC & EXTI:** Gestión de interrupciones externas para eventos asíncronos (TEC1-4).
+* **Timers & RIT:** Uso del *Repetitive Interrupt Timer* y Timers de 32 bits para el "Heartbeat" del sistema.
+* **Comunicaciones Serie:** UART con **Ring Buffers** y modulación PWM mediante el bloque **SCTimer**.
+* **HMI & Buses:** Manejo de displays y protocolos I2C/SPI bajo arquitectura de 3 capas.
 
 ---
 
-## 📋 Laboratorios e Implementaciones
+### 🚀 Nivel Avanzado - High Performance & Dual-Core
+*Arquitecturas de alto rendimiento: Gestión masiva de datos y multiprocesamiento.*
 
-| Nivel | Proyecto | Descripción Técnica |
-| :--- | :--- | :--- |
-| **Básico** | [01_GPIO_SCU_Mux](./projects/01_Basico/01_GPIO_SCU_Mux) | Multiplexación de pines (SCU) y control de flujo digital. |
-| **Intermedio** | [02_Timers_Interrupts](./projects/02_Intermedio/02_Timers) | Gestión de tiempos precisos y concurrencia por hardware. |
-| **Avanzado** | [03_DMA_DualCore](./projects/03_Avanzado/03_DMA) | Transferencia masiva de datos y orquestación de núcleos. |
+* **GPDMA Mastery:** Transferencias masivas memoria-periférico con **Zero CPU Load**.
+* **Dual-Core Orchestration:** Despertar al núcleo **Cortex-M0** para tareas de E/S mientras el **M4** procesa datos.
+* **Adquisición de Datos:** ADC de alta velocidad sincronizado por hardware y procesamiento de señales.
+* **RTOS & Robustez:** Multitarea profesional utilizando FreeRTOS integrado en el Toolchain local.
 
 ---
 
 ## 🚀 Guía Rápida de Inicio
 
-1.  **Configurar Entorno:** Consulta la [Guía del Toolchain Local](./tools/README.md) para preparar los binarios.
-2.  **Compilar:** Presiona `F3` (Ejecuta el comando `MAKE ALL`).
-3.  **Depurar:** Presiona `F5` para iniciar la sesión de GDB con visualización de periféricos activa.
+1.  **Configurar Entorno:** Consulta la [Guía del Toolchain Local](./tools/README.md) para preparar drivers (**Zadig**) y binarios.
+2.  **Limpiar y Compilar:** Presiona `F3` (Ejecuta `MAKE CLEAN`) y luego `F4` (Ejecuta `MAKE ALL`).
+3.  **Flashear:** Presiona `F5` para grabar el binario directamente en la memoria Flash.
+4.  **Depurar:** Presiona `F6` para iniciar el servidor de debug (**OpenOCD**) y utiliza el panel de VS Code para conectar la sesión con visualización de registros activa.
 
 ---
-💻 **Desarrollo de Sistemas Embebidos Profesionales | LPC4337 - NXP**

@@ -1,7 +1,5 @@
 # 🛠️ Infraestructura del Toolchain y Orquestación
 
-# 🛠️ Infraestructura del Toolchain y Orquestación
-
 Este documento detalla la arquitectura técnica y el ecosistema de herramientas que sostienen el desarrollo sobre la **EDU-CIAA (NXP LPC4337)**. Se enfoca en la implementación de una **Capa 1 (Hardware & Tools)** y una **Capa 2 (Automatización)** robustas, preparadas para un entorno de producción.
 
 ## 🎯 1. Filosofía: Soberanía Técnica y Portabilidad
