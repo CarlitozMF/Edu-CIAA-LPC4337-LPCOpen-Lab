@@ -33,9 +33,6 @@ graph TD
     C -->|Registros / CMSIS-SVD| D[Hardware: NXP LPC4337]
 ```
 
----
-
-
 Para garantizar la robustez, portabilidad y facilidad de depuración, el firmware se organiza en tres niveles de abstracción:
 
 * **Capa 1 (Hardware Mapping):** Acceso directo a registros mediante el uso de máscaras y punteros. Implementa la validación bit a bit utilizando descriptores **SVD**, asegurando que el multiplexado del **SCU** y la configuración del silicio sean exactos.
