@@ -89,7 +89,7 @@ Para dominar el **LPC4337**, el camino se divide en tres niveles de complejidad 
 Para el desarrollo de este ecosistema se ha consultado la documentación oficial de los fabricantes y literatura de referencia en sistemas embebidos de alto rendimiento.
 
 ### 📑 Documentación del Silicio (NXP)
-* **[LPC43xx User Manual (UM10503)](https://www.nxp.com/docs/en/user-guide/UM10503.pdf):** La biblia del LPC4337. Detalla el funcionamiento de cada periférico, registros y la matriz de conmutación SCU.
+* **[LPC43xx User Manual (UM10503)](https://www.nxp.com/webapp/sps/download/preDownload.jsp?render=true):** La biblia del LPC4337. Detalla el funcionamiento de cada periférico, registros y la matriz de conmutación SCU.
 * **[LPC4337 Datasheet](https://www.nxp.com/docs/en/data-sheet/LPC4337_43S37.pdf):** Especificaciones eléctricas, tiempos y diagramas de pines de la arquitectura Dual-Core.
 * **[LPCOpen Software Development Platform](https://www.nxp.com/design/software/development-software/lpcopen-libraries:LPCOPEN):** Repositorio oficial de drivers y ejemplos de abstracción de hardware.
 
