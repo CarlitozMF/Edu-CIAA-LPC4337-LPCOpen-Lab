@@ -49,11 +49,16 @@ graph TD
         H --> J[Registros de Periféricos]
     end
 
-    %% Estilos de colores
-    style Capa_3 fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style Capa_2 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style Capa_1 fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    style Silicio fill:#eceff1,stroke:#263238,stroke-dasharray: 5 5
+    %% Estilos Profesionales (Esquema Industrial)
+    classDef capa3 fill:#2d3436,stroke:#636e72,color:#dfe6e9,stroke-width:2px;
+    classDef capa2 fill:#0984e3,stroke:#74b9ff,color:#fff,stroke-width:2px;
+    classDef capa1 fill:#d63031,stroke:#ff7675,color:#fff,stroke-width:2px;
+    classDef hardware fill:#000,stroke:#fdcb6e,color:#fdcb6e,stroke-dasharray: 5 5;
+
+    class A,B,C capa3;
+    class D,E capa2;
+    class F,G,H capa1;
+    class I,J hardware;
 ```
 
 * **Capa 1: Hardware Mapping (`hardware.h` / `hardware.c`):** Es el cimiento del sistema. Aquí se gestiona el acceso directo a registros y el multiplexado del **SCU** (System Control Unit). Define el "mapeo real" de la EDU-CIAA, asegurando que el silicio esté correctamente configurado mediante descriptores precisos de LPCOpen.
