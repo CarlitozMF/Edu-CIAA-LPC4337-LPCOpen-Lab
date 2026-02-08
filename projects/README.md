@@ -69,7 +69,7 @@ Cada laboratorio dentro de este directorio sigue una estructura estricta para ga
 
 | Nivel | Proyecto | Periféricos / Modos Clave |
 | :--- | :--- | :--- |
-| **Básico** | [01_GPIO_SCU](./projects/01_GPIO) | SCU, GPIO, MEF. |
+| **Básico** | [01_GPIO_SCU](./01_GPIO) | SCU, GPIO, MEF. |
 
 ---
 💻 **Desarrollo de Sistemas Embebidos Profesionales | LPC4337 - NXP**
