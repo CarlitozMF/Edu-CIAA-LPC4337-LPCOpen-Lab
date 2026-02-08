@@ -7,6 +7,22 @@ Desarrollar un set de drivers y aplicaciones de grado industrial que permitan do
 
 ---
 
+## 🏛️ Arquitectura de Software: Modelo de 3 Capas
+
+Para garantizar la **Soberanía Técnica** y la portabilidad, los proyectos se estructuran bajo un modelo jerárquico que separa el silicio de la aplicación:
+
+1. **Capa de Hardware (`hardware.h` / `hardware.c`):** Abstracción directa de registros y periféricos. Es la única capa con dependencia directa del **LPC4337**.
+2. **Capa de Servicio/Drivers:** Lógica intermedia que gestiona el comportamiento del periférico (ej. drivers de display, sensores, MEF de debounce).
+3. **Capa de Aplicación (`main.c` / `main.h`):** Orquestación de alto nivel. El archivo `main.c` se mantiene minimalista, delegando la complejidad técnica a las capas inferiores.
+
+### 🚀 ¿Qué logramos con este ajuste?
+
+* **Limpieza:** Justificamos por qué el `main.c` ahora es más corto y legible.
+* **Portabilidad:** Si en el futuro se desea migrar el código a otra plataforma (ej. STM32), solo se debe reescribir la Capa 1.
+* **Profesionalismo:** Aplicación de buenas prácticas de ingeniería mediante el desacoplamiento de código.
+
+---
+
 ## 🏗️ Roadmap de Aprendizaje (Estructura de Niveles)
 
 ### 🟢 Nivel 01: Fundamentos y Gestión de GPIO
@@ -45,6 +61,7 @@ Cada laboratorio dentro de este directorio sigue una estructura estricta para ga
 3.  **Arquitectura del Software:** Desglose de las **3 Capas** y fragmentos de código clave.
 4.  **Detalles de Robustez:** Técnicas aplicadas (Histeresis, Timers Maestro/Esclavo, Bit-shifting).
 5.  **Mapeo de Hardware:** Tabla de pines y conexión física en la **EDU-CIAA**.
+6.  **Referencias:** Referencias recomendadas para comprender el funcionamiento y toma de decisiones del proyecto.
 
 ---
 

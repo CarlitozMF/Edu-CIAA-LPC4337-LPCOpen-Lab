@@ -2,35 +2,65 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "🧹 MAKE CLEAN",
-            "type": "shell",
-            "command": "make",
-            "args": ["clean"],
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "bash.exe", "args": ["-c"] } }
-        },
-        {
             "label": "🛠️ MAKE ALL",
             "type": "shell",
             "command": "make",
-            "args": ["all"],
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "bash.exe", "args": ["-c"] } },
-            "group": { "kind": "build", "isDefault": true },
+            "args": [
+                "PROJECT=${input:projectName}",
+                "all"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "TMP": "${workspaceFolder}/out",
+                    "TEMP": "${workspaceFolder}/out",
+                    "TMPDIR": "${workspaceFolder}/out"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "problemMatcher": "$gcc"
         },
         {
             "label": "🚀 MAKE FLASH",
             "type": "shell",
             "command": "make",
-            "args": ["flash"],
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "bash.exe", "args": ["-c"] } },
+            "args": [
+                "PROJECT=${input:projectName}",
+                "flash"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "TMP": "${workspaceFolder}/out",
+                    "TEMP": "${workspaceFolder}/out",
+                    "TMPDIR": "${workspaceFolder}/out"
+                }
+            },
             "problemMatcher": "$gcc"
         },
         {
-            "label": "🐞 MAKE DEBUG",
+            "label": "🧹 MAKE CLEAN",
             "type": "shell",
             "command": "make",
-            "args": ["debug"],
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "bash.exe", "args": ["-c"] } }
+            "args": [
+                "PROJECT=${input:projectName}",
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "projectName",
+            "type": "pickString",
+            "description": "Selecciona el laboratorio:",
+            "options": ["01_GPIO", "02_Timers", "03_ADC"],
+            "default": "01_GPIO"
         }
     ]
 }

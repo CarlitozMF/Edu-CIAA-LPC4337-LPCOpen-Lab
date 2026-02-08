@@ -1,50 +1,66 @@
-#include "chip.h"
-#include <chip_lpc43xx.h>
+/**
+ * @file main.c
+ * @author Carlos (CarlitozMF)
+ * @brief Laboratorio 01: Gestión de SCU y GPIO en arquitectura Dual-Core LPC4337.
+ */
 
+#include "main.h"
 
+/**
+ * @brief Configuración inicial del hardware.
+ * Utiliza las definiciones de hardware.h y las macros de main.h para el ruteo.
+ */
 void board_init(void) {
+    /* Actualiza la frecuencia de clock del sistema */
     SystemCoreClockUpdate();
     
-    // 1. Configuración de pines (SCU) para el LED RGB
-    Chip_SCU_PinMuxSet(2, 0, (SCU_MODE_INACT | SCU_MODE_FUNC4)); // Rojo
-    Chip_SCU_PinMuxSet(2, 1, (SCU_MODE_INACT | SCU_MODE_FUNC4)); // Verde
-    Chip_SCU_PinMuxSet(2, 2, (SCU_MODE_INACT | SCU_MODE_FUNC4)); // Azul
+    /* --- CONFIGURACIÓN LED RGB (Capa 1: Hardware Mapping) --- */
+    Chip_SCU_PinMuxSet(LEDR_SCU_PORT, LEDR_SCU_PIN, (SCU_MODE_INACT | LEDRGB_FUNC));
+    Chip_SCU_PinMuxSet(LEDG_SCU_PORT, LEDG_SCU_PIN, (SCU_MODE_INACT | LEDRGB_FUNC));
+    Chip_SCU_PinMuxSet(LEDB_SCU_PORT, LEDB_SCU_PIN, (SCU_MODE_INACT | LEDRGB_FUNC));
 
-    // 2. Establecer como Salidas
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 5, 0);
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 5, 1);
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 5, 2);
+    /* Configura dirección como SALIDA (Capa 2: Abstracción) */
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LEDR_GPIO_PORT, LEDR_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LEDG_GPIO_PORT, LEDG_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LEDB_GPIO_PORT, LEDB_GPIO_PIN);
 
-    /* --- CONFIGURACIÓN LEDS AMARILLOS (Puertos varios) --- */
-    Chip_SCU_PinMuxSet(2, 10, (SCU_MODE_INACT | SCU_MODE_FUNC0)); // LED 1
-    Chip_SCU_PinMuxSet(2, 11, (SCU_MODE_INACT | SCU_MODE_FUNC0)); // LED 2
-    Chip_SCU_PinMuxSet(2, 12, (SCU_MODE_INACT | SCU_MODE_FUNC0)); // LED 3
+    /* --- CONFIGURACIÓN LEDS AMARILLOS --- */
+    Chip_SCU_PinMuxSet(LED1_SCU_PORT, LED1_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+    Chip_SCU_PinMuxSet(LED2_SCU_PORT, LED2_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+    Chip_SCU_PinMuxSet(LED3_SCU_PORT, LED3_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
 
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, 14); // LED 1
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 11); // LED 2
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 12); // LED 3
+    /* Configura dirección como SALIDA */
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED1_GPIO_PORT, LED1_GPIO_PIN); 
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED2_GPIO_PORT, LED2_GPIO_PIN); 
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED3_GPIO_PORT, LED3_GPIO_PIN); 
 
-    // 3. APAGAR TODO (Lógica Negativa: High = Apagado)
-    // Reemplazamos la función problemática por estas tres:
-    Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 5, 0);
-    Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 5, 1);
-    Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 5, 2);
+    /* Estado Inicial: Todo apagado */
+    LEDR_OFF();
+    LEDG_OFF();
+    LEDB_OFF();
+    LED1_OFF();
+    LED2_OFF();
+    LED3_OFF();
+}
 
-    Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 0, 14);
-    Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 1, 11);
-    Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 1, 12);
+/** * @brief Retardo por software con protección contra optimización.
+ */
+static void delay(uint32_t count) {
+    for(volatile uint32_t i = 0; i < count; i++);
 }
 
 int main(void) {
+    /* Inicialización soberana */
     board_init();
 
     while(1) {
-        // ENCEDER (Low en EDU-CIAA)
-        Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, 1, 12);
-        for(volatile int i = 0; i < 1000000; i++); // Un poco más lento para verlo bien
+        // Ejemplo de parpadeo usando las macros de main.h
+        LEDG_ON();
+        delay(1000000); 
         
-        // APAGAR (High en EDU-CIAA)
-        Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 1, 12);
-        for(volatile int i = 0; i < 1000000; i++);
+        LEDG_OFF();
+        delay(1000000);
     }
+
+    return 0;
 }
