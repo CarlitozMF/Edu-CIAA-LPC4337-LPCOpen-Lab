@@ -28,18 +28,42 @@ Para garantizar la robustez y portabilidad, el firmware se organiza en tres nive
 
 ```mermaid
 graph TD
-    A[Capa 3: Aplicación] -->|Lógica de Negocio| B[Capa 2: Abstracción de Software]
-    B -->|LPCOpen / APIs Propias| C[Capa 1: Hardware Mapping]
-    C -->|Registros / CMSIS-SVD| D[Hardware: NXP LPC4337]
+    %% Definición de Nodos de Capas
+    subgraph Capa_3 [Capa 3: Aplicación]
+        A[main.c] -->|Orquesta| B[Máquinas de Estado - MEF]
+        B -->|Usa solo macros semánticas| C[Lógica de Negocio]
+    end
+
+    subgraph Capa_2 [Capa 2: Abstracción de Interfaz]
+        C -->|Referencia| D["main.h (Macros Legibles)"]
+        D -->|Ej: LED1_TOGGLE()| E[Bridge Semántico]
+    end
+
+    subgraph Capa_1 [Capa 1: Hardware Mapping]
+        E -->|Llama funciones de| F[hardware.h / hardware.c]
+        F -->|Configura| G[SCU - Pin Muxing]
+        F -->|Utiliza| H[LPCOpen / CMSIS]
+    end
+
+    subgraph Silicio [Hardware Real]
+        G --> I[Pad Físico LPC4337]
+        H --> J[Registros de Periféricos]
+    end
+
+    %% Estilos de colores
+    style Capa_3 fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Capa_2 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Capa_1 fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Silicio fill:#eceff1,stroke:#263238,stroke-dasharray: 5 5
 ```
 
 Para garantizar la robustez, portabilidad y facilidad de depuración, el firmware se organiza en tres niveles de abstracción:
 
-* **Capa 1 (Hardware Mapping):** Acceso directo a registros mediante el uso de máscaras y punteros. Implementa la validación bit a bit utilizando descriptores **SVD**, asegurando que el multiplexado del **SCU** (System Control Unit) y la configuración del silicio sean exactos y libres de efectos colaterales.
+* **Capa 1: Hardware Mapping (`hardware.h` / `hardware.c`):** Es el cimiento del sistema. Aquí se gestiona el acceso directo a registros y el multiplexado del **SCU** (System Control Unit). Define el "mapeo real" de la EDU-CIAA, asegurando que el silicio esté correctamente configurado mediante descriptores precisos de LPCOpen.
 
-* **Capa 2 (Abstracción):** Integración del framework **LPCOpen** y creación de **APIs/Drivers propios** que encapsulan la complejidad del hardware (ej. `gpio_init()`, `timer_start()`). Esta capa actúa como un puente que permite que la aplicación sea agnóstica al pin físico, facilitando la migración del código y el mantenimiento a largo plazo.
+* **Capa 2: Abstracción de Interfaz (`main.h`):** Actúa como puente semántico. Traduce las funciones técnicas y constantes de hardware en **macros y APIs legibles** (ej. `LED1_TOGGLE()`). Esta capa garantiza que la lógica de aplicación sea agnóstica a los pines físicos, facilitando el mantenimiento y la portabilidad.
 
-* **Capa 3 (Aplicación):** Lógica de alto nivel y **Máquinas de Estado Finitos (MEF)** que orquestan el comportamiento del sistema. Se comunica exclusivamente con las APIs de la Capa 2, garantizando que un cambio en el hardware no afecte la lógica de negocio.
+* **Capa 3: Aplicación (`main.c`):** Contiene la orquestación de alto nivel y las **Máquinas de Estado Finitos (MEF)**. Se comunica exclusivamente con la Capa 2, manteniendo un código limpio, minimalista y fácil de auditar, enfocado puramente en la lógica de negocio.
 
 ---
 
@@ -75,6 +99,15 @@ Para dominar el **LPC4337**, el camino se divide en tres niveles de complejidad 
 
 ---
 
+## 📁 Estructura del Repositorio
+
+* **[`/projects`](./projects):** Directorio principal que contiene los laboratorios prácticos (GPIO, Timers, ADC, etc.). Cada proyecto incluye su propio README técnico con detalles de implementación.
+* **[`/docs/hardware_reference`](./docs/hardware_reference/README.md):** Mi guía personal de referencia del hardware, donde documento el comportamiento del LPC4337, tablas de pines y configuraciones críticas de registros extraídas de los manuales de NXP.
+* **[`/libs`](./libs):** Librerías base (LPCOpen, CMSIS) y el startup code necesario para el arranque del sistema.
+* **[`/tools`](./tools):** Scripts, configuraciones de OpenOCD y utilidades del toolchain local.
+
+---
+
 ## 🚀 Guía Rápida de Inicio
 
 1.  **Configurar Entorno:** Consulta la [Guía del Toolchain Local](./tools/README.md) para preparar drivers (**Zadig**) y binarios.
@@ -97,8 +130,6 @@ Para el desarrollo de este ecosistema se ha consultado la documentación oficial
 * **[Cortex-M4 Technical Reference Manual](https://developer.arm.com/documentation/100166/latest/):** Detalle del núcleo, el set de instrucciones Thumb-2 y la unidad de punto flotante (FPU).
 * **[Definitive Guide to Arm Cortex-M3 and Cortex-M4 Processors](https://www.sciencedirect.com/book/9780124080829/the-definitive-guide-to-arm-cortex-m3-and-cortex-m4-processors):** (Joseph Yiu) Referencia fundamental para entender el manejo de excepciones, el NVIC y el arranque del sistema.
 
-
-
 ### 🛠️ Herramientas y Estándares
 * **[GNU Arm Embedded Toolchain](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain):** Documentación oficial del compilador GCC y las opciones de optimización para Cortex-M.
 * **[OpenOCD Documentation](https://openocd.org/doc/html/index.html):** Guía para la configuración de scripts JTAG/SWD y comandos de depuración.
@@ -112,3 +143,6 @@ Para el desarrollo de este ecosistema se ha consultado la documentación oficial
 ## ⚖️ Licencia
 
 Este proyecto está bajo la Licencia **MIT**. Eres libre de usar, copiar, modificar y distribuir el código, siempre que se mantenga la nota de copyright y el aviso de permiso en todas las copias. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
+
+---
+💻 *Sistemas Embebidos | Aprendizaje Autodidacta y Soberanía Técnica | Carlos*
