@@ -72,7 +72,7 @@ graph TD
 ## 📁 Estructura del Repositorio
 
 * **[`/projects`](./projects):** Directorio principal que contiene los laboratorios prácticos (GPIO, Timers, ADC, etc.). Cada proyecto incluye su propio README técnico con detalles de implementación.
-* **[`/docs/hardware_reference`](./docs/hardware_reference/README.md):** Mi guía personal de referencia del hardware, donde documento el comportamiento del LPC4337, tablas de pines y configuraciones críticas de registros extraídas de los manuales de NXP.
+* **[`/docs/hardware_reference`](./docs/hardware_reference/README.md):** Guía de referencia del hardware, donde documento el comportamiento del LPC4337, tablas de pines y configuraciones críticas de registros extraídas de los manuales de NXP y EDUCIIA.
 * **[`/libs`](./libs):** Librerías base (LPCOpen, CMSIS) y el startup code necesario para el arranque del sistema.
 * **[`/tools`](./tools):** Scripts, configuraciones de OpenOCD y utilidades del toolchain local.
 
