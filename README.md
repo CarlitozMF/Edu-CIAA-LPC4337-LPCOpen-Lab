@@ -35,7 +35,7 @@ graph TD
 
     subgraph Capa_2 [Capa 2: Abstracción de Interfaz]
         C -->|Referencia| D["main.h (Macros Legibles)"]
-        D -->|Ej: LED1_TOGGLE()| E[Bridge Semántico]
+        D -->|"Ej: LED1_TOGGLE()"| E[Bridge Semántico]
     end
 
     subgraph Capa_1 [Capa 1: Hardware Mapping]
@@ -54,7 +54,6 @@ graph TD
     style Capa_2 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style Capa_1 fill:#fff3e0,stroke:#e65100,stroke-width:2px
     style Silicio fill:#eceff1,stroke:#263238,stroke-dasharray: 5 5
-
 ```
 
 * **Capa 1: Hardware Mapping (`hardware.h` / `hardware.c`):** Es el cimiento del sistema. Aquí se gestiona el acceso directo a registros y el multiplexado del **SCU** (System Control Unit). Define el "mapeo real" de la EDU-CIAA, asegurando que el silicio esté correctamente configurado mediante descriptores precisos de LPCOpen.
