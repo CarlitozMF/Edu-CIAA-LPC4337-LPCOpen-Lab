@@ -57,41 +57,46 @@ graph TD
     style Silicio fill:#f5f5f5,stroke:#212121
 ```
 
-### 🔹 Capa 1: Hardware Abstraction (`hardware.c` / `hardware.h`)
-Es la única capa que interactúa directamente con los registros del microcontrolador utilizando la librería **LPCOpen**. Se encarga de la inicialización de bajo nivel:
+### 🔹 Capa 1: Hardware Mapping (`hardware.h`)
+En esta capa se define la "Soberanía Técnica" sobre el silicio. No contiene lógica ejecutable, sino el **mapeo físico** del LPC4337 basado en el manual **UM10503**.
 
-1.  **`SystemCoreClockUpdate();`**: Función nativa que recalcula la frecuencia del reloj del sistema. Es obligatoria al inicio para que el microcontrolador sincronice sus periféricos a la velocidad real de operación (204 MHz).
-2.  **`Chip_SCU_PinMuxSet(PORT, PIN, MODE);`**: 
-    * **Función**: Configura la matriz de conmutación (**System Control Unit**).
-    * **Uso**: Permite asociar un pin físico (ej. P2_10) con una función lógica (GPIO, PWM, etc.). En este laboratorio, se configuran en modo GPIO con atributos de alta velocidad.
-3.  **`Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, GPIO_PORT, GPIO_PIN);`**:
-    * **Función**: Establece el flujo de datos del pin como salida.
-    * **Abstracción**: Los parámetros de puerto y pin GPIO se encuentran definidos como constantes en `hardware.h`, permitiendo que el código sea independiente del conexionado físico.
+* **Mapeo de Pines:** Se asocian los puertos y pines físicos del SCU (ej. `P2_10`) con sus correspondientes puertos y pines del periférico GPIO (ej. `GPIO 0[14]`).
+* **Abstracción de Funciones:** Se definen los modos de función del SCU según el Pinout de la EDU-CIAA:
+    * `LED_FUNC` (`SCU_MODE_FUNC0`) para los LEDs externos.
+    * `LEDRGB_FUNC` (`SCU_MODE_FUNC4`) para los LEDs RGB.
+* **Beneficio:** Si se desea cambiar un pin, solo se modifica este archivo. El resto del firmware permanece intacto.
 
-### 🔹 Capa 2: Lógica de Interfaz (`main.h`)
-Esta capa traduce las funciones técnicas en comandos legibles ("semánticos"). Aquí se definen las macros de control que limpian la lógica de la aplicación:
+### 🔹 Capa 2: Interfaz Semántica (`main.h`)
+Es el puente entre el hardware crudo y la aplicación. Aquí se crean las macros que utilizaremos en la lógica principal, consumiendo las definiciones de `hardware.h`:
 
 ```c
-// Abstracción semántica para control de LED 1
+// Ejemplo de abstracción para LED 1
 #define LED1_ON()       Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, LED1_GPIO_PORT, LED1_GPIO_PIN)
 #define LED1_OFF()      Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, LED1_GPIO_PORT, LED1_GPIO_PIN)
 #define LED1_TOGGLE()   Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, LED1_GPIO_PORT, LED1_GPIO_PIN)
 ```
 
-### 🔹 Capa 3: Aplicación (`main.c`)
-Gracias a la abstracción previa, el punto de entrada del programa es minimalista y fácil de auditar. Solo orquesta la lógica de alto nivel.
+### 🔹 Capa 3: Aplicación y Configuración (`main.c`)
+En el `main.c` se realiza la orquestación final. Es el punto de encuentro donde las definiciones de la **Capa 1** y las abstracciones de la **Capa 2** cobran vida para ejecutar la lógica de control:
+
+1. **Configuración Inicial (`Board_Init`):** Se ejecutan las funciones críticas de **LPCOpen** para inicializar el silicio. En esta etapa se consumen directamente las etiquetas de `hardware.h`:
+    * **`Chip_SCU_PinMuxSet`**: Establece la función del pin y el modo (usando el `OR` con `SCU_MODE_INACT` para control total del driver).
+    * **`Chip_GPIO_SetPinDIROutput`**: Configura el sentido del flujo de datos.
+2. **Lógica de Usuario:** Se implementa el bucle principal (`while(1)`) utilizando exclusivamente las macros definidas en `main.h`. Esto garantiza que la lógica de la aplicación sea legible, minimalista y fácil de auditar, ocultando la complejidad de los registros detrás de nombres semánticos.
 
 ```c
 int main(void) {
-    Init_Hardware(); // Configuración de Capa 1
-    
+    // Inicialización de Capa 1 y Capa 3
+    SystemCoreClockUpdate();
+    Board_Init(); // Configuración de SCU y GPIO usando hardware.h
+
     while(1) {
-        LED1_TOGGLE(); // Ejecución de Capa 2 (Macro semántica)
-        Delay(SystemCoreClock / 10); 
+        // Ejecución mediante Capa 2
+        LED1_TOGGLE(); 
+        delay(SystemCoreClock / 20);
     }
 }
 ```
-
 ---
 
 ## 🛡️ 4. Detalles de Robustez y Calidad de Firmware
@@ -123,6 +128,7 @@ En lugar de utilizar funciones de alto nivel que implican una sobrecarga de memo
 
 ### 4. Gestión de la Matriz de Conmutación (SCU Safe-Config)
 La configuración del SCU incluye la desactivación de resistencias de pull-up/pull-down internas (`SCU_MODE_INACT`) para los LEDs. Esto asegura que el estado eléctrico de la salida sea controlado puramente por el driver del microcontrolador, minimizando el consumo de corriente residual y garantizando que el LED se apague por completo al llevar la salida a un estado lógico bajo.
+`Chip_SCU_PinMuxSet(LEDR_SCU_PORT, LEDR_SCU_PIN, (SCU_MODE_INACT | LEDRGB_FUNC));`
 
 ---
 
