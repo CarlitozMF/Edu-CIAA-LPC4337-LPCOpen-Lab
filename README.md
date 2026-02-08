@@ -67,6 +67,15 @@ Para garantizar la robustez, portabilidad y facilidad de depuración, el firmwar
 
 ---
 
+## 📁 Estructura del Repositorio
+
+* **[`/projects`](./projects):** Directorio principal que contiene los laboratorios prácticos (GPIO, Timers, ADC, etc.). Cada proyecto incluye su propio README técnico con detalles de implementación.
+* **[`/docs/hardware_reference`](./docs/hardware_reference/README.md):** Mi guía personal de referencia del hardware, donde documento el comportamiento del LPC4337, tablas de pines y configuraciones críticas de registros extraídas de los manuales de NXP.
+* **[`/libs`](./libs):** Librerías base (LPCOpen, CMSIS) y el startup code necesario para el arranque del sistema.
+* **[`/tools`](./tools):** Scripts, configuraciones de OpenOCD y utilidades del toolchain local.
+
+---
+
 ## 📋 Plan de Carrera: Laboratorios e Implementaciones
 
 Para dominar el **LPC4337**, el camino se divide en tres niveles de complejidad creciente, enfocados en la **Soberanía Técnica** y la **Arquitectura de 3 Capas**.
@@ -96,15 +105,6 @@ Para dominar el **LPC4337**, el camino se divide en tres niveles de complejidad 
 * **Dual-Core Orchestration:** Despertar al núcleo **Cortex-M0** para tareas de E/S mientras el **M4** procesa datos.
 * **Adquisición de Datos:** ADC de alta velocidad sincronizado por hardware y procesamiento de señales.
 * **RTOS & Robustez:** Multitarea profesional utilizando FreeRTOS integrado en el Toolchain local.
-
----
-
-## 📁 Estructura del Repositorio
-
-* **[`/projects`](./projects):** Directorio principal que contiene los laboratorios prácticos (GPIO, Timers, ADC, etc.). Cada proyecto incluye su propio README técnico con detalles de implementación.
-* **[`/docs/hardware_reference`](./docs/hardware_reference/README.md):** Mi guía personal de referencia del hardware, donde documento el comportamiento del LPC4337, tablas de pines y configuraciones críticas de registros extraídas de los manuales de NXP.
-* **[`/libs`](./libs):** Librerías base (LPCOpen, CMSIS) y el startup code necesario para el arranque del sistema.
-* **[`/tools`](./tools):** Scripts, configuraciones de OpenOCD y utilidades del toolchain local.
 
 ---
 
