@@ -128,6 +128,7 @@ En lugar de utilizar funciones de alto nivel que implican una sobrecarga de memo
 
 ### 4. Gestión de la Matriz de Conmutación (SCU Safe-Config)
 La configuración del SCU incluye la desactivación de resistencias de pull-up/pull-down internas (`SCU_MODE_INACT`) para los LEDs. Esto asegura que el estado eléctrico de la salida sea controlado puramente por el driver del microcontrolador, minimizando el consumo de corriente residual y garantizando que el LED se apague por completo al llevar la salida a un estado lógico bajo.
+
 `Chip_SCU_PinMuxSet(LEDR_SCU_PORT, LEDR_SCU_PIN, (SCU_MODE_INACT | LEDRGB_FUNC));`
 
 ---
