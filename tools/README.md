@@ -85,22 +85,37 @@ Esta es la pieza crítica de **Robustez** del entorno. Se configuró un **Bypass
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "🔗 CONECTAR A F6 (EXTERNAL)",
+"name": "🐞 DEBUG SOBERANO (VIA F6)",
             "type": "cortex-debug",
             "request": "launch",
-            "servertype": "external", 
-            "gdbTarget": "localhost:3333",
+            "servertype": "external", // <--- CAMBIO CLAVE: VS Code ya no lanza OpenOCD
+            "gdbTarget": "localhost:3333", // <--- Se conecta al puente que abriste con F6
             "executable": "${workspaceFolder}/out/${input:projectName}/${input:projectName}.elf",
-            "preLaunchTask": "🛠️ MAKE ALL",
+            "armToolchainPath": "${workspaceFolder}/tools/gcc-arm/bin",
+            "cwd": "${workspaceFolder}",
+            "svdFile": "${workspaceFolder}/misc/LPC43xx_43Sxx.svd",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "🛠️ MAKE ALL", // <--- Sigue compilando antes de entrar
             "overrideLaunchCommands": [
                 "monitor halt",
                 "monitor targets lpc4337.m4",
                 "load",
                 "tbreak main"
             ],
-            "runToEntryPoint": "main",
-            "preLaunchTask": "MAKE ALL",
             "showDevDebugOutput": "none"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "projectName",
+            "type": "pickString",
+            "description": "Selecciona el proyecto para el laboratorio:",
+            "options": [
+                "01_GPIO",
+                "02_Timers",
+                "03_ADC"
+            ],
+            "default": "01_GPIO"
         }
     ]
 }
@@ -116,50 +131,84 @@ Se ha configurado un entorno de ejecución basado en Bash para asegurar que el M
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "🧹 MAKE CLEAN",
+            "label": "🛠️ MAKE BUILD",
             "type": "shell",
             "command": "make",
-            "args": ["clean"],
+            "args": [
+                "PROJECT=${input:projectName}",
+                "make" 
+            ],
             "options": {
-                "cwd": "${workspaceFolder}",
-                "shell": { "executable": "bash.exe", "args": ["-c"] }
+                "cwd": "${workspaceFolder}"
             },
-            "detail": "Limpia binarios y purga la carpeta out/."
-        },
-        {
-            "label": "🛠️ MAKE ALL",
-            "type": "shell",
-            "command": "make",
-            "args": ["all"],
-            "options": {
-                "cwd": "${workspaceFolder}",
-                "shell": { "executable": "bash.exe", "args": ["-c"] }
+            "group": {
+                "kind": "build",
+                "isDefault": true
             },
-            "group": { "kind": "build", "isDefault": true },
-            "problemMatcher": "$gcc",
-            "detail": "Compilación incremental del proyecto seleccionado."
+            "problemMatcher": "$gcc"
         },
         {
             "label": "🚀 MAKE FLASH",
             "type": "shell",
             "command": "make",
-            "args": ["flash"],
+            "args": [
+                "PROJECT=${input:projectName}",
+                "flash"
+            ],
             "options": {
-                "cwd": "${workspaceFolder}",
-                "shell": { "executable": "bash.exe", "args": ["-c"] }
+                "cwd": "${workspaceFolder}"
             },
-            "detail": "Graba el binario directamente en la memoria Flash."
+            "problemMatcher": "$gcc"
         },
         {
-            "label": "🐞 MAKE DEBUG",
+            "label": "🐞 MAKE DEBUG (Server)",
             "type": "shell",
             "command": "make",
-            "args": ["debug"],
+            "args": [
+                "PROJECT=${input:projectName}",
+                "debug"
+            ],
             "options": {
-                "cwd": "${workspaceFolder}",
-                "shell": { "executable": "bash.exe", "args": ["-c"] }
+                "cwd": "${workspaceFolder}"
             },
-            "detail": "Inicia el servidor OpenOCD (GDB Server) persistente."
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "."
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Iniciando servidor",
+                    "endsPattern": "Esperando conexión"
+                }
+            }
+        },
+        {
+            "label": "🧹 MAKE CLEAN",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "PROJECT=${input:projectName}",
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "projectName",
+            "type": "pickString",
+            "description": "Selecciona el laboratorio a procesar:",
+            "options": [
+                "01_GPIO",
+                "02_Timers",
+                "03_ADC",
+                "04_UART",
+                "05_CAN"
+            ],
+            "default": "01_GPIO"
         }
     ]
 }

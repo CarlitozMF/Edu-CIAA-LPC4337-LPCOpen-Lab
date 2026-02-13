@@ -61,7 +61,8 @@ LDFLAGS    := $(ARCH_FLAGS) -nostartfiles -T"$(MISC_DIR)/link.ld" \
 # ⚡ REGLAS DE EJECUCIÓN
 # =============================================================================
 
-all: $(OUT)/$(PROJECT).bin
+# Comando: make (Compila todo)
+make: $(OUT)/$(PROJECT).bin
 
 $(OUT)/$(PROJECT).elf: $(SRC)
 	@mkdir -p $(OUT)
@@ -76,12 +77,14 @@ $(OUT)/$(PROJECT).bin: $(OUT)/$(PROJECT).elf
 	@"$(OBJCOPY)" -O binary $< $@
 	@echo "✅ ¡Listo! Binario generado en: $@"
 
+# Comando: make clean (Limpia la salida)
 clean:
 	@echo "🧹 Limpiando laboratorio del proyecto: $(PROJECT)..."
 	@rm -rf $(OUT)
 
+# Comando: make flash (Graba el micro)
 # 🚀 GRABACIÓN (Flash)
-flash: all
+flash: make
 	@echo "🚀 Grabando $(PROJECT) en la EDU-CIAA..."
 	@"$(OOCD)" -s "$(OOCD_SCR)" -f "$(MISC_DIR)/lpc4337.cfg" \
 		-c "init" -c "halt" \
@@ -91,7 +94,7 @@ flash: all
 
 # 🐞 DEPURACIÓN (Debug)
 # Esta regla lanza el servidor OpenOCD y lo deja a la espera de GDB.
-debug: all
+debug: make
 	@echo "🐞 Iniciando servidor de depuración para $(PROJECT)..."
 	@echo "   (Esperando conexión de VS Code / GDB en puerto 3333)"
 	@"$(OOCD)" -s "$(OOCD_SCR)" -f "$(MISC_DIR)/lpc4337.cfg"

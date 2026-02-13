@@ -113,9 +113,9 @@ Para dominar el **LPC4337**, el camino se divide en tres niveles de complejidad 
 ## 🚀 Guía Rápida de Inicio
 
 1.  **Configurar Entorno:** Consulta la [Guía del Toolchain Local](./tools/README.md) para preparar drivers (**Zadig**) y binarios.
-2.  **Limpiar y Compilar:** Presiona `F3` (Ejecuta `MAKE CLEAN`) y luego `F4` (Ejecuta `MAKE ALL`).
-3.  **Flashear:** Presiona `F5` para grabar el binario directamente en la memoria Flash.
-4.  **Depurar:** Presiona `F6` para iniciar el servidor de debug (**OpenOCD**) y utiliza el panel de VS Code para conectar la sesión con visualización de registros activa.
+2.  **Limpiar y Compilar:** Presiona `F3` (Ejecuta `MAKE CLEAN`) y luego `F4` (Ejecuta `MAKE`).
+3.  **Flashear:** Presiona `F5` (Ejecuta `MAKE FLASH`) para grabar el binario directamente en la memoria Flash.
+4.  **Depurar:** Presiona `F6` (Ejecuta `MAKE DEBUG`) para iniciar el servidor de debug (**OpenOCD**) y utiliza el panel de VS Code para conectar la sesión con visualización de registros activa.
 
 ---
 
