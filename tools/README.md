@@ -218,7 +218,7 @@ Se ha configurado un entorno de ejecución basado en Bash para asegurar que el M
 | Tecla | Función | Descripción Técnica |
 | :---: | :--- | :--- |
 | **F3** | **Clean** | Ejecuta `make clean`. Purga binarios previos. |
-| **F4** | **Build** | Ejecuta `make all`. Compilación incremental vía Bash. |
+| **F4** | **Build** | Ejecuta `make`. Compilación incremental vía Bash. |
 | **F5** | **Flash** | Ejecuta `make flash`. Grabación directa a la Flash. |
 | **F6** | **Debug Server** | Ejecuta `make debug`. Inicia OpenOCD persistente. |
 
