@@ -29,10 +29,8 @@
             "description": "Selecciona el proyecto para el laboratorio:",
             "options": [
                 "01_GPIO",
-                "02_Timers",
-                "03_ADC"
-            ],
-            "default": "01_GPIO"
+                "02_GPIO_Abstraction"
+            ]
         }
     ]
 }

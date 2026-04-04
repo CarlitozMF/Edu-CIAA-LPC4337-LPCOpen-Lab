@@ -32,10 +32,16 @@ OOCD_SCR   := $(ROOT_DIR)/tools/openocd/openocd/scripts
 # NOTA: startup.c DEBE ir primero para asegurar la Tabla de Vectores al inicio
 STARTUP    := $(LIBS_DIR)/startup/src/startup.c
 PROJ_SRC   := $(wildcard $(PROJ_DIR)/Core/Src/*.c)
+
+# Escaneo de Drivers Propios
+# Buscamos todos los .c dentro de cualquier subcarpeta de custom_drivers
+CUSTOM_DRV := $(wildcard $(LIBS_DIR)/custom_drivers/*/*.c)
+
+# Drivers de LPCOpen (Capa de fabricante)
 DRIVERS    := $(wildcard $(LIBS_DIR)/lpc_open/lpc_chip_43xx/src/*.c)
 BOARD      := $(wildcard $(LIBS_DIR)/lpc_open/boards/edu_ciaa_nxp/src/*.c)
 
-SRC        := $(STARTUP) $(PROJ_SRC) $(DRIVERS) $(BOARD)
+SRC        := $(STARTUP) $(PROJ_SRC) $(CUSTOM_DRV) $(DRIVERS) $(BOARD)
 
 # 🚩 5. CAPA 3: BANDERAS DE INGENIERÍA (Hard-FP & Thumb)
 # -mfloat-abi=hard: Usa la unidad de punto flotante (FPU) por hardware
@@ -44,6 +50,8 @@ ARCH_FLAGS := -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
 DEFINES    := -DCORE_M4 -DBOARD=edu_ciaa_nxp -D__USE_LPCOPEN -DCHIP_LPC43XX
 
 INCLUDES   := -I$(PROJ_DIR)/Core/Inc \
+			  -I$(LIBS_DIR)/custom_drivers/gpio	\
+              -I$(LIBS_DIR)/custom_drivers/led	\
               -I$(LIBS_DIR)/lpc_open/lpc_chip_43xx/inc \
               -I$(LIBS_DIR)/lpc_open/boards/edu_ciaa_nxp/inc \
               -I$(LIBS_DIR)/cmsis_core/inc

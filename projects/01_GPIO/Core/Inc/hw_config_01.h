@@ -1,5 +1,5 @@
-#ifndef HARDWARE_H
-#define HARDWARE_H
+#ifndef HW_CONFIG_01_H
+#define HW_CONFIG_01_H
 
 #include "chip.h"
 
@@ -65,4 +65,4 @@
 #define LED_FUNC        SCU_MODE_FUNC0  // Función GPIO para LEDs Externos
 #define LEDRGB_FUNC     SCU_MODE_FUNC4  // Función GPIO para LED RGB
 
-#endif
+#endif /* HW_CONFIG_01_H */

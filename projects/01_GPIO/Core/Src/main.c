@@ -1,10 +1,10 @@
 /**
  * @file main.c
- * @author Carlos (CarlitozMF)
+ * @author Carlos Mamani Flores (CarlitozMF)
  * @brief Laboratorio 01: Gestión de SCU y GPIO en arquitectura Dual-Core LPC4337.
  */
 
-#include "main.h"
+#include "main_project_01.h"
 
 /**
  * @brief Configuración inicial del hardware.

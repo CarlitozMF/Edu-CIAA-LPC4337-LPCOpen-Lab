@@ -30,18 +30,18 @@ graph TD
     %% Definición de Nodos de Capas
     subgraph Capa_3 [Capa 3: Aplicación]
         A[main.c] -->|Orquesta| B[Máquinas de Estado - MEF]
-        B -->|Usa solo macros semánticas| C[Lógica de Negocio]
+        B -->|Usa| C[main_project_0X.h]
     end
 
-    subgraph Capa_2 [Capa 2: Abstracción de Interfaz]
-        C -->|Referencia| D["main.h (Macros Legibles)"]
-        D -->|"Ej: LED1_TOGGLE()"| E[Bridge Semántico]
+    subgraph Capa_2 [Capa 2: Drivers de Interfaz]
+        C -->|Abstrae| D["libs/custom_drivers (gpio.h, led.h)"]
+        D -->|Hardware Agnostic| E[Lógica de Periférico]
     end
 
     subgraph Capa_1 [Capa 1: Hardware Mapping]
-        E -->|Llama funciones de| F[hardware.h / hardware.c]
-        F -->|Configura| G[SCU - Pin Muxing]
-        F -->|Utiliza| H[LPCOpen / CMSIS]
+        E -->|Se configura con| F[hw_config_0X.h]
+        F -->|Mapeo Físico| G[SCU - Pin Muxing]
+        F -->|Acceso Base| H[LPCOpen / CMSIS]
     end
 
     subgraph Silicio [Hardware Real]
@@ -49,7 +49,7 @@ graph TD
         H --> J[Registros de Periféricos]
     end
 
-    %% Estilos Profesionales (Esquema Industrial)
+    %% Estilos Profesionales
     classDef capa3 fill:#2d3436,stroke:#636e72,color:#dfe6e9,stroke-width:2px;
     classDef capa2 fill:#0984e3,stroke:#74b9ff,color:#fff,stroke-width:2px;
     classDef capa1 fill:#d63031,stroke:#ff7675,color:#fff,stroke-width:2px;
@@ -61,19 +61,27 @@ graph TD
     class I,J hardware;
 ```
 
-* **Capa 1: Hardware Mapping (`hardware.h` / `hardware.c`):** Es el cimiento del sistema. Aquí se gestiona el acceso directo a registros y el multiplexado del **SCU** (System Control Unit). Define el "mapeo real" de la EDU-CIAA, asegurando que el silicio esté correctamente configurado mediante descriptores precisos de LPCOpen.
+---
 
-* **Capa 2: Abstracción de Interfaz (`main.h`):** Actúa como puente semántico. Traduce las funciones técnicas y constantes de hardware en **macros y APIs legibles** (ej. `LED1_TOGGLE()`). Esta capa garantiza que la lógica de aplicación sea agnóstica a los pines físicos, facilitando el mantenimiento y la portabilidad.
+## 🏗️ Arquitectura del Software (Modelo de 3 Capas)
+*Actualización: Implementación de Espacios de Trabajo Multi-Proyecto para la EDU-CIAA.*
 
-* **Capa 3: Aplicación (`main.c`):** Contiene la orquestación de alto nivel y las **Máquinas de Estado Finitos (MEF)**. Se comunica exclusivamente con la Capa 2, manteniendo un código limpio, minimalista y fácil de auditar, enfocado puramente en la lógica de negocio.
+* **Capa 1: Hardware Mapping (`hw_config_0X.h`):** Es el **nexo físico** del sistema. Cada proyecto posee su propio archivo de configuración numerado para evitar colisiones de IntelliSense y garantizar la unicidad de los símbolos. Aquí reside la *"verdad del silicio"*: matrices de estructuras `static const` que definen pines, puertos y modos de función SCU para ser inyectados en los drivers.
+
+* **Capa 2: Drivers de Interfaz (`libs/custom_drivers`):** Son componentes de software **reutilizables y portables**. Estos drivers son agnósticos al hardware; no conocen números de pines, solo entienden comportamientos (ej: `LED_Set`). Reciben las estructuras de la Capa 1 y operan el hardware mediante las bibliotecas base de LPCOpen/CMSIS.
+
+* **Capa 3: Aplicación (`main.c` / `main_project_0X.h`):** Contiene la **lógica de negocio** y las Máquinas de Estados Finitos (MEF). Al utilizar headers únicos por proyecto, se garantiza una navegación precisa en el IDE y un código minimalista que solo "habla" en términos semánticos de la aplicación.
 
 ---
 
-## 📁 Estructura del Repositorio
+## 📁 Estructura del Repositorio (Actualizada)
 
-* **[`/projects`](./projects):** Directorio principal que contiene los laboratorios prácticos (GPIO, Timers, ADC, etc.). Cada proyecto incluye su propio README técnico con detalles de implementación.
-* **[`/docs/hardware_reference`](./docs/hardware_reference/README.md):** Guía de referencia del hardware, donde documento el comportamiento del LPC4337, tablas de pines y configuraciones críticas de registros extraídas de los manuales de NXP y EDUCIIA.
-* **[`/libs`](./libs):** Librerías base (LPCOpen, CMSIS) y el startup code necesario para el arranque del sistema.
+* **[`/projects`](./projects):** Directorio de laboratorios prácticos. Cada uno cuenta con su par de archivos de configuración exclusivos para asegurar la independencia técnica:
+    * `main_project_0X.h`: Interfaz semántica y prototipos de la aplicación.
+    * `hw_config_0X.h`: Mapeo físico y descriptores de hardware específicos del laboratorio.
+* **[`/libs`](./libs):** El núcleo del sistema y recursos compartidos.
+    * `lpc_open / cmsis`: Framework base de NXP y definiciones de registros.
+    * `custom_drivers`: **Drivers de autoría propia** (GPIO, LED, etc.) que implementan la abstracción de la Capa 2.
 * **[`/tools`](./tools):** Scripts, configuraciones de OpenOCD y utilidades del toolchain local.
 
 ---

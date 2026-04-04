@@ -1,7 +1,7 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MAIN_PROJECT_01_H
+#define MAIN_PROJECT_01_H
 
-#include "hardware.h"
+#include "hw_config_01.h"
 
 /* =============================================================================
  * 🛠️ MACROS DE ACCIÓN (Abstracción de Software)

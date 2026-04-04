@@ -71,10 +71,7 @@
             "description": "Selecciona el laboratorio a procesar:",
             "options": [
                 "01_GPIO",
-                "02_Timers",
-                "03_ADC",
-                "04_UART",
-                "05_CAN"
+                "02_GPIO_Abstraction"
             ],
             "default": "01_GPIO"
         }

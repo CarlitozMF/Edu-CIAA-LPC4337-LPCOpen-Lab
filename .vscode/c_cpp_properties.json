@@ -1,13 +1,13 @@
 {
     "configurations": [
         {
-            "name": "EDU-CIAA-LOCAL",
+            "name": "EDU-CIAA-PORTABLE",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/libs/custom_drivers/inc",
+                "${workspaceFolder}/libs/**",
                 "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc",
                 "${workspaceFolder}/libs/lpc_open/boards/edu_ciaa_nxp/inc",
-                "${workspaceFolder}/libs/cmsis_core/inc"
+                "${workspaceFolder}/libs/cmsis_core/inc",
+                "${workspaceFolder}/projects/**" 
             ],
             "defines": [
                 "CORE_M4",
@@ -16,15 +16,18 @@
                 "BOARD=edu_ciaa_nxp",
                 "__GNUC__"
             ],
+            /* Encapsulamos la ruta entre comillas dobles por los espacios en el nombre de usuario */
             "compilerPath": "${workspaceFolder}/tools/gcc-arm/bin/arm-none-eabi-gcc.exe",
             "cStandard": "c11",
-            "intelliSenseMode": "windows-gcc-arm", 
-            "compilerArgs": [
-                "-mcpu=cortex-m4",
-                "-mthumb",
-                "-mfloat-abi=hard",
-                "-mfpu=fpv4-sp-d16"
-            ]
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/libs",
+                    "${workspaceFolder}/projects"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            }
         }
     ],
     "version": 4
