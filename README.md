@@ -85,36 +85,21 @@ graph TD
 * **[`/tools`](./tools):** Scripts, configuraciones de OpenOCD y utilidades del toolchain local.
 
 ---
+## 📋 Plan de Carrera: Hoja de Ruta Tecnológica
 
-## 📋 Plan de Carrera: Laboratorios e Implementaciones
+El dominio del **LPC4337** se estructura en tres niveles evolutivos, diseñados para escalar desde el control del silicio hasta arquitecturas de alto rendimiento.
 
-Para dominar el **LPC4337**, el camino se divide en tres niveles de complejidad creciente, enfocados en la **Soberanía Técnica** y la **Arquitectura de 3 Capas**.
+### 🟢 Nivel 01: Fundamentos y Abstracción de Hardware
+*Focus: Capa 1 y Capa 2. Dominio del SCU, GPIO y lógica no bloqueante (MEF).*
+> **Meta:** Control total del ruteo interno del chip y creación de drivers HAL propietarios.
 
-### 🏗️ Nivel Básico - Fundamentos y Registro Directo
-*El objetivo es dominar la Capa 1 y el ruteo interno del silicio mediante el SCU.*
+### 🟡 Nivel 02: Autonomía y Periféricos de Precisión
+*Focus: Eventos asíncronos y procesamiento independiente del CPU.*
+> **Meta:** Implementación de Timers, ADC (Burst Mode), protocolos serie (UART/I2C/SPI) e interrupciones (NVIC).
 
-* **SCU & GPIO Mastery:** Configuración de la matriz de conmutación (pin muxing), Pull-ups, y Open-drain.
-* **Modularidad de Capas:** Separación estricta entre el mapeo de registros (**Capa 1**) y el driver funcional (**Capa 2**).
-* **Lógica No Bloqueante:** Implementación de MEFs (Máquinas de Estado) y antirebote (debounce) sin `delay()`.
----
-
-### ⚙️ Nivel Intermedio - Eventos y Hardware Autónomo
-*Transición hacia el procesamiento basado en eventos y autonomía del hardware.*
-
-* **NVIC & EXTI:** Gestión de interrupciones externas para eventos asíncronos (TEC1-4).
-* **Timers & RIT:** Uso del *Repetitive Interrupt Timer* y Timers de 32 bits para el "Heartbeat" del sistema.
-* **Comunicaciones Serie:** UART con **Ring Buffers** y modulación PWM mediante el bloque **SCTimer**.
-* **HMI & Buses:** Manejo de displays y protocolos I2C/SPI bajo arquitectura de 3 capas.
-
----
-
-### 🚀 Nivel Avanzado - High Performance & Dual-Core
-*Arquitecturas de alto rendimiento: Gestión masiva de datos y multiprocesamiento.*
-
-* **GPDMA Mastery:** Transferencias masivas memoria-periférico con **Zero CPU Load**.
-* **Dual-Core Orchestration:** Despertar al núcleo **Cortex-M0** para tareas de E/S mientras el **M4** procesa datos.
-* **Adquisición de Datos:** ADC de alta velocidad sincronizado por hardware y procesamiento de señales.
-* **RTOS & Robustez:** Multitarea profesional utilizando FreeRTOS integrado en el Toolchain local.
+### 🔴 Nivel 03: High Performance & Dual-Core
+*Focus: Maximización del ancho de banda y procesamiento paralelo.*
+> **Meta:** Gestión masiva de datos con GPDMA, orquestación M4/M0 y sistemas de tiempo real (RTOS).
 
 ---
 

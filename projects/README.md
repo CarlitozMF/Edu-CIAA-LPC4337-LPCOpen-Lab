@@ -9,67 +9,55 @@ Desarrollar un set de drivers y aplicaciones de grado industrial que permitan do
 
 ## 🏛️ Arquitectura de Software: Modelo de 3 Capas
 
-Para garantizar la **Soberanía Técnica** y la portabilidad, los proyectos se estructuran bajo un modelo jerárquico que separa el silicio de la aplicación:
+Para garantizar la portabilidad y el mantenimiento, los proyectos se estructuran bajo un modelo jerárquico que desacopla el silicio de la lógica de negocio:
 
-1. **Capa de Hardware (`hardware.h` / `hardware.c`):** Abstracción directa de registros y periféricos. Es la única capa con dependencia directa del **LPC4337**.
-2. **Capa de Servicio/Drivers:** Lógica intermedia que gestiona el comportamiento del periférico (ej. drivers de display, sensores, MEF de debounce).
-3. **Capa de Aplicación (`main.c` / `main.h`):** Orquestación de alto nivel. El archivo `main.c` se mantiene minimalista, delegando la complejidad técnica a las capas inferiores.
+1. **Capa 1: Hardware Mapping (`hw_config_0X.h`):** Es el nexo físico único por proyecto. Define matrices de estructuras `static const` con el mapeo del **SCU** y **GPIO**. Es la única capa con dependencia directa de los registros del **LPC4337**.
+2. **Capa 2: Abstracción de Interfaz / Drivers (`libs/custom_drivers`):** Lógica intermedia reutilizable (ej. `led.c`, `gpio.c`). Estos drivers son agnósticos al pin físico; reciben la configuración de la Capa 1 y operan mediante **LPCOpen/CMSIS**.
+3. **Capa 3: Aplicación (`main.c` / `main_project_0X.h`):** Orquestación de alto nivel y **Máquinas de Estado (MEF)**. El código es minimalista y semántico, delegando la complejidad técnica a los drivers de la Capa 2.
 
-### 🚀 ¿Qué logramos con este ajuste?
-
-* **Limpieza:** Justificamos por qué el `main.c` ahora es más corto y legible.
-* **Portabilidad:** Si en el futuro se desea migrar el código a otra plataforma (ej. STM32), solo se debe reescribir la Capa 1.
-* **Profesionalismo:** Aplicación de buenas prácticas de ingeniería mediante el desacoplamiento de código.
+### 🚀 ¿Qué logramos con este diseño?
+* **IntelliSense Robusto:** El uso de headers únicos (`0X`) evita colisiones de símbolos en VS Code.
+* **Portabilidad:** Para migrar a otra plataforma (ej. STM32), solo se reescribe la Capa 1 y los drivers base, manteniendo la Capa 3 intacta.
+* **Escalabilidad:** Permite sumar periféricos simplemente agregando elementos a los arrays de configuración.
 
 ---
 
 ## 🏗️ Roadmap de Aprendizaje (Estructura de Niveles)
 
 ### 🟢 Nivel 01: Fundamentos y Gestión de GPIO
-* **SCU & Digital I/O:** Configuración de la matriz de conmutación (System Control Unit), pull-ups/downs y modos de drenador abierto.
-* **Lógica de Control:** Implementación de Máquinas de Estado Finitas (**MEF**) y técnicas de **Debounce No Bloqueante**.
+* **SCU & Digital I/O:** Dominio de la matriz de conmutación, pull-ups/downs y modos de drenador abierto.
+* **Abstracción Inicial:** Transición de macros directas a drivers basados en estructuras de datos.
+* **Lógica No Bloqueante:** Implementación de **MEF** y técnicas de **Debounce** profesional sin uso de `delay()`.
 
 ### 🟡 Nivel 02: Periféricos de Precisión y Conectividad
-Este nivel se divide en cuatro fases críticas para el dominio del hardware asíncrono y la autonomía de los periféricos:
-
-#### **Fase 1: Timers Avanzados**
-* **Modos de Operación:** Implementación de **Match & Capture**, generación de **PWM** para control de potencia y el uso del **SCTimer/PWM** (State Configurable Timer) para tareas de temporización complejas.
-
-#### **Fase 2: Adquisición Analógica (ADC & DAC)**
-* **ADC Mastery:** Configuración en todos sus modos: **Burst Mode** (muestreo continuo), **Scan Mode** y sincronización por hardware mediante Timers.
-* **DAC:** Generación de señales analógicas y control de niveles de tensión para aplicaciones de audio o control.
-
-#### **Fase 3: Conectividad y Protocolos Serie**
-* **UART/USART:** Implementación con **Ring Buffers** e interrupciones para telemetría robusta.
-* **I2C:** Comunicación con sensores externos (EEPROM, RTC) gestionando colisiones y estados del bus.
-* **SPI:** Transferencia de datos a alta velocidad para memorias o displays gráficos.
-* **CAN Bus:** Introducción a protocolos industriales, manejo de filtros y buzones de mensajes (Mailboxes).
+* **Fase 1: Timers & PWM:** Match & Capture, control de potencia y uso del **SCTimer/PWM**.
+* **Fase 2: Adquisición Analógica:** ADC en **Burst Mode** y **Scan Mode**, sincronización por hardware y DAC.
+* **Fase 3: Protocolos Serie:** UART con **Ring Buffers**, I2C (Sensores/RTC), SPI y CAN Bus industrial.
 
 ### 🔴 Nivel 03: Arquitectura de Alto Rendimiento
-* **DMA Mastery:** Transferencia masiva de datos (M2P, P2M, M2M) con **Zero CPU Load**.
-* **Dual-Core Orchestration:** Multiprocesamiento asimétrico utilizando el núcleo **Cortex-M0** para tareas de E/S mientras el **M4** procesa algoritmos.
-* **RTOS & DSP:** Gestión de tareas en tiempo real con **FreeRTOS** y procesamiento digital de señales.
+* **DMA Mastery:** Transferencia masiva de datos con **Zero CPU Load**.
+* **Dual-Core Orchestration:** Multiprocesamiento asimétrico (M4 + M0).
+* **RTOS & DSP:** Gestión de tareas en tiempo real con **FreeRTOS** y algoritmos de filtrado.
 
 ---
 
 ## 🏛️ Estándar de Documentación de Proyectos
-
-Cada laboratorio dentro de este directorio sigue una estructura estricta para garantizar la claridad técnica:
-
-1.  **Título y Objetivos:** Periférico atacado y meta de aprendizaje.
-2.  **Teoría de Operación:** Detalle del bloque de hardware y sus modos específicos (ej. Modo Burst en ADC).
-3.  **Arquitectura del Software:** Desglose de las **3 Capas** y fragmentos de código clave.
-4.  **Detalles de Robustez:** Técnicas aplicadas (Histeresis, Timers Maestro/Esclavo, Bit-shifting).
-5.  **Mapeo de Hardware:** Tabla de pines y conexión física en la **EDU-CIAA**.
-6.  **Referencias:** Referencias recomendadas para comprender el funcionamiento y toma de decisiones del proyecto.
+Cada laboratorio sigue una estructura estricta para garantizar la claridad técnica:
+1. **Título y Objetivos.**
+2. **Teoría de Operación (Timers Maestro/Esclavo, SCU, etc.).**
+3. **Arquitectura del Software:** Diagrama Mermaid y desglose de las 3 Capas.
+4. **Detalles de Robustez:** Histéresis, Bit-shifting, protección de memoria.
+5. **Mapeo de Hardware:** Tabla de pines de la **EDU-CIAA**.
+6. **Conclusión y Referencias.**
 
 ---
 
-## 📋 Tabla de Laboratorios Planeados
+## 📋 Tabla de Laboratorios
 
-| Nivel | Proyecto | Periféricos / Modos Clave |
+| Nivel | Proyecto | Descripción / Periféricos Clave |
 | :--- | :--- | :--- |
-| **Básico** | [01_GPIO_SCU](./01_GPIO) | SCU, GPIO, MEF. |
+| **Básico** | [01_GPIO](./projects/01_GPIO) | Gestión de registros, SCU y Macros de acción. |
+| **Básico** | [02_GPIO_Abstraction](./projects/02_02_GPIO_Abstraction) | Arquitectura de 3 Capas, Drivers HAL y Estructuras. |
 
 ---
-💻 **Desarrollo de Sistemas Embebidos Profesionales | LPC4337 - NXP**
+💻 **Sistemas Embebidos | Aprendizaje Autodidacta | Carlos**
