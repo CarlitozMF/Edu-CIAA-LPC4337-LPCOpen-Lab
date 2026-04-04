@@ -21,7 +21,7 @@ A diferencia de microcontroladores más simples, el LPC4337 requiere configurar 
 
 ### 3. Registro de Dirección y Control (GPIO)
 Una vez que el pin físico está conectado eléctricamente al periférico GPIO, se utiliza `Chip_GPIO_SetPinDIROutput` para configurar el registro de dirección (**DIR**). 
-* **Atomicidad:** Las macros en `main.h` utilizan funciones de LPCOpen que acceden a los registros **SET**, **CLR** y **NOT** (Toggle). Esto permite manipular un bit específico sin afectar a los demás pines del mismo puerto (evitando la clásica secuencia read-modify-write y garantizando atomicidad en la operación).
+* **Atomicidad:** Las macros en `main_project_01.h` utilizan funciones de LPCOpen que acceden a los registros **SET**, **CLR** y **NOT** (Toggle). Esto permite manipular un bit específico sin afectar a los demás pines del mismo puerto (evitando la clásica secuencia read-modify-write y garantizando atomicidad en la operación).
 
 ---
 
@@ -35,11 +35,11 @@ graph TD
         A[Lógica de Usuario] -->|Llamada| B[LED1_TOGGLE]
     end
 
-    subgraph Capa_2 [Capa 2: Interfaz Semántica - main.h]
+    subgraph Capa_2 [Capa 2: Interfaz Semántica - main_project_01.h]
         B -->|Macro Expansion| C[Chip_GPIO_SetPinToggle]
     end
 
-    subgraph Capa_1 [Capa 1: Hardware Abstraction - hardware.c]
+    subgraph Capa_1 [Capa 1: Hardware Abstraction - hw_config_01.h]
         C -->|Acceso a Registros| D[LPC_GPIO_PORT / NOT]
         E[Init_Hardware] -->|Configura| F[SCU / PinMux]
         E -->|Define| G[GPIO / DIR]
@@ -57,7 +57,7 @@ graph TD
     style Silicio fill:#f5f5f5,stroke:#212121
 ```
 
-### 🔹 Capa 1: Hardware Mapping (`hardware.h`)
+### 🔹 Capa 1: Hardware Mapping (`hw_config_01.h`)
 En esta capa se define la "Soberanía Técnica" sobre el silicio. No contiene lógica ejecutable, sino el **mapeo físico** del LPC4337 basado en el manual **UM10503**.
 
 * **Mapeo de Pines:** Se asocian los puertos y pines físicos del SCU (ej. `P2_10`) con sus correspondientes puertos y pines del periférico GPIO (ej. `GPIO 0[14]`).
@@ -66,8 +66,8 @@ En esta capa se define la "Soberanía Técnica" sobre el silicio. No contiene l�
     * `LEDRGB_FUNC` (`SCU_MODE_FUNC4`) para los LEDs RGB.
 * **Beneficio:** Si se desea cambiar un pin, solo se modifica este archivo. El resto del firmware permanece intacto.
 
-### 🔹 Capa 2: Interfaz Semántica (`main.h`)
-Es el puente entre el hardware crudo y la aplicación. Aquí se crean las macros que utilizaremos en la lógica principal, consumiendo las definiciones de `hardware.h`:
+### 🔹 Capa 2: Interfaz Semántica (`main_project_01.h`)
+Es el puente entre el hardware crudo y la aplicación. Aquí se crean las macros que utilizaremos en la lógica principal, consumiendo las definiciones de `hw_config_01.h`:
 
 ```c
 // Ejemplo de abstracción para LED 1
@@ -82,7 +82,7 @@ En el `main.c` se realiza la orquestación final. Es el punto de encuentro donde
 1. **Configuración Inicial (`Board_Init`):** Se ejecutan las funciones críticas de **LPCOpen** para inicializar el silicio. En esta etapa se consumen directamente las etiquetas de `hardware.h`:
     * **`Chip_SCU_PinMuxSet`**: Establece la función del pin y el modo (usando el `OR` con `SCU_MODE_INACT` para control total del driver).
     * **`Chip_GPIO_SetPinDIROutput`**: Configura el sentido del flujo de datos.
-2. **Lógica de Usuario:** Se implementa el bucle principal (`while(1)`) utilizando exclusivamente las macros definidas en `main.h`. Esto garantiza que la lógica de la aplicación sea legible, minimalista y fácil de auditar, ocultando la complejidad de los registros detrás de nombres semánticos.
+2. **Lógica de Usuario:** Se implementa el bucle principal (`while(1)`) utilizando exclusivamente las macros definidas en `main_project_01.h`. Esto garantiza que la lógica de la aplicación sea legible, minimalista y fácil de auditar, ocultando la complejidad de los registros detrás de nombres semánticos.
 
 ```c
 int main(void) {
@@ -105,7 +105,7 @@ La robustez de este laboratorio no reside solo en su funcionalidad, sino en las 
 
 ### 1. Aislamiento de Silicio (Hardware Encapsulation)
 Se ha erradicado por completo el uso de "números mágicos" y llamadas directas a registros de memoria en las capas superiores.
-* **Beneficio:** Al centralizar el acceso al hardware exclusivamente en `hardware.c`, se reduce el riesgo de errores de configuración duplicada. 
+* **Beneficio:** Al centralizar el acceso al hardware exclusivamente en `hw_config_01.c`, se reduce el riesgo de errores de configuración duplicada. 
 * **Portabilidad:** Este aislamiento permite que el 90% del código sea agnóstico al microcontrolador. Si el proyecto migrara a otra familia (ej. de LPC4337 a un STM32), la lógica de la aplicación en `main.c` permanecería inalterada; solo se requeriría adaptar la implementación interna de la Capa 1.
 
 ### 2. Configuración Determinista mediante Sincronización de Reloj
