@@ -84,11 +84,11 @@ graph TD
 
 | Módulo | Capa | Responsabilidad Técnica | Documentación |
 | :--- | :---: | :--- | :--- |
-| **SYS_CORE** | 2 | Sincronización de `SystemCoreClock` (204MHz) e inicialización atómica de periféricos críticos. | [Ver Doc](./doc/01-sys_core) |
-| **SYSTICK** | 2 | Gestión de la excepción de sistema (Exc. 15) del Cortex-M4 para establecer la base de tiempo de 1ms. | [Ver Doc](./doc/02-systick) |
-| **GPIO** | 1 | Interfaz de bajo nivel para acceso directo a registros `LPC_GPIO_PORT` (SET, CLR y DIR). | [Ver Doc](./doc/03-gpio) |
-| **CIAA_BOARD** | 1 | Configuración del multiplexado de pines (**SCU**) y activación de resistencias de Pull-up/Pull-down nativas. | [Ver Doc](./doc/04-ciaa_board) |
-| **LED** | 2 | Abstracción de señales visuales mediante funciones lógicas de estado (**Set** y **Toggle**). | [Ver Doc](./doc/05-led) |
+| **SYS_CORE** | 2 | Sincronización de `SystemCoreClock` (204MHz) e inicialización atómica de periféricos críticos. | [SYS_CORE](../../docs/05-sys_core/) |
+| **SYSTICK** | 2 | Gestión de la excepción de sistema (Exc. 15) del Cortex-M4 para establecer la base de tiempo de 1ms. | [SYSTICK](../../docs/04-systick/) |
+| **GPIO** | 1 | Interfaz de bajo nivel para acceso directo a registros `LPC_GPIO_PORT` (SET, CLR y DIR). | [GPIO](../../docs/01-gpio/) |
+| **CIAA_BOARD** | 1 | Configuración del multiplexado de pines (**SCU**) y activación de resistencias de Pull-up/Pull-down nativas. | [CIAA_BOARD](../../docs/03-ciia_board/) |
+| **LED** | 2 | Abstracción de señales visuales mediante funciones lógicas de estado (**Set** y **Toggle**). | [LED](../../docs/02-led/) |
 
 ### **3.3. Ejemplo de Implementación: Capa 3 (Application)**
 

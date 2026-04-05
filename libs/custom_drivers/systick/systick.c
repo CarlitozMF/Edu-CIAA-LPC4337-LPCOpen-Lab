@@ -1,6 +1,6 @@
 /**
  * @file systick.c
- * @author Carlos Mamani Flores (UTN-FRT) & Gemini
+ * @author Carlos Mamani Flores (UTN-FRT)
  * @brief Implementación robusta del SysTick para LPC4337 (Cortex-M4).
  * Proporciona base de tiempo de 1ms con protección contra optimización.
  */

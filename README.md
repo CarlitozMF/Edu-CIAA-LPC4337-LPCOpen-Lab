@@ -74,15 +74,18 @@ graph TD
 
 ---
 
-## 📁 Estructura del Repositorio (Actualizada)
+## 📁 Estructura del Repositorio (Soberanía Técnica)
+
+La organización del proyecto sigue una jerarquía de capas diseñada para garantizar la portabilidad y el desacoplamiento entre el silicio (LPC4337) y la aplicación final.
 
 * **[`/projects`](./projects):** Directorio de laboratorios prácticos. Cada uno cuenta con su par de archivos de configuración exclusivos para asegurar la independencia técnica:
     * `main_project_0X.h`: Interfaz semántica y prototipos de la aplicación.
     * `hw_config_0X.h`: Mapeo físico y descriptores de hardware específicos del laboratorio.
 * **[`/libs`](./libs):** El núcleo del sistema y recursos compartidos.
-    * `lpc_open / cmsis`: Framework base de NXP y definiciones de registros.
-    * `custom_drivers`: **Drivers de autoría propia** (GPIO, LED, etc.) que implementan la abstracción de la Capa 2.
-* **[`/tools`](./tools):** Scripts, configuraciones de OpenOCD y utilidades del toolchain local.
+    * `lpc_open` / `cmsis`: Framework base de NXP y definiciones de registros del núcleo ARM.
+    * **[`custom_drivers`](./libs/custom_drivers):** Drivers de autoría propia (GPIO, LED, SysTick) que implementan la **Arquitectura de 3 Capas**.
+* **[`/docs`](./docs):** **Documentación Técnica Detallada.** Análisis de registros, diagramas de flujo y robustez de cada módulo:
+* **[`/tools`](./tools):** Scripts de automatización, configuraciones de OpenOCD y utilidades del toolchain local (**GCC + GDB**).
 
 ---
 ## 📋 Plan de Carrera: Hoja de Ruta Tecnológica
