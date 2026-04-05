@@ -1,8 +1,5 @@
-# Proyecto 02: Ecosistema de Drivers y Planificación de Tareas sobre LPC4337
+# 🚀 1. Laboratorio 02: Ecosistema de Drivers y Planificación de Tareas sobre LPC4337
 
-## 1. Título y Objetivos
-
-### **Título Técnico**
 **Desarrollo de un Ecosistema de Drivers (API) de 3 Capas sobre LPCOpen para el Control Determinístico y Planificación de Tareas en el Microcontrolador ARM Cortex-M4F.**
 
 ### **Objetivos Técnicos del Proyecto**
@@ -23,7 +20,7 @@ Como ejemplo de aplicación práctica de estos drivers, el proyecto implementa u
 
 ---
 
-## 2. Teoría de Operación y Fundamentos de Bajo Nivel
+## 🛠️ 2. Teoría de Operación y Fundamentos de Bajo Nivel
 
 La arquitectura del firmware se fundamenta en la transición de estados del procesador ARM Cortex-M4F, desde la extracción del *Stack Pointer* hasta la ejecución del *Thread Mode* en el `main`.
 
@@ -53,7 +50,7 @@ El driver `ciaa_board` junto con la lógica de aplicación implementa un filtrad
 
 ---
 
-## 3. Arquitectura del Software (Layered Architecture)
+## 🏗️ 3. Arquitectura del Software (Modelo de 3 Capas)
 
 El firmware se ha diseñado bajo un modelo de capas para garantizar el desacoplamiento entre la lógica de aplicación y los registros del procesador. Cada módulo posee su propia documentación técnica detallada en el directorio `/doc`.
 
@@ -134,7 +131,7 @@ btn_prev_state = btn_now; // Actualización del estado previo
 
 ---
 
-## 4. Detalles de Robustez
+## 🛡️ 4. Detalles de Robustez y Calidad de Firmware
 
 La fiabilidad del sistema no depende solo de la lógica algorítmica, sino de la previsión de fallos de hardware y desbordamientos de memoria. Se han implementado los siguientes mecanismos de seguridad:
 
@@ -159,7 +156,7 @@ En el driver `sys_core`, se utilizan instrucciones intrínsecas del ARM Cortex-M
 
 ---
 
-## 5. Mapeo de Hardware
+## 📋 5. Mapeo de Hardware (EDU-CIAA)
 
 El diseño de los drivers `ciaa_board` y `hw_config` se basa en la correspondencia física entre los pines del microcontrolador NXP LPC4337 y la serigrafía de la placa EDU-CIAA. A continuación, se detallan los recursos utilizados en este proyecto:
 
@@ -181,7 +178,7 @@ El diseño de los drivers `ciaa_board` y `hw_config` se basa en la correspondenc
 
 ---
 
-## 6. Conclusión y Referencias
+## 📚 6. Conclusión y Referencias
 
 ### **6.1. Conclusión Técnica**
 La implementación de este ecosistema de drivers sobre el **LPC4337** demuestra que la eficiencia en sistemas embebidos no reside únicamente en el uso de librerías de fabricante, sino en la capacidad de abstraer el hardware mediante una **arquitectura de software soberana**. 
