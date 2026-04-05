@@ -22,7 +22,7 @@ WEAK void UsageFault_Handler(void);
 WEAK void SVC_Handler(void);
 WEAK void DebugMon_Handler(void);
 WEAK void PendSV_Handler(void);
-WEAK void SysTick_Handler(void);
+//WEAK void SysTick_Handler(void);
 
 WEAK void initialise_monitor_handles(void);
 
@@ -176,8 +176,9 @@ void PendSV_Handler(void) {
     while (1) {
     }
 }
+/*
 __attribute__ ((section(".after_vectors")))
-void SysTick_Handler(void) {
+WEAK void SysTick_Handler(void) {
     while (1) {
     }
-}
+}*/

@@ -1,6 +1,11 @@
 /**
  * @file led.h
- * @brief API de abstracción para el manejo de LEDs.
+ * @author Carlos Mamani Flores (UTN-FRT)
+ * @brief API de Abstracción de Alto Nivel para la gestión de arreglos de LEDs.
+ * Proporciona una interfaz semántica para controlar múltiples LEDs mediante índices,
+ * abstrayendo la configuración física de los pines GPIO.
+ * @version 1.0
+ * @date 2026-04-04
  */
 
 #ifndef LED_H
@@ -8,26 +13,29 @@
 
 #include "gpio.h"
 
+/* --- API de Gestión de LEDs --- */
+
 /**
- * @brief Inicializa un array de LEDs como salidas.
- * @param table Puntero al array de configuraciones GPIO.
- * @param count Cantidad de LEDs en el array.
+ * @brief Inicializa un conjunto de LEDs configurándolos como salidas digitales.
+ * @note Establece un estado inicial seguro (GPIO_LOW) para todos los elementos.
+ * @param table Puntero al array de estructuras gpio_config_t que definen los pines.
+ * @param count Cantidad total de LEDs presentes en el arreglo.
  */
 void LED_Init_Array(const gpio_config_t *table, uint8_t count);
 
 /**
- * @brief Cambia el estado de un LED específico por su índice.
- * @param table Puntero al array de configuraciones.
- * @param index Índice del LED en el array.
- * @param state Estado (GPIO_HIGH / GPIO_LOW).
+ * @brief Establece el estado lógico de un LED específico dentro del arreglo.
+ * @param table Puntero al array de configuraciones GPIO.
+ * @param index Índice del LED deseado (empezando en 0).
+ * @param state Estado a escribir (GPIO_HIGH para encender, GPIO_LOW para apagar).
  */
 void LED_Set(const gpio_config_t *table, uint8_t index, gpio_state_t state);
 
 /**
- * @brief Alterna el estado de un LED específico.
- * @param table Puntero al array de configuraciones.
- * @param index Índice del LED en el array.
+ * @brief Invierte el estado actual (Toggle) de un LED específico por su índice.
+ * @param table Puntero al array de configuraciones GPIO.
+ * @param index Índice del LED en el arreglo.
  */
 void LED_Toggle(const gpio_config_t *table, uint8_t index);
 
-#endif
+#endif /* LED_H */

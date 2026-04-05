@@ -4,7 +4,7 @@
 #include "chip.h"
 
 /* =============================================================================
- * 📍 MAPEAMIENTO FÍSICO (Basado en el User Manual UM10503)
+ * 📍 MAPEO FÍSICO (Basado en el User Manual UM10503)
  * ============================================================================= */
 
 /* --- LEDs Externos --- */

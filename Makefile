@@ -50,6 +50,9 @@ ARCH_FLAGS := -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
 DEFINES    := -DCORE_M4 -DBOARD=edu_ciaa_nxp -D__USE_LPCOPEN -DCHIP_LPC43XX
 
 INCLUDES   := -I$(PROJ_DIR)/Core/Inc \
+			  -I$(LIBS_DIR)/custom_drivers/sys_core \
+			  -I$(LIBS_DIR)/custom_drivers/systick \
+			  -I$(LIBS_DIR)/custom_drivers/ciaa_board \
 			  -I$(LIBS_DIR)/custom_drivers/gpio	\
               -I$(LIBS_DIR)/custom_drivers/led	\
               -I$(LIBS_DIR)/lpc_open/lpc_chip_43xx/inc \
@@ -70,15 +73,27 @@ LDFLAGS    := $(ARCH_FLAGS) -nostartfiles -T"$(MISC_DIR)/link.ld" \
 # =============================================================================
 
 # Comando: make (Compila todo)
+# Convertimos la lista de .c en .o dentro de la carpeta out, manteniendo estructura
+OBJS := $(SRC:%.c=$(OUT)/%.o)
+
+# Comando: make (Compila todo)
 make: $(OUT)/$(PROJECT).bin
 
-$(OUT)/$(PROJECT).elf: $(SRC)
-	@mkdir -p $(OUT)
-	@echo "🛠️  Compilando Proyecto Soberano: $(PROJECT)..."
-	@echo "   (Fuentes: $(words $(SRC)) archivos detectados)"
-	@"$(CC)" $(CFLAGS) $^ $(LDFLAGS) -o $@
+# 🔗 REGLA DE ENLACE (LINKING)
+# Aquí unimos todos los .o individuales. Si hay funciones duplicadas, el Linker saltará.
+$(OUT)/$(PROJECT).elf: $(OBJS)
+	@echo "🔗 Enlazando Objetos Soberanos: $(PROJECT)..."
+	@"$(CC)" $(LDFLAGS) $^ -o $@
 	@echo "📊 Reporte de Memoria:"
 	@"$(SIZE)" $@
+
+# 🔨 REGLA DE COMPILACIÓN (COMPILING)
+# Esta regla compila cada archivo .c por separado. 
+# El flag -c es fundamental: "compilar pero no enlazar".
+$(OUT)/%.o: %.c
+	@mkdir -p $(dir $@)
+	@echo "🔨 Compilando: $<"
+	@"$(CC)" $(CFLAGS) -c $< -o $@
 
 $(OUT)/$(PROJECT).bin: $(OUT)/$(PROJECT).elf
 	@echo "📦 Empaquetando binario final..."

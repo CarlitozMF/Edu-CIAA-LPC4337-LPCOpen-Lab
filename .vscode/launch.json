@@ -12,7 +12,7 @@
             "cwd": "${workspaceFolder}",
             "svdFile": "${workspaceFolder}/misc/LPC43xx_43Sxx.svd",
             "runToEntryPoint": "main",
-            "preLaunchTask": "🛠️ MAKE ALL", // <--- Sigue compilando antes de entrar
+            "preLaunchTask": "🛠️ MAKE BUILD", // <--- Sigue compilando antes de entrar
             "overrideLaunchCommands": [
                 "monitor halt",
                 "monitor targets lpc4337.m4",

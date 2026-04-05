@@ -57,7 +57,8 @@ Cada laboratorio sigue una estructura estricta para garantizar la claridad técn
 | Nivel | Proyecto | Descripción / Periféricos Clave |
 | :--- | :--- | :--- |
 | **Básico** | [01_GPIO](./projects/01_GPIO) | Gestión de registros, SCU y Macros de acción. |
-| **Básico** | [02_GPIO_Abstraction](./projects/02_02_GPIO_Abstraction) | Arquitectura de 3 Capas, Drivers HAL y Estructuras. |
+| **Básico** | [02_GPIO_Abstraction](./projects/02_GPIO_Abstraction) | Arquitectura de 3 Capas, Drivers HAL y Estructuras. |
 
 ---
+
 💻 **Sistemas Embebidos | Aprendizaje Autodidacta | Carlos**

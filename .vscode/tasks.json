@@ -6,8 +6,7 @@
             "type": "shell",
             "command": "make",
             "args": [
-                "PROJECT=${input:projectName}",
-                "make"
+                "PROJECT=${input:projectName}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
