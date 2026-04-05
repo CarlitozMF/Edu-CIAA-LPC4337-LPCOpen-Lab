@@ -5,7 +5,7 @@ Este directorio centraliza el conocimiento técnico, los diagramas de flujo y la
 ## 🛠️ Referencia de Hardware y Metodología
 Antes de profundizar en los drivers, es fundamental entender cómo se mapea la **EDU-CIAA**. El siguiente manual es la base para cualquier configuración de pines:
 
-* **[📘 Manual de Metodología de Mapeo](./00_hardware_reference/README.md):** Guía paso a paso para transformar etiquetas físicas en código funcional (SCU vs GPIO). Incluye Pinout oficial y Layout de componentes.
+* **[📘 Manual de Metodología de Mapeo](./00-hardware_reference/README.md):** Guía paso a paso para transformar etiquetas físicas en código funcional (SCU vs GPIO). Incluye Pinout oficial y Layout de componentes.
 
 ---
 
@@ -16,15 +16,15 @@ A continuación, se detallan los manuales técnicos de cada módulo desarrollado
 ### **Nivel 0 y 1: Infraestructura y Hardware**
 | Módulo | Descripción Técnica | Documentación |
 | :--- | :--- | :---: |
-| **SYS_CORE** | Inicialización soberana, PLL a 204MHz y barreras `ISB`. | [Link](./01-sys_core) |
-| **GPIO HAL** | Gestión atómica de la SCU y registros de bits. | [Link](./03-gpio) |
+| **SYS_CORE** | Inicialización soberana, PLL a 204MHz y barreras `ISB`. | [Link](./05-sys_core/) |
+| **GPIO HAL** | Gestión atómica de la SCU y registros de bits. | [Link](./01-gpio/) |
 
 ### **Nivel 2: Abstracción de Periféricos y Placa**
 | Módulo | Descripción Técnica | Documentación |
 | :--- | :--- | :---: |
-| **SysTick** | Base de tiempo de 1ms y aritmética anti-rollover. | [Link](./02-systick) |
-| **CIAA_BOARD** | BSP (Board Support Package) con mapeo estático de la placa. | [Link](./04-ciaa_board) |
-| **LED API** | Interfaz semántica para gestión de indicadores. | [Link](./05-led) |
+| **SysTick** | Base de tiempo de 1ms y aritmética anti-rollover. | [Link](./04-systick/) |
+| **CIAA_BOARD** | BSP (Board Support Package) con mapeo estático de la placa. | [Link](./03-ciia_board/) |
+| **LED API** | Interfaz semántica para gestión de indicadores. | [Link](./02-led/) |
 
 ---
 
