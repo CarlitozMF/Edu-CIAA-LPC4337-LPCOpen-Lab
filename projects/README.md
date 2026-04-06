@@ -58,6 +58,7 @@ Cada laboratorio sigue una estructura estricta para garantizar la claridad técn
 | :--- | :--- | :--- |
 | **Básico** | [01_GPIO](./01_GPIO) | Gestión de registros, SCU y Macros de acción. |
 | **Básico** | [02_GPIO_Abstraction](./02_GPIO_Abstraction) | Arquitectura de 3 Capas, Drivers HAL y Estructuras. |
+| **Básico** | [03_External_Counter_MEF](./03_External_Counter_MEF/) | Arquitectura de 3 Capas, MEF No Bloqueante, Antirrebote y Display 7 Seg. |
 
 ---
 
