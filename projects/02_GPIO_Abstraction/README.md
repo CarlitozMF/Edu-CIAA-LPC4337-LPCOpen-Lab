@@ -201,4 +201,5 @@ Este proyecto representa el cimiento fundamental para desarrollos de mayor compl
 
 💻 **"La verdadera ingeniería no reside en la velocidad del reloj, sino en la jerarquía del diseño. Con una arquitectura de 3 capas y una base de tiempo determinística, hemos transformado el silicio en un sistema inteligente; en la EDU-CIAA, la robustez del firmware es el reflejo de nuestra soberanía técnica."**
 
-> 🛠️ Estudiante de Ing. Electrónica @UTN_FRT | Apasionado por los Sistemas Embebidos y el Low-level (ASM/C).
+> 🛠️ **Carlos** | Estudiante de 4° año de Ing. Electrónica @UTN_FRT  
+> 🚀 Apasionado por los Sistemas Embebidos, Firmware Engineering y el Low-level (ASM/C).

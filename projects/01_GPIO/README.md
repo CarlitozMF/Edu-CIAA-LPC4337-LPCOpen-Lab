@@ -165,4 +165,5 @@ La ejecución de este laboratorio y el desarrollo del ecosistema se apoyan en la
 
 💻 *"La autonomía en el aprendizaje permite transformar un pedazo de silicio en una solución de ingeniería; con 204MHz y una arquitectura robusta, el límite de la EDU-CIAA lo pone nuestra curiosidad."*
 
-> 🛠️ Estudiante de Ing. Electrónica @UTN_FRT | Apasionado por los Sistemas Embebidos y el Low-level (ASM/C).
+> 🛠️ **Carlos** | Estudiante de 4° año de Ing. Electrónica @UTN_FRT  
+> 🚀 Apasionado por los Sistemas Embebidos, Firmware Engineering y el Low-level (ASM/C).

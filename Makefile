@@ -1,7 +1,7 @@
 # =============================================================================
 # 🏗️  MAKEFILE MAESTRO - ECOSISTEMA SOBERANO EDU-CIAA (LPC4337)
 # =============================================================================
-# Autor: Carlitoz MF & Gemini
+# Autor: Carlitoz MF
 # Descripción: Orquestador multianidado para compilación Bare Metal ARM.
 # =============================================================================
 

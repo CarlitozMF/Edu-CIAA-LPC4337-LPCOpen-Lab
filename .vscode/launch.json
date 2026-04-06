@@ -5,7 +5,7 @@
 "name": "🐞 DEBUG SOBERANO (VIA F6)",
             "type": "cortex-debug",
             "request": "launch",
-            "servertype": "external", // <--- CAMBIO CLAVE: VS Code ya no lanza OpenOCD
+            "servertype": "external", 
             "gdbTarget": "localhost:3333", // <--- Se conecta al puente que abriste con F6
             "executable": "${workspaceFolder}/out/${input:projectName}/${input:projectName}.elf",
             "armToolchainPath": "${workspaceFolder}/tools/gcc-arm/bin",
@@ -29,7 +29,8 @@
             "description": "Selecciona el proyecto para el laboratorio:",
             "options": [
                 "01_GPIO",
-                "02_GPIO_Abstraction"
+                "02_GPIO_Abstraction",
+                "03_External_Counter_MEF"
             ]
         }
     ]

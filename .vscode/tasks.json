@@ -70,7 +70,8 @@
             "description": "Selecciona el laboratorio a procesar:",
             "options": [
                 "01_GPIO",
-                "02_GPIO_Abstraction"
+                "02_GPIO_Abstraction",
+                "03_External_Counter_MEF"
             ],
             "default": "01_GPIO"
         }
