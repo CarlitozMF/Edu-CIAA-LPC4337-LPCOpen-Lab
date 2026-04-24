@@ -10,6 +10,10 @@
 
 #include "sys_core.h"
 
+/* Definición real de las frecuencias para LPCOpen */
+const uint32_t OscRateIn = 12000000; 
+const uint32_t ExtRateIn = 0;
+
 /**
  * @brief Inicializa el tridente crítico del sistema (Reloj, Placa y Tiempo).
  * * La secuencia de inicialización es estrictamente jerárquica:

@@ -5,7 +5,6 @@
             "includePath": [
                 "${workspaceFolder}/libs/**",
                 "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc",
-                "${workspaceFolder}/libs/lpc_open/boards/edu_ciaa_nxp/inc",
                 "${workspaceFolder}/libs/cmsis_core/inc",
                 "${workspaceFolder}/projects/**" 
             ],

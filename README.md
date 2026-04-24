@@ -74,7 +74,7 @@ graph TD
 
 ---
 
-## 📁 Estructura del Repositorio (Soberanía Técnica)
+## 📁 Estructura del Repositorio
 
 La organización del proyecto sigue una jerarquía de capas diseñada para garantizar la portabilidad y el desacoplamiento entre el silicio (LPC4337) y la aplicación final.
 
@@ -108,10 +108,15 @@ El dominio del **LPC4337** se estructura en tres niveles evolutivos, diseñados 
 
 ## 🚀 Guía Rápida de Inicio
 
+Para operar el laboratorio, utiliza los **botones de acceso rápido** ubicados en la **Barra de Estado** (parte inferior de VS Code). También puedes usar los atajos de teclado vinculados.
+
 1.  **Configurar Entorno:** Consulta la [Guía del Toolchain Local](./tools/README.md) para preparar drivers (**Zadig**) y binarios.
-2.  **Limpiar y Compilar:** Presiona `F3` (Ejecuta `MAKE CLEAN`) y luego `F4` (Ejecuta `MAKE`).
-3.  **Flashear:** Presiona `F5` (Ejecuta `MAKE FLASH`) para grabar el binario directamente en la memoria Flash.
-4.  **Depurar:** Presiona `F6` (Ejecuta `MAKE DEBUG`) para iniciar el servidor de debug (**OpenOCD**) y utiliza el panel de VS Code para conectar la sesión con visualización de registros activa.
+2.  **Limpiar Laboratorio:** Haz clic en el botón **`🧹 CLEAN`** (o presiona `F3`). Esto elimina archivos de objetos previos y asegura una compilación limpia.
+3.  **Compilar Proyecto:** Haz clic en **`🛠️ BUILD`** (o presiona `F4`). El sistema te pedirá seleccionar el laboratorio (ej. `01_GPIO`). El binario se generará en la carpeta `out/`.
+4.  **Grabar (Flash):** Haz clic en **`🚀 FLASH`** (o presiona `F5`). Se compilará el código automáticamente y se grabará en la Flash Bank A de la EDU-CIAA.
+5.  **Depurar (Debug):** Haz clic en el icono del **Bicho Rojo** en la barra lateral o presiona `F6`. Esto lanza **OpenOCD** y habilita la vista de registros (**XPeripherals**) para inspeccionar el hardware en tiempo real.
+
+> **Nota:** Al presionar cualquier botón de acción, VS Code desplegará un menú superior para que elijas sobre qué proyecto (01, 02, 03, etc.) deseas trabajar. Esto permite mantener un solo espacio de trabajo para todos los laboratorios de la cursada.
 
 ---
 
@@ -143,4 +148,7 @@ Para el desarrollo de este ecosistema se ha consultado la documentación oficial
 Este proyecto está bajo la Licencia **MIT**. Eres libre de usar, copiar, modificar y distribuir el código, siempre que se mantenga la nota de copyright y el aviso de permiso en todas las copias. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
 
 ---
-💻 *Sistemas Embebidos | Aprendizaje Autodidacta y Soberanía Técnica | Carlos*
+
+
+🛠️ **Carlos** | Estudiante de Ing. Electrónica @UTN_FRT.
+🚀 Apasionado Autodidacta por los Sistemas Embebidos.

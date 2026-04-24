@@ -16,6 +16,12 @@
 #include "systick.h"
 #include "ciaa_board.h"
 
+/* Definición de frecuencias de reloj externas para la EDU-CIAA */
+/* Estos valores los requiere LPCOpen (chip_43xx) para calcular los PLLs */
+
+extern const uint32_t OscRateIn;  /* Cristal principal de 12MHz */
+extern const uint32_t ExtRateIn;         /* No usamos entrada de reloj externa (ENET) */
+
 /* --- Macros de Control de Núcleo (Intrínsecas) --- */
 
 /**

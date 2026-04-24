@@ -2,36 +2,52 @@
     "version": "0.2.0",
     "configurations": [
         {
-"name": "🐞 DEBUG SOBERANO (VIA F6)",
+            "name": "🐞 DEBUG (EDU-CIAA)",
             "type": "cortex-debug",
             "request": "launch",
-            "servertype": "external", 
-            "gdbTarget": "localhost:3333", // <--- Se conecta al puente que abriste con F6
+            "servertype": "openocd",
             "executable": "${workspaceFolder}/out/${input:projectName}/${input:projectName}.elf",
             "armToolchainPath": "${workspaceFolder}/tools/gcc-arm/bin",
+            "gdbPath": "${workspaceFolder}/tools/gcc-arm/bin/arm-none-eabi-gdb.exe",
             "cwd": "${workspaceFolder}",
             "svdFile": "${workspaceFolder}/misc/LPC43xx_43Sxx.svd",
+            "device": "LPC4337", 
             "runToEntryPoint": "main",
-            "preLaunchTask": "🛠️ MAKE BUILD", // <--- Sigue compilando antes de entrar
+            "preLaunchTask": "🛠️ MAKE BUILD", 
+            "configFiles": [
+                "${workspaceFolder}/misc/lpc4337.cfg"
+            ],
+            "serverpath": "${workspaceFolder}/tools/openocd/bin/openocd.exe", 
+            "serverArgs": [
+                "-s", "${workspaceFolder}/tools/openocd/scripts"
+            ],
             "overrideLaunchCommands": [
-                "monitor halt",
-                "monitor targets lpc4337.m4",
+                "monitor reset halt",
                 "load",
                 "tbreak main"
             ],
-            "showDevDebugOutput": "none"
+            "postLaunchCommands": [
+                "monitor reset init",
+                "monitor halt"
+            ],
+            // Esto ayuda a que las vistas de registros se activen correctamente
+            "numberOfProcessors": 1,
+            "targetAttributes": {
+                "core": "Cortex-M4"
+            }
         }
     ],
     "inputs": [
         {
             "id": "projectName",
             "type": "pickString",
-            "description": "Selecciona el proyecto para el laboratorio:",
+            "description": "Seleccioná el proyecto para depurar:",
             "options": [
                 "01_GPIO",
                 "02_GPIO_Abstraction",
                 "03_External_Counter_MEF"
-            ]
+            ],
+            "default": "01_GPIO"
         }
     ]
 }

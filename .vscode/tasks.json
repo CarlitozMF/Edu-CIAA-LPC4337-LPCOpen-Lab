@@ -6,13 +6,36 @@
             "type": "shell",
             "command": "make",
             "args": [
-                "PROJECT=${input:projectName}"
+                "PROJECT=${input:projectName}",
+                "-j4"
             ],
-            "options": {
-                "cwd": "${workspaceFolder}"
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": ["-c"]
+                    }
+                }
             },
-            "group": "build",
-            "problemMatcher": "$gcc"
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "clear": true,
+                "showReuseMessage": false
+            }
         },
         {
             "label": "🚀 MAKE FLASH",
@@ -22,10 +45,74 @@
                 "PROJECT=${input:projectName}",
                 "flash"
             ],
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": ["-c"]
+                    }
+                }
+            },
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
+                }
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": "$gcc"
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "label": "🧹 MAKE CLEAN",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "PROJECT=${input:projectName}",
+                "clean"
+            ],
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": ["-c"]
+                    }
+                }
+            },
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
+                }
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "clear": true,
+                "showReuseMessage": false
+            }
         },
         {
             "label": "🐞 MAKE DEBUG (Server)",
@@ -35,6 +122,22 @@
                 "PROJECT=${input:projectName}",
                 "debug"
             ],
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": ["-c"]
+                    }
+                }
+            },
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
+                }
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -49,25 +152,13 @@
                     "endsPattern": "Esperando conexión"
                 }
             }
-        },
-        {
-            "label": "🧹 MAKE CLEAN",
-            "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "clean"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            }
         }
     ],
     "inputs": [
         {
             "id": "projectName",
             "type": "pickString",
-            "description": "Selecciona el laboratorio a procesar:",
+            "description": "Seleccioná el laboratorio a procesar:",
             "options": [
                 "01_GPIO",
                 "02_GPIO_Abstraction",

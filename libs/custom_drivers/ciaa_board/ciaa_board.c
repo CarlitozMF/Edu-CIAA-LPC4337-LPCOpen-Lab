@@ -1,6 +1,6 @@
 /**
  * @file ciaa_board.c
- * @author Carlos Mamani Flores (UTN-FRT) & Gemini
+ * @author Carlos Mamani Flores (UTN-FRT)
  * @brief Implementación del Board Support Package (BSP) para la EDU-CIAA LPC4337.
  * * Este módulo actúa como una capa de enlace entre el hardware físico de la placa
  * y el driver HAL de GPIO. Centraliza el mapeo de registros SCU y GPIO 

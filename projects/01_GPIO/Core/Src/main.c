@@ -4,7 +4,14 @@
  * @brief Laboratorio 01: Gestión de SCU y GPIO en arquitectura Dual-Core LPC4337.
  */
 
+#include "chip.h"
 #include "main_project_01.h"
+
+/* Definición de frecuencias de reloj externas para la EDU-CIAA */
+/* Estos valores los requiere LPCOpen (chip_43xx) para calcular los PLLs */
+
+const uint32_t OscRateIn = 12000000;  /* Cristal principal de 12MHz */
+const uint32_t ExtRateIn = 0;         /* No usamos entrada de reloj externa (ENET) */
 
 /**
  * @brief Configuración inicial del hardware.
@@ -55,12 +62,20 @@ int main(void) {
 
     while(1) {
         // Ejemplo de parpadeo usando las macros de main.h
-        LEDG_ON();
+        LEDB_ON();
         delay(1000000); 
         
-        LEDG_OFF();
+        LEDB_OFF();
         delay(1000000);
     }
 
     return 0;
+}
+
+/**
+ * @brief Handler de la interrupción del SysTick.
+ * Se deja vacío para el Proyecto 01 ya que no utilizamos base de tiempo por interrupción.
+ */
+void SysTick_Handler(void) {
+    // No hace nada, solo satisface al Linker.
 }

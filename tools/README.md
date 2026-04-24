@@ -1,13 +1,13 @@
-# 🛠️ Infraestructura del Toolchain y Orquestación
+# 🛠️ Infraestructura del Toolchain
 
 Este documento detalla la arquitectura técnica y el ecosistema de herramientas que sostienen el desarrollo sobre la **EDU-CIAA (NXP LPC4337)**. Se enfoca en la implementación de una **Capa 1 (Hardware & Tools)** y una **Capa 2 (Automatización)** robustas, preparadas para un entorno de producción.
 
-## 🎯 1. Filosofía: Soberanía Técnica y Portabilidad
-El diseño de este Toolchain se fundamenta en la **Soberanía Técnica**: la capacidad del desarrollador de poseer y controlar cada etapa del ciclo de vida del software, sin depender de la opacidad de los IDEs propietarios ("Black Boxes").
+## 🎯 1. Filosofía: Portabilidad
+El diseño de este Toolchain se fundamenta en la **Portabilidad Técnica**: la capacidad del desarrollador de poseer y controlar cada etapa del ciclo de vida del software, sin depender de la opacidad de los IDEs propietarios.
 
-* **Independencia Total**: El entorno es 100% autónomo. No requiere instalaciones globales ni configuraciones previas en el sistema operativo.
-* **Portabilidad "Copy-Paste"**: Al utilizar binarios locales dentro del repositorio, el proyecto es agnóstico a la máquina. Basta con clonar el repositorio para que el ciclo de *Build & Debug* funcione de forma inmediata, eliminando el clásico problema de "en mi máquina funciona".
-* **Control de Silicio**: Se prioriza la transparencia sobre los registros y la memoria, utilizando herramientas de introspección directa para validar la configuración del hardware.
+* **Independencia Total**: El entorno es 100% autónomo. No requiere instalaciones globales ni configuraciones previas en el sistema operativo -Usuarios Windows-.
+* **Portabilidad "Copy-Paste"**: Al utilizar binarios locales dentro del repositorio, el proyecto es agnóstico a la máquina. Basta con clonar el repositorio para que el ciclo de *Clean, Build & Debug* funcione de forma inmediata, eliminando el clásico problema de "en mi máquina funciona".
+* **Transparencia y Acceso a Bajo Nivel**: El entorno no impone capas de abstracción obligatorias. Gracias a la integración de archivos **SVD** y **OpenOCD**, el desarrollador mantiene visibilidad total sobre los registros de hardware en todo momento, permitiendo trabajar tanto con bibliotecas del fabricante (**LPCOpen**) como en modo **Bare-Metal (CMSIS)** con control absoluto sobre el mapa de memoria.
 
 ---
 
@@ -17,7 +17,7 @@ La estructura de carpetas está diseñada para separar estrictamente las respons
 
 * **`libs/` (Capa 2 - Abstracción de Software)**: Es el núcleo de los drivers y middlewares del sistema. Contiene:
     * **`cmsis_core` / `cmsis_dsp`**: Estándar de interfaz de microcontroladores Cortex-M para acceso a registros del núcleo y procesamiento digital de señales.
-    * **`custom_drivers`**: Controladores de autoría propia desarrollados para periféricos específicos, siguiendo la filosofía de "Soberanía Técnica".
+    * **`custom_drivers`**: Controladores de autoría propia desarrollados para periféricos específicos.
     * **`fatfs` / `lpc_fatfs_disks`**: Sistema de archivos genérico y su capa de enlace con el hardware de la EDU-CIAA para la gestión de memorias SD.
     * **`lpc_open`**: Framework de NXP que proporciona el acceso de bajo nivel a los periféricos del LPC4337.
     * **`startup`**: Código de inicialización en ensamblador y C (Vector Table) necesario para el arranque del procesador.
@@ -75,155 +75,55 @@ Se ha configurado el entorno para identificar la placa mediante su descripción 
 ---
 
 ## ⚙️ 5. Automatización en VS Code
-Para maximizar la productividad, el toolchain se integra con Visual Studio Code mediante una orquestación basada en **Bash**.
 
-#### 📄 `launch.json` (Configuración de Depuración)
-Esta es la pieza crítica de **Robustez** del entorno. Se configuró un **Bypass de Reset** y un aislamiento del target para mitigar el error de protocolo **FC** (causado por la falta de respuesta del co-procesador Cortex-M0 durante el handshake JTAG).
+El entorno utiliza el motor de tareas de VS Code (`tasks.json`) para orquestar el flujo de trabajo de forma agnóstica al sistema operativo. Se prioriza el uso de **Git Bash** en Windows para mantener la compatibilidad con la sintaxis del Makefile maestro.
 
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-"name": "🐞 DEBUG SOBERANO (VIA F6)",
-            "type": "cortex-debug",
-            "request": "launch",
-            "servertype": "external", // <--- CAMBIO CLAVE: VS Code ya no lanza OpenOCD
-            "gdbTarget": "localhost:3333", // <--- Se conecta al puente que abriste con F6
-            "executable": "${workspaceFolder}/out/${input:projectName}/${input:projectName}.elf",
-            "armToolchainPath": "${workspaceFolder}/tools/gcc-arm/bin",
-            "cwd": "${workspaceFolder}",
-            "svdFile": "${workspaceFolder}/misc/LPC43xx_43Sxx.svd",
-            "runToEntryPoint": "main",
-            "preLaunchTask": "🛠️ MAKE ALL", // <--- Sigue compilando antes de entrar
-            "overrideLaunchCommands": [
-                "monitor halt",
-                "monitor targets lpc4337.m4",
-                "load",
-                "tbreak main"
-            ],
-            "showDevDebugOutput": "none"
-        }
-    ],
-    "inputs": [
-        {
-            "id": "projectName",
-            "type": "pickString",
-            "description": "Selecciona el proyecto para el laboratorio:",
-            "options": [
-                "01_GPIO",
-                "02_Timers",
-                "03_ADC"
-            ],
-            "default": "01_GPIO"
-        }
-    ]
-}
+### 🛠️ Perfiles de Automatización
+El sistema detecta automáticamente el entorno de ejecución:
+* **Windows**: Fuerza el uso de `bash.exe` para garantizar que comandos como `mkdir -p` y `rm -rf` se ejecuten sin errores de sintaxis de CMD.
+* **Linux**: Utiliza `/bin/bash` nativo, integrándose con el toolchain instalado en el sistema.
+
+### 🚀 Flujo de Trabajo Integrado
+Se han definido tareas clave que automatizan el ciclo de vida del proyecto. Estas acciones pueden ejecutarse mediante los **botones en la Barra de Estado** de VS Code o a través de los atajos de teclado vinculados:
+
+| Botón / Tarea | Acción Técnica | Atajo |
+| :--- | :--- | :--- |
+| **🛠️ BUILD** | Compilación multihilo (`-j4`) generando archivos `.elf`, `.map` y `.bin`. | `F4` |
+| **⚡ FLASH** | Grabación atómica en Flash Bank A (0x1A000000) vía OpenOCD. | `F5` |
+| **🗑️ CLEAN** | Limpieza total de la carpeta `out/` del proyecto seleccionado. | `F3` |
+| **🐞 DEBUG** | Lanzamiento del servidor OpenOCD en segundo plano para conexión GDB. | `F6` |
+
+> **Independencia del Desarrollador**: Gracias al uso de `inputs` dinámicos, el entorno permite cambiar de proyecto (ej. de `01_GPIO` a `02_Timers`) en tiempo real sin modificar una sola línea de configuración ni reiniciar el editor.
+
+### 🐧 Nota de Compatibilidad para Linux
+A diferencia de la arquitectura para Windows, este repositorio no incluye los binarios ejecutables para Linux para mantener la eficiencia del almacenamiento. Los usuarios de sistemas basados en Unix deben asegurar la instalación de las herramientas de grado industrial mediante el gestor de paquetes de su distribución:
+
+#### **Debian / Ubuntu / Mint**
+```bash
+sudo apt update && sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi openocd make
 ```
 
-#### 📄 tasks.json (Tareas de Build y Mantenimiento)
-
-Se ha configurado un entorno de ejecución basado en Bash para asegurar que el Makefile procese correctamente las rutas y comandos de limpieza (rm, mkdir) independientemente de la terminal por defecto de Windows.
-
-```json
-
-{
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "🛠️ MAKE BUILD",
-            "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "make" 
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": "$gcc"
-        },
-        {
-            "label": "🚀 MAKE FLASH",
-            "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "flash"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": "$gcc"
-        },
-        {
-            "label": "🐞 MAKE DEBUG (Server)",
-            "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "debug"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "isBackground": true,
-            "problemMatcher": {
-                "pattern": {
-                    "regexp": "."
-                },
-                "background": {
-                    "activeOnStart": true,
-                    "beginsPattern": "Iniciando servidor",
-                    "endsPattern": "Esperando conexión"
-                }
-            }
-        },
-        {
-            "label": "🧹 MAKE CLEAN",
-            "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "clean"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            }
-        }
-    ],
-    "inputs": [
-        {
-            "id": "projectName",
-            "type": "pickString",
-            "description": "Selecciona el laboratorio a procesar:",
-            "options": [
-                "01_GPIO",
-                "02_Timers",
-                "03_ADC",
-                "04_UART",
-                "05_CAN"
-            ],
-            "default": "01_GPIO"
-        }
-    ]
-}
+#### **Arch Linux / Manjaro**
+```bash
+sudo pacman -S arm-none-eabi-gcc arm-none-eabi-binutils openocd make
 ```
 
-### ⌨️ Mapeo de Atajos (Productividad)
-| Tecla | Función | Descripción Técnica |
-| :---: | :--- | :--- |
-| **F3** | **Clean** | Ejecuta `make clean`. Purga binarios previos. |
-| **F4** | **Build** | Ejecuta `make`. Compilación incremental vía Bash. |
-| **F5** | **Flash** | Ejecuta `make flash`. Grabación directa a la Flash. |
-| **F6** | **Debug Server** | Ejecuta `make debug`. Inicia OpenOCD persistente. |
+#### **Fedora**
+
+```bash
+sudo dnf install arm-none-eabi-gcc-cs arm-none-eabi-binutils-cs openocd make
+```
+#### **openSUSE**
+```bash
+sudo zypper install cross-arm-none-gcc12-bootstrap openocd make
+```
+
+* **Detección Automática**: El `Makefile Maestro` y el `tasks.json` detectarán automáticamente estas instalaciones globales, omitiendo las rutas de la carpeta `./tools/` y utilizando los binarios del sistema de forma transparente.
+* **Permisos de Hardware**: Asegúrate de que tu usuario tenga permisos de acceso al puerto serie y al depurador JTAG (típicamente añadiendo tu usuario a los grupos `dialout`, `uucp` o `plugdev` según la distribución utilizada).
 
 ---
 
-> *"La potencia de un desarrollo no reside en la interfaz del IDE, sino en la transparencia del Toolchain."*
+*"La verdadera autonomía en sistemas embebidos no proviene de un IDE propietario, sino del dominio absoluto sobre el hardware con las herramientas necesarias."*
 
-💻 **Desarrollo de Sistemas Embebidos Profesionales | LPC4337 - NXP**
+🛠️ **Carlos** | Estudiante de Ing. Electrónica @UTN_FRT.  
+🚀 Apasionado Autodidacta por los Sistemas Embebidos.
