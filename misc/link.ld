@@ -55,10 +55,12 @@ SECTIONS
         _ebss = .;
     } > RamLoc32
 
-    /* DESCARTES PARA EVITAR OVERLAP */
+/* DESCARTES PARA EVITAR OVERLAP */
     /DISCARD/ :
     {
         *(.ARM.exidx*)
         *(.ARM.extab*)
+        *(.eh_frame*)        /* 👈 FILTRO CRÍTICO PARA PARCHEO EN LINUX */
+        *(.note.GNU-stack)   /* Evita advertencias molestas del linker */
     }
 }

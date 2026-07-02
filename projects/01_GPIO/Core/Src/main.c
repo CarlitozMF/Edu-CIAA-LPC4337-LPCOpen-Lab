@@ -90,12 +90,12 @@ int main(void) {
     board_init();
 
     while(1) {
-     /*   // Ejemplo de parpadeo usando las macros de main.h
+       // Ejemplo de parpadeo usando las macros de main.h
         LEDB_ON();
         delay(1000000); 
         
         LEDB_OFF();
-        delay(1000000);*/
+        delay(1000000);
     }
 
     return 0;
