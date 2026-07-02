@@ -33,7 +33,15 @@
 #define LEDB_ON()       Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, LEDB_GPIO_PORT, LEDB_GPIO_PIN)
 #define LEDB_OFF()      Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, LEDB_GPIO_PORT, LEDB_GPIO_PIN)
 
-
+//Macros para display off
+#define SEG_A_OFF()     Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_A_GPIO_PORT, SEG_A_GPIO_PIN)
+#define SEG_B_OFF()     Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_B_GPIO_PORT, SEG_B_GPIO_PIN)
+#define SEG_C_OFF()     Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_C_GPIO_PORT, SEG_C_GPIO_PIN)
+#define SEG_D_OFF()     Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_D_GPIO_PORT, SEG_D_GPIO_PIN)
+#define SEG_E_OFF()     Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_E_GPIO_PORT, SEG_E_GPIO_PIN)
+#define SEG_F_OFF()     Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_F_GPIO_PORT, SEG_F_GPIO_PIN)
+#define SEG_G_OFF()     Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_G_GPIO_PORT, SEG_G_GPIO_PIN)
+#define SEG_DP_OFF()    Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, SEG_DP_GPIO_PORT, SEG_DP_GPIO_PIN)
 
 /* --- Prototipos de funciones --- */
 void board_init(void);

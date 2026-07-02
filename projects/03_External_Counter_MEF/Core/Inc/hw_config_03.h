@@ -9,7 +9,7 @@
 #include "gpio.h"
 
 /* --- Mapeo del Display de 7 Segmentos (Puerto 6) --- */
-// Nota: Todos en SCU Puerto 6, Función FUNC0 para GPIO
+// Nota: {SCU_PORT, SCU_PIN, SCU_MODE_FUNCX, GPIO_PORT, GPIO_PIN}
 static const gpio_config_t seg_a  = {6, 1,  SCU_MODE_FUNC0, 3, 0};  // P6_1  -> GPIO3[0]
 static const gpio_config_t seg_b  = {6, 5,  SCU_MODE_FUNC0, 3, 4};  // P6_5  -> GPIO3[4]
 static const gpio_config_t seg_c  = {6, 8,  SCU_MODE_FUNC4, 5, 16}; // P6_8  -> GPIO5[16]

@@ -59,9 +59,50 @@
 #define LEDB_GPIO_PORT  5
 #define LEDB_GPIO_PIN   2
 
+/*Display*/
+#define SEG_A_SCU_PORT  6
+#define SEG_A_SCU_PIN   1
+#define SEG_A_GPIO_PORT 3
+#define SEG_A_GPIO_PIN  0
+
+#define SEG_B_SCU_PORT  6
+#define SEG_B_SCU_PIN   5
+#define SEG_B_GPIO_PORT 3
+#define SEG_B_GPIO_PIN  4
+
+#define SEG_C_SCU_PORT  6
+#define SEG_C_SCU_PIN   8
+#define SEG_C_GPIO_PORT 5
+#define SEG_C_GPIO_PIN  16
+
+#define SEG_D_SCU_PORT  6
+#define SEG_D_SCU_PIN   10
+#define SEG_D_GPIO_PORT 3
+#define SEG_D_GPIO_PIN  6
+
+#define SEG_E_SCU_PORT  6
+#define SEG_E_SCU_PIN   4
+#define SEG_E_GPIO_PORT 3
+#define SEG_E_GPIO_PIN  3
+
+#define SEG_F_SCU_PORT  6
+#define SEG_F_SCU_PIN   7
+#define SEG_F_GPIO_PORT 5
+#define SEG_F_GPIO_PIN  15
+
+#define SEG_G_SCU_PORT  6
+#define SEG_G_SCU_PIN   9
+#define SEG_G_GPIO_PORT 3
+#define SEG_G_GPIO_PIN  5
+
+#define SEG_DP_SCU_PORT  6
+#define SEG_DP_SCU_PIN   11
+#define SEG_DP_GPIO_PORT 3
+#define SEG_DP_GPIO_PIN  7
+
 
 /* --- Configuración de Modos del SCU --- */
-//segun pinout de la educiia
+//según pinout de la educiia
 #define LED_FUNC        SCU_MODE_FUNC0  // Función GPIO para LEDs Externos
 #define LEDRGB_FUNC     SCU_MODE_FUNC4  // Función GPIO para LED RGB
 

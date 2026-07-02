@@ -31,7 +31,7 @@ void board_init(void) {
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LEDG_GPIO_PORT, LEDG_GPIO_PIN);
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LEDB_GPIO_PORT, LEDB_GPIO_PIN);
 
-    /* --- CONFIGURACIÓN LEDS AMARILLOS --- */
+    /* --- CONFIGURACIÓN LEDS--- */
     Chip_SCU_PinMuxSet(LED1_SCU_PORT, LED1_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
     Chip_SCU_PinMuxSet(LED2_SCU_PORT, LED2_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
     Chip_SCU_PinMuxSet(LED3_SCU_PORT, LED3_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
@@ -41,6 +41,26 @@ void board_init(void) {
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED2_GPIO_PORT, LED2_GPIO_PIN); 
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED3_GPIO_PORT, LED3_GPIO_PIN); 
 
+    /* --- CONFIGURACIÓN PINES DISPLAY ---  */
+    Chip_SCU_PinMuxSet(SEG_A_SCU_PORT, SEG_A_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+    Chip_SCU_PinMuxSet(SEG_B_SCU_PORT, SEG_B_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+    Chip_SCU_PinMuxSet(SEG_C_SCU_PORT, SEG_C_SCU_PIN, (SCU_MODE_INACT | LEDRGB_FUNC));
+    Chip_SCU_PinMuxSet(SEG_D_SCU_PORT, SEG_D_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+    Chip_SCU_PinMuxSet(SEG_E_SCU_PORT, SEG_E_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+    Chip_SCU_PinMuxSet(SEG_F_SCU_PORT, SEG_F_SCU_PIN, (SCU_MODE_INACT | LEDRGB_FUNC));
+    Chip_SCU_PinMuxSet(SEG_G_SCU_PORT, SEG_G_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+    Chip_SCU_PinMuxSet(SEG_DP_SCU_PORT, SEG_DP_SCU_PIN, (SCU_MODE_INACT | LED_FUNC));
+
+    /* Configura dirección como SALIDA */
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_A_GPIO_PORT, SEG_A_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_B_GPIO_PORT, SEG_B_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_C_GPIO_PORT, SEG_C_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_D_GPIO_PORT, SEG_D_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_E_GPIO_PORT, SEG_E_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_F_GPIO_PORT, SEG_F_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_G_GPIO_PORT, SEG_G_GPIO_PIN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, SEG_DP_GPIO_PORT, SEG_DP_GPIO_PIN);
+
     /* Estado Inicial: Todo apagado */
     LEDR_OFF();
     LEDG_OFF();
@@ -48,6 +68,15 @@ void board_init(void) {
     LED1_OFF();
     LED2_OFF();
     LED3_OFF();
+    SEG_A_OFF();
+    SEG_B_OFF();
+    SEG_C_OFF();
+    SEG_D_OFF();
+    SEG_E_OFF();
+    SEG_F_OFF();
+    SEG_G_OFF();
+    SEG_DP_OFF();
+
 }
 
 /** * @brief Retardo por software con protección contra optimización.
@@ -61,12 +90,12 @@ int main(void) {
     board_init();
 
     while(1) {
-        // Ejemplo de parpadeo usando las macros de main.h
+     /*   // Ejemplo de parpadeo usando las macros de main.h
         LEDB_ON();
         delay(1000000); 
         
         LEDB_OFF();
-        delay(1000000);
+        delay(1000000);*/
     }
 
     return 0;

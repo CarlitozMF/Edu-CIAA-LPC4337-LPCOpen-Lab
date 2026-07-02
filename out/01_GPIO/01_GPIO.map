@@ -4193,7 +4193,7 @@ LOAD C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm
 END GROUP
                 0x10008000                        __stack_end = 0x10008000
 
-.text           0x1a000000     0x5894
+.text           0x1a000000     0x58f0
  FILL mask 0xff
                 0x1a000000                        __vectors_start__ = .
  *(.isr_vector)
@@ -4216,384 +4216,384 @@ END GROUP
                 0x1a000300                MemManage_Handler
                 0x1a000300                SVC_Handler
                 0x1a000302                Reset_Handler
- .text          0x1a000344       0xd4 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
-                0x1a00035c                board_init
-                0x1a0003e8                main
-                0x1a000414                SysTick_Handler
- .text          0x1a000418      0x1d8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000462                setStartMode
-                0x1a000470                readAdcVal
-                0x1a000488                Chip_ADC_Init
-                0x1a0004c8                Chip_ADC_DeInit
-                0x1a0004de                Chip_ADC_ReadValue
-                0x1a0004e6                Chip_ADC_ReadStatus
-                0x1a000518                Chip_ADC_Int_SetChannelCmd
-                0x1a000534                Chip_ADC_SetStartMode
-                0x1a000554                Chip_ADC_SetSampleRate
-                0x1a000586                Chip_ADC_SetResolution
-                0x1a000592                Chip_ADC_EnableChannel
-                0x1a0005b6                Chip_ADC_SetBurstCmd
-                0x1a0005d8                Chip_ADC_ReadByte
- .text          0x1a0005f0      0x110 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
-                0x1a0005f0                Chip_AES_Init
-                0x1a00063c                Chip_AES_SetMode
-                0x1a00064c                Chip_AES_LoadKey
-                0x1a000664                Chip_AES_LoadKeyRNG
-                0x1a000674                Chip_AES_LoadKeySW
-                0x1a000684                Chip_AES_LoadIV_SW
-                0x1a000694                Chip_AES_LoadIV_IC
-                0x1a0006a4                Chip_AES_Operate
-                0x1a0006b4                Chip_AES_ProgramKey
-                0x1a0006d0                Chip_AES_Config_DMA
-                0x1a0006e0                Chip_AES_OperateDMA
-                0x1a0006f0                Chip_AES_GetStatusDMA
- .text          0x1a000700       0x16 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
-                0x1a000700                Chip_ATIMER_Init
-                0x1a00070a                Chip_ATIMER_DeInit
- *fill*         0x1a000716        0x2 ff
- .text          0x1a000718      0x3e4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
-                0x1a0007bc                Chip_CCAN_DeInit
-                0x1a0007c8                Chip_CCAN_SetBitRate
-                0x1a000842                Chip_CCAN_ClearStatus
-                0x1a000850                Chip_CCAN_TransferMsgObject
-                0x1a000876                Chip_CCAN_SetMsgObject
-                0x1a000960                Chip_CCAN_GetMsgObject
-                0x1a0009ce                Chip_CCAN_SetValidMsg
-                0x1a000a14                Chip_CCAN_Init
-                0x1a000a46                Chip_CCAN_Send
-                0x1a000a98                Chip_CCAN_AddReceiveID
-                0x1a000ac2                Chip_CCAN_DeleteReceiveID
- .text          0x1a000afc       0xc4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
-                0x1a000b30                Chip_USB0_Init
-                0x1a000b64                Chip_USB1_Init
-                0x1a000bac                SystemCoreClockUpdate
- .text          0x1a000bc0      0x96c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a000dec                Chip_Clock_EnableCrystal
-                0x1a000e38                Chip_Clock_DisableCrystal
-                0x1a000e48                Chip_Clock_SetDivider
-                0x1a000e9c                Chip_Clock_GetDividerSource
-                0x1a000eb8                Chip_Clock_GetDividerDivisor
-                0x1a000ed4                Chip_Clock_GetClockInputHz
-                0x1a000fbc                Chip_Clock_CalcMainPLLValue
-                0x1a00103c                Chip_Clock_SetupMainPLLMult
-                0x1a0010d8                Chip_Clock_SetupMainPLLHz
-                0x1a00119e                Chip_Clock_GetMainPLLHz
-                0x1a001228                Chip_Clock_SetBaseClock
-                0x1a001288                Chip_Clock_GetBaseClockOpts
-                0x1a0012c6                Chip_Clock_EnableBaseClock
-                0x1a0012e2                Chip_Clock_DisableBaseClock
-                0x1a0012fe                Chip_Clock_IsBaseClockEnabled
-                0x1a001320                Chip_Clock_GetBaseClock
-                0x1a001348                Chip_Clock_GetBaseClocktHz
-                0x1a001354                Chip_Clock_EnableOpts
-                0x1a001390                Chip_Clock_Enable
-                0x1a0013c4                Chip_Clock_RTCEnable
-                0x1a0013dc                Chip_Clock_Disable
-                0x1a001410                Chip_Clock_StartPowerDown
-                0x1a001424                Chip_Clock_ClearPowerDown
-                0x1a001438                Chip_Clock_GetRate
-                0x1a001480                Chip_Clock_GetEMCRate
-                0x1a0014b4                Chip_Clock_SetupPLL
-                0x1a0014f4                Chip_Clock_EnablePLL
-                0x1a001508                Chip_Clock_DisablePLL
-                0x1a00151c                Chip_Clock_GetPLLStatus
- .text          0x1a00152c       0x4c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
-                0x1a00152c                Chip_DAC_DeInit
-                0x1a001536                Chip_DAC_UpdateValue
-                0x1a001546                Chip_DAC_SetBias
-                0x1a00155e                Chip_DAC_Init
- .text          0x1a001578       0x58 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
-                0x1a001594                Chip_EEPROM_Init
-                0x1a0015ac                Chip_EEPROM_WaitForIntStatus
-                0x1a0015bc                Chip_EEPROM_EraseProgramPage
- .text          0x1a0015d0      0x348 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
-                0x1a00162e                initDynMem
-                0x1a0017da                initStaticMem
-                0x1a001842                Chip_EMC_Dynamic_Init
-                0x1a00185c                Chip_EMC_Dynamic_Enable
-                0x1a00187c                Chip_EMC_Static_Init
-                0x1a001894                Chip_EMC_Mirror
-                0x1a0018b4                Chip_EMC_Enable
-                0x1a0018d4                Chip_EMC_LowPowerMode
-                0x1a0018f4                Chip_EMC_Init
- .text          0x1a001918      0x16c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
-                0x1a001978                Chip_ENET_DeInit
-                0x1a001992                Chip_ENET_SetupMII
-                0x1a0019a4                Chip_ENET_Init
-                0x1a001a20                Chip_ENET_StartMIIWrite
-                0x1a001a40                Chip_ENET_StartMIIRead
-                0x1a001a58                Chip_ENET_SetDuplex
-                0x1a001a6e                Chip_ENET_SetSpeed
- .text          0x1a001a84       0xdc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
-                0x1a001a84                Chip_EVRT_Init
-                0x1a001ab4                Chip_EVRT_ConfigIntSrcActiveType
-                0x1a001b24                Chip_EVRT_SetUpIntSrc
-                0x1a001b44                Chip_EVRT_IsSourceInterrupting
- .text          0x1a001b60      0x6a0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
-                0x1a001cc4                makeCtrlWord
-                0x1a001da2                setupChannel
-                0x1a001e34                Chip_GPDMA_Init
-                0x1a001e78                Chip_GPDMA_DeInit
-                0x1a001e82                Chip_GPDMA_InitChannelCfg
-                0x1a001f04                Chip_GPDMA_IntGetStatus
-                0x1a001f60                Chip_GPDMA_ClearIntPending
-                0x1a001f76                Chip_GPDMA_Interrupt
-                0x1a001fc0                Chip_GPDMA_ChannelCmd
-                0x1a001fe8                Chip_GPDMA_Stop
-                0x1a002030                Chip_GPDMA_Transfer
-                0x1a0020d4                Chip_GPDMA_PrepareDescriptor
-                0x1a002154                Chip_GPDMA_SGTransfer
-                0x1a0021c6                Chip_GPDMA_GetFreeChannel
- .text          0x1a002200        0x4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
-                0x1a002200                Chip_GPIO_Init
-                0x1a002202                Chip_GPIO_DeInit
- .text          0x1a002204        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
- .text          0x1a002204      0x6dc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x1a00228a                Chip_I2C_EventHandler
-                0x1a0022a8                handleMasterXferState
-                0x1a0023ac                getSlaveIndex
-                0x1a0023e0                handleSlaveXferState
-                0x1a0024d4                Chip_I2C_Init
-                0x1a0024fc                Chip_I2C_DeInit
-                0x1a002520                Chip_I2C_SetClockRate
-                0x1a00255c                Chip_I2C_GetClockRate
-                0x1a002588                Chip_I2C_SetMasterEventHandler
-                0x1a0025bc                Chip_I2C_GetMasterEventHandler
-                0x1a0025d0                Chip_I2C_MasterTransfer
-                0x1a002660                Chip_I2C_MasterSend
-                0x1a002692                Chip_I2C_MasterCmdRead
-                0x1a0026d4                Chip_I2C_MasterRead
-                0x1a002706                Chip_I2C_IsMasterActive
-                0x1a002724                Chip_I2C_MasterStateHandler
-                0x1a002758                Chip_I2C_SlaveSetup
-                0x1a0027e4                Chip_I2C_SlaveStateHandler
-                0x1a002880                Chip_I2C_Disable
-                0x1a002894                Chip_I2C_IsStateChanged
-                0x1a0028ac                Chip_I2C_EventHandlerPolling
- .text          0x1a0028e0      0x23c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
-                0x1a0028f4                Chip_I2CM_Init
-                0x1a002906                Chip_I2CM_DeInit
-                0x1a002916                Chip_I2CM_SetBusSpeed
-                0x1a002938                Chip_I2CM_XferHandler
-                0x1a002a34                Chip_I2CM_Xfer
-                0x1a002a42                Chip_I2CM_XferBlocking
-                0x1a002a66                Chip_I2CM_Write
-                0x1a002ac0                Chip_I2CM_Read
- .text          0x1a002b1c      0x284 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
-                0x1a002bf4                Chip_I2S_Init
-                0x1a002bfe                Chip_I2S_DeInit
-                0x1a002c20                Chip_I2S_TxConfig
-                0x1a002c90                Chip_I2S_RxConfig
-                0x1a002d00                Chip_I2S_Int_TxCmd
-                0x1a002d28                Chip_I2S_Int_RxCmd
-                0x1a002d50                Chip_I2S_DMA_TxCmd
-                0x1a002d78                Chip_I2S_DMA_RxCmd
- .text          0x1a002da0      0x20c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
-                0x1a002da0                Chip_IAP_Init
-                0x1a002dc4                Chip_IAP_PreSectorForReadWrite
-                0x1a002de8                Chip_IAP_CopyRamToFlash
-                0x1a002e24                Chip_IAP_EraseSector
-                0x1a002e60                Chip_IAP_BlankCheckSector
-                0x1a002e84                Chip_IAP_ReadPID
-                0x1a002ea0                Chip_IAP_ReadBootCode
-                0x1a002ec0                Chip_IAP_Compare
-                0x1a002ee4                Chip_IAP_ReinvokeISP
-                0x1a002f04                Chip_IAP_ReadUID
-                0x1a002f3c                Chip_IAP_ErasePage
-                0x1a002f74                Chip_IAP_SetBootFlashBank
- .text          0x1a002fac      0x1f0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
-                0x1a002fac                Chip_LCD_Init
-                0x1a0030d8                Chip_LCD_DeInit
-                0x1a0030e2                Chip_LCD_Cursor_Config
-                0x1a0030fc                Chip_LCD_Cursor_WriteImage
-                0x1a00312c                Chip_LCD_LoadPalette
- .text          0x1a00319c       0xc4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
-                0x1a00319c                Chip_OTP_Init
-                0x1a0031d8                Chip_OTP_ProgBootSrc
-                0x1a0031e8                Chip_OTP_ProgJTAGDis
-                0x1a0031f8                Chip_OTP_ProgUSBID
-                0x1a003208                Chip_OTP_ProgGPWord
-                0x1a003234                Chip_OTP_ProgKey
-                0x1a003250                Chip_OTP_GenRand
- .text          0x1a003260        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
- .text          0x1a003260       0x1c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
-                0x1a003260                Chip_PMC_Sleep
-                0x1a003264                Chip_PMC_Set_PwrState
- .text          0x1a00327c      0x16a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
-                0x1a00327c                RingBuffer_Init
-                0x1a00328c                RingBuffer_Insert
-                0x1a0032bc                RingBuffer_InsertMult
-                0x1a00333e                RingBuffer_Pop
-                0x1a00336e                RingBuffer_PopMult
- *fill*         0x1a0033e6        0x2 ff
- .text          0x1a0033e8       0x68 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
-                0x1a0033e8                Chip_RIT_Init
-                0x1a00340a                Chip_RIT_DeInit
-                0x1a003418                Chip_RIT_SetTimerInterval
-                0x1a003440                Chip_RIT_GetIntStatus
- .text          0x1a003450      0x1dc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
-                0x1a003450                Chip_RTC_DeInit
-                0x1a003456                Chip_RTC_ResetClockTickCounter
-                0x1a003478                Chip_RTC_Enable
-                0x1a003490                Chip_RTC_CntIncrIntConfig
-                0x1a0034ae                Chip_RTC_AlarmIntConfig
-                0x1a0034cc                Chip_RTC_SetFullTime
-                0x1a003506                Chip_RTC_GetFullTime
-                0x1a003532                Chip_RTC_SetFullAlarmTime
-                0x1a003554                Chip_RTC_GetFullAlarmTime
-                0x1a00356e                Chip_RTC_CalibCounterCmd
-                0x1a00358e                Chip_RTC_Init
-                0x1a0035d4                Chip_RTC_EV_GetFirstTimeStamp
-                0x1a003600                Chip_RTC_EV_GetLastTimeStamp
- .text          0x1a00362c       0x44 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
-                0x1a00362c                Chip_SCT_Init
-                0x1a00363c                Chip_SCT_DeInit
-                0x1a003646                Chip_SCT_SetClrControl
-                0x1a003658                Chip_SCT_SetConflictResolution
- .text          0x1a003670       0x96 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
-                0x1a003670                Chip_SCTPWM_SetOutPin
-                0x1a0036bc                Chip_SCTPWM_SetRate
- *fill*         0x1a003706        0x2 ff
- .text          0x1a003708      0x194 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
-                0x1a003708                Chip_SDIF_Init
-                0x1a003754                Chip_SDIF_DeInit
-                0x1a00375e                Chip_SDIF_SendCmd
-                0x1a0037a8                Chip_SDIF_GetResponse
-                0x1a0037ba                Chip_SDIF_SetClock
-                0x1a003808                Chip_SDIF_SetClearIntFifo
-                0x1a003820                Chip_SDIF_DmaSetup
- .text          0x1a00389c      0x63c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
-                0x1a00389c                SDIO_Card_GetBlockSize
-                0x1a0038b8                SDIO_Setup_Callback
-                0x1a0038c4                SDIO_Send_Command
-                0x1a00392c                SDIO_Card_WriteData
-                0x1a0039e0                SDIO_Card_ReadData
-                0x1a003b40                SDIO_Write_Direct
-                0x1a003b80                SDIO_WriteRead_Direct
-                0x1a003bb8                SDIO_Card_SetBlockSize
-                0x1a003c6e                SDIO_Read_Direct
-                0x1a003ca8                SDIO_Card_EnableInt
-                0x1a003cf8                SDIO_Card_DisableInt
-                0x1a003d54                SDIO_Card_Init
-                0x1a003e30                SDIO_Handler
- .text          0x1a003ed8      0x7ec out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
-                0x1a004270                Chip_SDMMC_GetState
-                0x1a0042a8                Chip_SDMMC_Acquire
-                0x1a004568                Chip_SDMMC_GetDeviceSize
-                0x1a004578                Chip_SDMMC_GetDeviceBlocks
-                0x1a004588                Chip_SDMMC_ReadBlocks
-                0x1a00461c                Chip_SDMMC_WriteBlocks
- .text          0x1a0046c4      0x1e4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
-                0x1a004726                Chip_SPI_Int_FlushData
-                0x1a00473a                Chip_SPI_RWFrames_Blocking
-                0x1a0047be                Chip_SPI_Int_RWFrames
-                0x1a004828                Chip_SPI_Int_RWFrames8Bits
-                0x1a004832                Chip_SPI_Int_RWFrames16Bits
-                0x1a00483c                Chip_SPI_SetBitRate
-                0x1a004864                Chip_SPI_Init
-                0x1a00489c                Chip_SPI_DeInit
- .text          0x1a0048a8      0x440 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x1a00495c                Chip_SSP_SetClockRate
-                0x1a00496e                Chip_SSP_RWFrames_Blocking
-                0x1a004a0e                Chip_SSP_WriteFrames_Blocking
-                0x1a004aac                Chip_SSP_ReadFrames_Blocking
-                0x1a004b50                Chip_SSP_Int_FlushData
-                0x1a004b72                Chip_SSP_Int_RWFrames8Bits
-                0x1a004bd4                Chip_SSP_Int_RWFrames16Bits
-                0x1a004c36                Chip_SSP_SetMaster
-                0x1a004c4c                Chip_SSP_SetBitRate
-                0x1a004c8e                Chip_SSP_Init
-                0x1a004cc8                Chip_SSP_DeInit
- .text          0x1a004ce8       0xa0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
-                0x1a004ce8                StopWatch_Init
-                0x1a004d30                StopWatch_Start
-                0x1a004d3c                StopWatch_TicksPerSecond
-                0x1a004d48                StopWatch_TicksToMs
-                0x1a004d58                StopWatch_TicksToUs
-                0x1a004d68                StopWatch_MsToTicks
-                0x1a004d78                StopWatch_UsToTicks
- .text          0x1a004d88      0x158 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
-                0x1a004db0                Chip_SetupCoreClock
-                0x1a004eb0                Chip_SetupXtalClocking
-                0x1a004ec4                Chip_SetupIrcClocking
-                0x1a004ed8                Chip_SystemInit
- .text          0x1a004ee0       0x94 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
-                0x1a004f0c                Chip_TIMER_Init
-                0x1a004f18                Chip_TIMER_DeInit
-                0x1a004f24                Chip_TIMER_Reset
-                0x1a004f3c                Chip_TIMER_ExtMatchControlSet
- .text          0x1a004f74      0x3c8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a004fe4                Chip_UART_Init
-                0x1a00503c                Chip_UART_DeInit
-                0x1a005058                Chip_UART_Send
-                0x1a005076                Chip_UART_CheckBusy
-                0x1a005086                Chip_UART_SendBlocking
-                0x1a0050aa                Chip_UART_Read
-                0x1a0050c8                Chip_UART_ReadBlocking
-                0x1a0050ec                Chip_UART_SetBaud
-                0x1a005130                Chip_UART_RXIntHandlerRB
-                0x1a005156                Chip_UART_TXIntHandlerRB
-                0x1a005192                Chip_UART_SendRB
-                0x1a0051d4                Chip_UART_ReadRB
-                0x1a0051e2                Chip_UART_IRQRBHandler
-                0x1a00521a                Chip_UART_SetBaudFDR
-                0x1a0052f8                Chip_UART_GetABEOStatus
-                0x1a005304                Chip_UART_ABCmd
- .text          0x1a00533c       0x36 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
-                0x1a00533c                Chip_WWDT_Init
-                0x1a005352                Chip_WWDT_DeInit
-                0x1a005354                Chip_WWDT_ClearStatusFlag
- *fill*         0x1a005372        0x2 ff
- .text          0x1a005374       0x30 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
-                0x1a005374                __aeabi_uldivmod
- .text          0x1a0053a4        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .text          0x1a000344      0x130 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+                0x1a000344                board_init
+                0x1a000468                main
+                0x1a000470                SysTick_Handler
+ .text          0x1a000474      0x1d8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a0004be                setStartMode
+                0x1a0004cc                readAdcVal
+                0x1a0004e4                Chip_ADC_Init
+                0x1a000524                Chip_ADC_DeInit
+                0x1a00053a                Chip_ADC_ReadValue
+                0x1a000542                Chip_ADC_ReadStatus
+                0x1a000574                Chip_ADC_Int_SetChannelCmd
+                0x1a000590                Chip_ADC_SetStartMode
+                0x1a0005b0                Chip_ADC_SetSampleRate
+                0x1a0005e2                Chip_ADC_SetResolution
+                0x1a0005ee                Chip_ADC_EnableChannel
+                0x1a000612                Chip_ADC_SetBurstCmd
+                0x1a000634                Chip_ADC_ReadByte
+ .text          0x1a00064c      0x110 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+                0x1a00064c                Chip_AES_Init
+                0x1a000698                Chip_AES_SetMode
+                0x1a0006a8                Chip_AES_LoadKey
+                0x1a0006c0                Chip_AES_LoadKeyRNG
+                0x1a0006d0                Chip_AES_LoadKeySW
+                0x1a0006e0                Chip_AES_LoadIV_SW
+                0x1a0006f0                Chip_AES_LoadIV_IC
+                0x1a000700                Chip_AES_Operate
+                0x1a000710                Chip_AES_ProgramKey
+                0x1a00072c                Chip_AES_Config_DMA
+                0x1a00073c                Chip_AES_OperateDMA
+                0x1a00074c                Chip_AES_GetStatusDMA
+ .text          0x1a00075c       0x16 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+                0x1a00075c                Chip_ATIMER_Init
+                0x1a000766                Chip_ATIMER_DeInit
+ *fill*         0x1a000772        0x2 ff
+ .text          0x1a000774      0x3e4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+                0x1a000818                Chip_CCAN_DeInit
+                0x1a000824                Chip_CCAN_SetBitRate
+                0x1a00089e                Chip_CCAN_ClearStatus
+                0x1a0008ac                Chip_CCAN_TransferMsgObject
+                0x1a0008d2                Chip_CCAN_SetMsgObject
+                0x1a0009bc                Chip_CCAN_GetMsgObject
+                0x1a000a2a                Chip_CCAN_SetValidMsg
+                0x1a000a70                Chip_CCAN_Init
+                0x1a000aa2                Chip_CCAN_Send
+                0x1a000af4                Chip_CCAN_AddReceiveID
+                0x1a000b1e                Chip_CCAN_DeleteReceiveID
+ .text          0x1a000b58       0xc4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x1a000b8c                Chip_USB0_Init
+                0x1a000bc0                Chip_USB1_Init
+                0x1a000c08                SystemCoreClockUpdate
+ .text          0x1a000c1c      0x96c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000e48                Chip_Clock_EnableCrystal
+                0x1a000e94                Chip_Clock_DisableCrystal
+                0x1a000ea4                Chip_Clock_SetDivider
+                0x1a000ef8                Chip_Clock_GetDividerSource
+                0x1a000f14                Chip_Clock_GetDividerDivisor
+                0x1a000f30                Chip_Clock_GetClockInputHz
+                0x1a001018                Chip_Clock_CalcMainPLLValue
+                0x1a001098                Chip_Clock_SetupMainPLLMult
+                0x1a001134                Chip_Clock_SetupMainPLLHz
+                0x1a0011fa                Chip_Clock_GetMainPLLHz
+                0x1a001284                Chip_Clock_SetBaseClock
+                0x1a0012e4                Chip_Clock_GetBaseClockOpts
+                0x1a001322                Chip_Clock_EnableBaseClock
+                0x1a00133e                Chip_Clock_DisableBaseClock
+                0x1a00135a                Chip_Clock_IsBaseClockEnabled
+                0x1a00137c                Chip_Clock_GetBaseClock
+                0x1a0013a4                Chip_Clock_GetBaseClocktHz
+                0x1a0013b0                Chip_Clock_EnableOpts
+                0x1a0013ec                Chip_Clock_Enable
+                0x1a001420                Chip_Clock_RTCEnable
+                0x1a001438                Chip_Clock_Disable
+                0x1a00146c                Chip_Clock_StartPowerDown
+                0x1a001480                Chip_Clock_ClearPowerDown
+                0x1a001494                Chip_Clock_GetRate
+                0x1a0014dc                Chip_Clock_GetEMCRate
+                0x1a001510                Chip_Clock_SetupPLL
+                0x1a001550                Chip_Clock_EnablePLL
+                0x1a001564                Chip_Clock_DisablePLL
+                0x1a001578                Chip_Clock_GetPLLStatus
+ .text          0x1a001588       0x4c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+                0x1a001588                Chip_DAC_DeInit
+                0x1a001592                Chip_DAC_UpdateValue
+                0x1a0015a2                Chip_DAC_SetBias
+                0x1a0015ba                Chip_DAC_Init
+ .text          0x1a0015d4       0x58 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+                0x1a0015f0                Chip_EEPROM_Init
+                0x1a001608                Chip_EEPROM_WaitForIntStatus
+                0x1a001618                Chip_EEPROM_EraseProgramPage
+ .text          0x1a00162c      0x348 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+                0x1a00168a                initDynMem
+                0x1a001836                initStaticMem
+                0x1a00189e                Chip_EMC_Dynamic_Init
+                0x1a0018b8                Chip_EMC_Dynamic_Enable
+                0x1a0018d8                Chip_EMC_Static_Init
+                0x1a0018f0                Chip_EMC_Mirror
+                0x1a001910                Chip_EMC_Enable
+                0x1a001930                Chip_EMC_LowPowerMode
+                0x1a001950                Chip_EMC_Init
+ .text          0x1a001974      0x16c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+                0x1a0019d4                Chip_ENET_DeInit
+                0x1a0019ee                Chip_ENET_SetupMII
+                0x1a001a00                Chip_ENET_Init
+                0x1a001a7c                Chip_ENET_StartMIIWrite
+                0x1a001a9c                Chip_ENET_StartMIIRead
+                0x1a001ab4                Chip_ENET_SetDuplex
+                0x1a001aca                Chip_ENET_SetSpeed
+ .text          0x1a001ae0       0xdc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+                0x1a001ae0                Chip_EVRT_Init
+                0x1a001b10                Chip_EVRT_ConfigIntSrcActiveType
+                0x1a001b80                Chip_EVRT_SetUpIntSrc
+                0x1a001ba0                Chip_EVRT_IsSourceInterrupting
+ .text          0x1a001bbc      0x6a0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+                0x1a001d20                makeCtrlWord
+                0x1a001dfe                setupChannel
+                0x1a001e90                Chip_GPDMA_Init
+                0x1a001ed4                Chip_GPDMA_DeInit
+                0x1a001ede                Chip_GPDMA_InitChannelCfg
+                0x1a001f60                Chip_GPDMA_IntGetStatus
+                0x1a001fbc                Chip_GPDMA_ClearIntPending
+                0x1a001fd2                Chip_GPDMA_Interrupt
+                0x1a00201c                Chip_GPDMA_ChannelCmd
+                0x1a002044                Chip_GPDMA_Stop
+                0x1a00208c                Chip_GPDMA_Transfer
+                0x1a002130                Chip_GPDMA_PrepareDescriptor
+                0x1a0021b0                Chip_GPDMA_SGTransfer
+                0x1a002222                Chip_GPDMA_GetFreeChannel
+ .text          0x1a00225c        0x4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x1a00225c                Chip_GPIO_Init
+                0x1a00225e                Chip_GPIO_DeInit
+ .text          0x1a002260        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
+ .text          0x1a002260      0x6dc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1a0022e6                Chip_I2C_EventHandler
+                0x1a002304                handleMasterXferState
+                0x1a002408                getSlaveIndex
+                0x1a00243c                handleSlaveXferState
+                0x1a002530                Chip_I2C_Init
+                0x1a002558                Chip_I2C_DeInit
+                0x1a00257c                Chip_I2C_SetClockRate
+                0x1a0025b8                Chip_I2C_GetClockRate
+                0x1a0025e4                Chip_I2C_SetMasterEventHandler
+                0x1a002618                Chip_I2C_GetMasterEventHandler
+                0x1a00262c                Chip_I2C_MasterTransfer
+                0x1a0026bc                Chip_I2C_MasterSend
+                0x1a0026ee                Chip_I2C_MasterCmdRead
+                0x1a002730                Chip_I2C_MasterRead
+                0x1a002762                Chip_I2C_IsMasterActive
+                0x1a002780                Chip_I2C_MasterStateHandler
+                0x1a0027b4                Chip_I2C_SlaveSetup
+                0x1a002840                Chip_I2C_SlaveStateHandler
+                0x1a0028dc                Chip_I2C_Disable
+                0x1a0028f0                Chip_I2C_IsStateChanged
+                0x1a002908                Chip_I2C_EventHandlerPolling
+ .text          0x1a00293c      0x23c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+                0x1a002950                Chip_I2CM_Init
+                0x1a002962                Chip_I2CM_DeInit
+                0x1a002972                Chip_I2CM_SetBusSpeed
+                0x1a002994                Chip_I2CM_XferHandler
+                0x1a002a90                Chip_I2CM_Xfer
+                0x1a002a9e                Chip_I2CM_XferBlocking
+                0x1a002ac2                Chip_I2CM_Write
+                0x1a002b1c                Chip_I2CM_Read
+ .text          0x1a002b78      0x284 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+                0x1a002c50                Chip_I2S_Init
+                0x1a002c5a                Chip_I2S_DeInit
+                0x1a002c7c                Chip_I2S_TxConfig
+                0x1a002cec                Chip_I2S_RxConfig
+                0x1a002d5c                Chip_I2S_Int_TxCmd
+                0x1a002d84                Chip_I2S_Int_RxCmd
+                0x1a002dac                Chip_I2S_DMA_TxCmd
+                0x1a002dd4                Chip_I2S_DMA_RxCmd
+ .text          0x1a002dfc      0x20c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+                0x1a002dfc                Chip_IAP_Init
+                0x1a002e20                Chip_IAP_PreSectorForReadWrite
+                0x1a002e44                Chip_IAP_CopyRamToFlash
+                0x1a002e80                Chip_IAP_EraseSector
+                0x1a002ebc                Chip_IAP_BlankCheckSector
+                0x1a002ee0                Chip_IAP_ReadPID
+                0x1a002efc                Chip_IAP_ReadBootCode
+                0x1a002f1c                Chip_IAP_Compare
+                0x1a002f40                Chip_IAP_ReinvokeISP
+                0x1a002f60                Chip_IAP_ReadUID
+                0x1a002f98                Chip_IAP_ErasePage
+                0x1a002fd0                Chip_IAP_SetBootFlashBank
+ .text          0x1a003008      0x1f0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+                0x1a003008                Chip_LCD_Init
+                0x1a003134                Chip_LCD_DeInit
+                0x1a00313e                Chip_LCD_Cursor_Config
+                0x1a003158                Chip_LCD_Cursor_WriteImage
+                0x1a003188                Chip_LCD_LoadPalette
+ .text          0x1a0031f8       0xc4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+                0x1a0031f8                Chip_OTP_Init
+                0x1a003234                Chip_OTP_ProgBootSrc
+                0x1a003244                Chip_OTP_ProgJTAGDis
+                0x1a003254                Chip_OTP_ProgUSBID
+                0x1a003264                Chip_OTP_ProgGPWord
+                0x1a003290                Chip_OTP_ProgKey
+                0x1a0032ac                Chip_OTP_GenRand
+ .text          0x1a0032bc        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
+ .text          0x1a0032bc       0x1c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
+                0x1a0032bc                Chip_PMC_Sleep
+                0x1a0032c0                Chip_PMC_Set_PwrState
+ .text          0x1a0032d8      0x16a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+                0x1a0032d8                RingBuffer_Init
+                0x1a0032e8                RingBuffer_Insert
+                0x1a003318                RingBuffer_InsertMult
+                0x1a00339a                RingBuffer_Pop
+                0x1a0033ca                RingBuffer_PopMult
+ *fill*         0x1a003442        0x2 ff
+ .text          0x1a003444       0x68 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+                0x1a003444                Chip_RIT_Init
+                0x1a003466                Chip_RIT_DeInit
+                0x1a003474                Chip_RIT_SetTimerInterval
+                0x1a00349c                Chip_RIT_GetIntStatus
+ .text          0x1a0034ac      0x1dc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+                0x1a0034ac                Chip_RTC_DeInit
+                0x1a0034b2                Chip_RTC_ResetClockTickCounter
+                0x1a0034d4                Chip_RTC_Enable
+                0x1a0034ec                Chip_RTC_CntIncrIntConfig
+                0x1a00350a                Chip_RTC_AlarmIntConfig
+                0x1a003528                Chip_RTC_SetFullTime
+                0x1a003562                Chip_RTC_GetFullTime
+                0x1a00358e                Chip_RTC_SetFullAlarmTime
+                0x1a0035b0                Chip_RTC_GetFullAlarmTime
+                0x1a0035ca                Chip_RTC_CalibCounterCmd
+                0x1a0035ea                Chip_RTC_Init
+                0x1a003630                Chip_RTC_EV_GetFirstTimeStamp
+                0x1a00365c                Chip_RTC_EV_GetLastTimeStamp
+ .text          0x1a003688       0x44 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+                0x1a003688                Chip_SCT_Init
+                0x1a003698                Chip_SCT_DeInit
+                0x1a0036a2                Chip_SCT_SetClrControl
+                0x1a0036b4                Chip_SCT_SetConflictResolution
+ .text          0x1a0036cc       0x96 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+                0x1a0036cc                Chip_SCTPWM_SetOutPin
+                0x1a003718                Chip_SCTPWM_SetRate
+ *fill*         0x1a003762        0x2 ff
+ .text          0x1a003764      0x194 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+                0x1a003764                Chip_SDIF_Init
+                0x1a0037b0                Chip_SDIF_DeInit
+                0x1a0037ba                Chip_SDIF_SendCmd
+                0x1a003804                Chip_SDIF_GetResponse
+                0x1a003816                Chip_SDIF_SetClock
+                0x1a003864                Chip_SDIF_SetClearIntFifo
+                0x1a00387c                Chip_SDIF_DmaSetup
+ .text          0x1a0038f8      0x63c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+                0x1a0038f8                SDIO_Card_GetBlockSize
+                0x1a003914                SDIO_Setup_Callback
+                0x1a003920                SDIO_Send_Command
+                0x1a003988                SDIO_Card_WriteData
+                0x1a003a3c                SDIO_Card_ReadData
+                0x1a003b9c                SDIO_Write_Direct
+                0x1a003bdc                SDIO_WriteRead_Direct
+                0x1a003c14                SDIO_Card_SetBlockSize
+                0x1a003cca                SDIO_Read_Direct
+                0x1a003d04                SDIO_Card_EnableInt
+                0x1a003d54                SDIO_Card_DisableInt
+                0x1a003db0                SDIO_Card_Init
+                0x1a003e8c                SDIO_Handler
+ .text          0x1a003f34      0x7ec out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+                0x1a0042cc                Chip_SDMMC_GetState
+                0x1a004304                Chip_SDMMC_Acquire
+                0x1a0045c4                Chip_SDMMC_GetDeviceSize
+                0x1a0045d4                Chip_SDMMC_GetDeviceBlocks
+                0x1a0045e4                Chip_SDMMC_ReadBlocks
+                0x1a004678                Chip_SDMMC_WriteBlocks
+ .text          0x1a004720      0x1e4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+                0x1a004782                Chip_SPI_Int_FlushData
+                0x1a004796                Chip_SPI_RWFrames_Blocking
+                0x1a00481a                Chip_SPI_Int_RWFrames
+                0x1a004884                Chip_SPI_Int_RWFrames8Bits
+                0x1a00488e                Chip_SPI_Int_RWFrames16Bits
+                0x1a004898                Chip_SPI_SetBitRate
+                0x1a0048c0                Chip_SPI_Init
+                0x1a0048f8                Chip_SPI_DeInit
+ .text          0x1a004904      0x440 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0049b8                Chip_SSP_SetClockRate
+                0x1a0049ca                Chip_SSP_RWFrames_Blocking
+                0x1a004a6a                Chip_SSP_WriteFrames_Blocking
+                0x1a004b08                Chip_SSP_ReadFrames_Blocking
+                0x1a004bac                Chip_SSP_Int_FlushData
+                0x1a004bce                Chip_SSP_Int_RWFrames8Bits
+                0x1a004c30                Chip_SSP_Int_RWFrames16Bits
+                0x1a004c92                Chip_SSP_SetMaster
+                0x1a004ca8                Chip_SSP_SetBitRate
+                0x1a004cea                Chip_SSP_Init
+                0x1a004d24                Chip_SSP_DeInit
+ .text          0x1a004d44       0xa0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+                0x1a004d44                StopWatch_Init
+                0x1a004d8c                StopWatch_Start
+                0x1a004d98                StopWatch_TicksPerSecond
+                0x1a004da4                StopWatch_TicksToMs
+                0x1a004db4                StopWatch_TicksToUs
+                0x1a004dc4                StopWatch_MsToTicks
+                0x1a004dd4                StopWatch_UsToTicks
+ .text          0x1a004de4      0x158 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x1a004e0c                Chip_SetupCoreClock
+                0x1a004f0c                Chip_SetupXtalClocking
+                0x1a004f20                Chip_SetupIrcClocking
+                0x1a004f34                Chip_SystemInit
+ .text          0x1a004f3c       0x94 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+                0x1a004f68                Chip_TIMER_Init
+                0x1a004f74                Chip_TIMER_DeInit
+                0x1a004f80                Chip_TIMER_Reset
+                0x1a004f98                Chip_TIMER_ExtMatchControlSet
+ .text          0x1a004fd0      0x3c8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a005040                Chip_UART_Init
+                0x1a005098                Chip_UART_DeInit
+                0x1a0050b4                Chip_UART_Send
+                0x1a0050d2                Chip_UART_CheckBusy
+                0x1a0050e2                Chip_UART_SendBlocking
+                0x1a005106                Chip_UART_Read
+                0x1a005124                Chip_UART_ReadBlocking
+                0x1a005148                Chip_UART_SetBaud
+                0x1a00518c                Chip_UART_RXIntHandlerRB
+                0x1a0051b2                Chip_UART_TXIntHandlerRB
+                0x1a0051ee                Chip_UART_SendRB
+                0x1a005230                Chip_UART_ReadRB
+                0x1a00523e                Chip_UART_IRQRBHandler
+                0x1a005276                Chip_UART_SetBaudFDR
+                0x1a005354                Chip_UART_GetABEOStatus
+                0x1a005360                Chip_UART_ABCmd
+ .text          0x1a005398       0x36 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
+                0x1a005398                Chip_WWDT_Init
+                0x1a0053ae                Chip_WWDT_DeInit
+                0x1a0053b0                Chip_WWDT_ClearStatusFlag
+ *fill*         0x1a0053ce        0x2 ff
+ .text          0x1a0053d0       0x30 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x1a0053d0                __aeabi_uldivmod
+ .text          0x1a005400        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
  .text.__udivmoddi4
-                0x1a0053a4      0x320 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x1a0053a4                __udivmoddi4
- .text          0x1a0056c4        0x4 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
-                0x1a0056c4                __aeabi_idiv0
-                0x1a0056c4                __aeabi_ldiv0
- .text          0x1a0056c8        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
- .text.memset   0x1a0056c8       0x10 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
-                0x1a0056c8                memset
- .text          0x1a0056d8        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
- .text.memcpy   0x1a0056d8       0x1c C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
-                0x1a0056d8                memcpy
+                0x1a005400      0x320 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x1a005400                __udivmoddi4
+ .text          0x1a005720        0x4 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x1a005720                __aeabi_idiv0
+                0x1a005720                __aeabi_ldiv0
+ .text          0x1a005724        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+ .text.memset   0x1a005724       0x10 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+                0x1a005724                memset
+ .text          0x1a005734        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+ .text.memcpy   0x1a005734       0x1c C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+                0x1a005734                memcpy
  *(.rodata*)
- .rodata        0x1a0056f4        0x8 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
-                0x1a0056f4                ExtRateIn
-                0x1a0056f8                OscRateIn
- .rodata        0x1a0056fc       0x14 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .rodata        0x1a005750        0x8 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+                0x1a005750                ExtRateIn
+                0x1a005754                OscRateIn
+ .rodata        0x1a005758       0x14 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
  .rodata.str1.4
-                0x1a005710        0x6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- *fill*         0x1a005716        0x2 ff
- .rodata        0x1a005718       0x6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .rodata        0x1a005784       0xb6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
- *fill*         0x1a00583a        0x2 ff
- .rodata        0x1a00583c       0x48 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .rodata        0x1a005884       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a005894                        . = ALIGN (0x4)
-                0x1a005894                        _etext = .
+                0x1a00576c        0x6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ *fill*         0x1a005772        0x2 ff
+ .rodata        0x1a005774       0x6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .rodata        0x1a0057e0       0xb6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+ *fill*         0x1a005896        0x2 ff
+ .rodata        0x1a005898       0x48 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .rodata        0x1a0058e0       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a0058f0                        . = ALIGN (0x4)
+                0x1a0058f0                        _etext = .
 
-.glue_7         0x1a005894        0x0
- .glue_7        0x1a005894        0x0 linker stubs
+.glue_7         0x1a0058f0        0x0
+ .glue_7        0x1a0058f0        0x0 linker stubs
 
-.glue_7t        0x1a005894        0x0
- .glue_7t       0x1a005894        0x0 linker stubs
+.glue_7t        0x1a0058f0        0x0
+ .glue_7t       0x1a0058f0        0x0 linker stubs
 
-.vfp11_veneer   0x1a005894        0x0
- .vfp11_veneer  0x1a005894        0x0 linker stubs
+.vfp11_veneer   0x1a0058f0        0x0
+ .vfp11_veneer  0x1a0058f0        0x0 linker stubs
 
-.v4_bx          0x1a005894        0x0
- .v4_bx         0x1a005894        0x0 linker stubs
+.v4_bx          0x1a0058f0        0x0
+ .v4_bx         0x1a0058f0        0x0 linker stubs
 
-.iplt           0x1a005894        0x0
- .iplt          0x1a005894        0x0 out/01_GPIO/libs/startup/src/startup.o
+.iplt           0x1a0058f0        0x0
+ .iplt          0x1a0058f0        0x0 out/01_GPIO/libs/startup/src/startup.o
 
-.rel.dyn        0x1a005894        0x0
- .rel.iplt      0x1a005894        0x0 out/01_GPIO/libs/startup/src/startup.o
+.rel.dyn        0x1a0058f0        0x0
+ .rel.iplt      0x1a0058f0        0x0 out/01_GPIO/libs/startup/src/startup.o
 
-.data           0x10000000       0x3c load address 0x1a005894
+.data           0x10000000       0x3c load address 0x1a0058f0
                 0x10000000                        _data = .
  *(vtable)
  *(.ramfunc*)
@@ -4646,10 +4646,10 @@ END GROUP
  *fill*         0x10000039        0x3 
                 0x1000003c                        _edata = .
 
-.igot.plt       0x1000003c        0x0 load address 0x1a0058d0
+.igot.plt       0x1000003c        0x0 load address 0x1a00592c
  .igot.plt      0x1000003c        0x0 out/01_GPIO/libs/startup/src/startup.o
 
-.bss            0x1000003c      0x21c load address 0x1a0058d0
+.bss            0x1000003c      0x21c load address 0x1a00592c
                 0x1000003c                        _bss = .
  *(.bss*)
  .bss           0x1000003c        0x0 out/01_GPIO/libs/startup/src/startup.o
@@ -4708,156 +4708,156 @@ END GROUP
 OUTPUT(out/01_GPIO/01_GPIO.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000    0x1a4ff
+.debug_info     0x00000000    0x1a9c5
  .debug_info    0x00000000      0x17b out/01_GPIO/libs/startup/src/startup.o
- .debug_info    0x0000017b      0xe6c out/01_GPIO/projects/01_GPIO/Core/Src/main.o
- .debug_info    0x00000fe7      0xba9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_info    0x00001b90      0xa5b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
- .debug_info    0x000025eb      0x278 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
- .debug_info    0x00002863      0xf6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
- .debug_info    0x000037cf      0xca8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_info    0x00004477     0x1a71 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_info    0x00005ee8      0x416 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
- .debug_info    0x000062fe      0x6c9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
- .debug_info    0x000069c7      0xb8f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
- .debug_info    0x00007556      0xcc1 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
- .debug_info    0x00008217      0x323 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
- .debug_info    0x0000853a     0x1b33 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
- .debug_info    0x0000a06d      0x1ce out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_info    0x0000a23b       0x77 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
- .debug_info    0x0000a2b2     0x1496 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_info    0x0000b748      0xafb out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
- .debug_info    0x0000c243      0x8e7 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
- .debug_info    0x0000cb2a      0xae0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
- .debug_info    0x0000d60a      0xbae out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
- .debug_info    0x0000e1b8      0x89d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
- .debug_info    0x0000ea55       0x77 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
- .debug_info    0x0000eacc      0x303 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
- .debug_info    0x0000edcf      0x557 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_info    0x0000f326      0x528 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
- .debug_info    0x0000f84e      0x70c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
- .debug_info    0x0000ff5a      0x9b0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
- .debug_info    0x0001090a      0xb36 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
- .debug_info    0x00011440      0x7d7 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
- .debug_info    0x00011c17     0x1959 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
- .debug_info    0x00013570     0x1720 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
- .debug_info    0x00014c90      0xc99 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
- .debug_info    0x00015929     0x192a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_info    0x00017253      0x867 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
- .debug_info    0x00017aba      0xab0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_info    0x0001856a      0x553 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_info    0x00018abd     0x18c9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_info    0x0001a386      0x179 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
+ .debug_info    0x0000017b     0x1332 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+ .debug_info    0x000014ad      0xba9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_info    0x00002056      0xa5b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+ .debug_info    0x00002ab1      0x278 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+ .debug_info    0x00002d29      0xf6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+ .debug_info    0x00003c95      0xca8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_info    0x0000493d     0x1a71 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_info    0x000063ae      0x416 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+ .debug_info    0x000067c4      0x6c9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+ .debug_info    0x00006e8d      0xb8f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+ .debug_info    0x00007a1c      0xcc1 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+ .debug_info    0x000086dd      0x323 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+ .debug_info    0x00008a00     0x1b33 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+ .debug_info    0x0000a533      0x1ce out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_info    0x0000a701       0x77 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
+ .debug_info    0x0000a778     0x1496 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_info    0x0000bc0e      0xafb out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+ .debug_info    0x0000c709      0x8e7 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+ .debug_info    0x0000cff0      0xae0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+ .debug_info    0x0000dad0      0xbae out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+ .debug_info    0x0000e67e      0x89d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+ .debug_info    0x0000ef1b       0x77 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
+ .debug_info    0x0000ef92      0x303 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
+ .debug_info    0x0000f295      0x557 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_info    0x0000f7ec      0x528 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+ .debug_info    0x0000fd14      0x70c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+ .debug_info    0x00010420      0x9b0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+ .debug_info    0x00010dd0      0xb36 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+ .debug_info    0x00011906      0x7d7 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+ .debug_info    0x000120dd     0x1959 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+ .debug_info    0x00013a36     0x1720 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+ .debug_info    0x00015156      0xc99 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+ .debug_info    0x00015def     0x192a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_info    0x00017719      0x867 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+ .debug_info    0x00017f80      0xab0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_info    0x00018a30      0x553 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_info    0x00018f83     0x18c9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_info    0x0001a84c      0x179 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
 
-.debug_abbrev   0x00000000     0x5404
+.debug_abbrev   0x00000000     0x53a2
  .debug_abbrev  0x00000000      0x109 out/01_GPIO/libs/startup/src/startup.o
- .debug_abbrev  0x00000109      0x28a out/01_GPIO/projects/01_GPIO/Core/Src/main.o
- .debug_abbrev  0x00000393      0x21c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_abbrev  0x000005af      0x199 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
- .debug_abbrev  0x00000748      0x13d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
- .debug_abbrev  0x00000885      0x3e5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
- .debug_abbrev  0x00000c6a      0x223 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_abbrev  0x00000e8d      0x3dd out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_abbrev  0x0000126a      0x153 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
- .debug_abbrev  0x000013bd      0x22f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
- .debug_abbrev  0x000015ec      0x245 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
- .debug_abbrev  0x00001831      0x286 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
- .debug_abbrev  0x00001ab7      0x160 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
- .debug_abbrev  0x00001c17      0x2c6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
- .debug_abbrev  0x00001edd       0xe9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_abbrev  0x00001fc6       0x28 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
- .debug_abbrev  0x00001fee      0x3c4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_abbrev  0x000023b2      0x2c8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
- .debug_abbrev  0x0000267a      0x230 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
- .debug_abbrev  0x000028aa      0x198 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
- .debug_abbrev  0x00002a42      0x1d6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
- .debug_abbrev  0x00002c18      0x17c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
- .debug_abbrev  0x00002d94       0x28 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
- .debug_abbrev  0x00002dbc      0x122 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
- .debug_abbrev  0x00002ede      0x1b2 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_abbrev  0x00003090      0x1df out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
- .debug_abbrev  0x0000326f      0x1ff out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
- .debug_abbrev  0x0000346e      0x22c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
- .debug_abbrev  0x0000369a      0x2ba out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
- .debug_abbrev  0x00003954      0x206 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
- .debug_abbrev  0x00003b5a      0x3c2 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
- .debug_abbrev  0x00003f1c      0x37f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
- .debug_abbrev  0x0000429b      0x2cf out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
- .debug_abbrev  0x0000456a      0x37a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_abbrev  0x000048e4      0x252 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
- .debug_abbrev  0x00004b36      0x227 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_abbrev  0x00004d5d      0x1a5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_abbrev  0x00004f02      0x433 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_abbrev  0x00005335       0xcf out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
+ .debug_abbrev  0x00000109      0x228 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+ .debug_abbrev  0x00000331      0x21c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_abbrev  0x0000054d      0x199 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+ .debug_abbrev  0x000006e6      0x13d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+ .debug_abbrev  0x00000823      0x3e5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+ .debug_abbrev  0x00000c08      0x223 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_abbrev  0x00000e2b      0x3dd out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_abbrev  0x00001208      0x153 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+ .debug_abbrev  0x0000135b      0x22f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+ .debug_abbrev  0x0000158a      0x245 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+ .debug_abbrev  0x000017cf      0x286 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+ .debug_abbrev  0x00001a55      0x160 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+ .debug_abbrev  0x00001bb5      0x2c6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+ .debug_abbrev  0x00001e7b       0xe9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_abbrev  0x00001f64       0x28 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
+ .debug_abbrev  0x00001f8c      0x3c4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_abbrev  0x00002350      0x2c8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+ .debug_abbrev  0x00002618      0x230 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+ .debug_abbrev  0x00002848      0x198 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+ .debug_abbrev  0x000029e0      0x1d6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+ .debug_abbrev  0x00002bb6      0x17c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+ .debug_abbrev  0x00002d32       0x28 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
+ .debug_abbrev  0x00002d5a      0x122 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
+ .debug_abbrev  0x00002e7c      0x1b2 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_abbrev  0x0000302e      0x1df out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+ .debug_abbrev  0x0000320d      0x1ff out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+ .debug_abbrev  0x0000340c      0x22c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+ .debug_abbrev  0x00003638      0x2ba out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+ .debug_abbrev  0x000038f2      0x206 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+ .debug_abbrev  0x00003af8      0x3c2 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+ .debug_abbrev  0x00003eba      0x37f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+ .debug_abbrev  0x00004239      0x2cf out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+ .debug_abbrev  0x00004508      0x37a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_abbrev  0x00004882      0x252 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+ .debug_abbrev  0x00004ad4      0x227 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_abbrev  0x00004cfb      0x1a5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_abbrev  0x00004ea0      0x433 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_abbrev  0x000052d3       0xcf out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
 
 .debug_loclists
-                0x00000000     0x84d6
+                0x00000000     0x87b0
  .debug_loclists
                 0x00000000       0x53 out/01_GPIO/libs/startup/src/startup.o
  .debug_loclists
-                0x00000053      0x278 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+                0x00000053      0x552 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
  .debug_loclists
-                0x000002cb      0x4f5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000005a5      0x4f5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .debug_loclists
-                0x000007c0      0x210 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+                0x00000a9a      0x210 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
  .debug_loclists
-                0x000009d0       0x34 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+                0x00000caa       0x34 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
  .debug_loclists
-                0x00000a04      0x70f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+                0x00000cde      0x70f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
  .debug_loclists
-                0x00001113      0xf84 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000013ed      0xf84 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .debug_loclists
-                0x00002097       0x5a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+                0x00002371       0x5a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
  .debug_loclists
-                0x000020f1       0xe1 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+                0x000023cb       0xe1 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
  .debug_loclists
-                0x000021d2      0x2e1 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+                0x000024ac      0x2e1 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
  .debug_loclists
-                0x000024b3       0xde out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+                0x0000278d       0xde out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
  .debug_loclists
-                0x00002591       0xc5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+                0x0000286b       0xc5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
  .debug_loclists
-                0x00002656      0xd7a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+                0x00002930      0xd7a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
  .debug_loclists
-                0x000033d0      0xa05 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x000036aa      0xa05 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
  .debug_loclists
-                0x00003dd5      0x38d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+                0x000040af      0x38d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
  .debug_loclists
-                0x00004162      0x376 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+                0x0000443c      0x376 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
  .debug_loclists
-                0x000044d8      0x582 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+                0x000047b2      0x582 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
  .debug_loclists
-                0x00004a5a      0x34f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+                0x00004d34      0x34f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
  .debug_loclists
-                0x00004da9      0x1f8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+                0x00005083      0x1f8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
  .debug_loclists
-                0x00004fa1      0x37f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+                0x0000527b      0x37f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
  .debug_loclists
-                0x00005320      0x11e out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+                0x000055fa      0x11e out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
  .debug_loclists
-                0x0000543e      0x103 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+                0x00005718      0x103 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
  .debug_loclists
-                0x00005541       0x83 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+                0x0000581b       0x83 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
  .debug_loclists
-                0x000055c4       0xeb out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+                0x0000589e       0xeb out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
  .debug_loclists
-                0x000056af      0x1de out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+                0x00005989      0x1de out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
  .debug_loclists
-                0x0000588d      0x9a8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+                0x00005b67      0x9a8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
  .debug_loclists
-                0x00006235      0x947 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+                0x0000650f      0x947 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
  .debug_loclists
-                0x00006b7c      0x3ac out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+                0x00006e56      0x3ac out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
  .debug_loclists
-                0x00006f28      0x953 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x00007202      0x953 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .debug_loclists
-                0x0000787b       0xa5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+                0x00007b55       0xa5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
  .debug_loclists
-                0x00007920      0x13a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x00007bfa      0x13a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .debug_loclists
-                0x00007a5a      0x112 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+                0x00007d34      0x112 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
  .debug_loclists
-                0x00007b6c      0x96a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x00007e46      0x96a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
 
 .debug_aranges  0x00000000      0x4d0
  .debug_aranges
@@ -4939,7 +4939,7 @@ LOAD linker stubs
  .debug_aranges
                 0x000004b0       0x20 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
 
-.debug_macro    0x00000000     0xcb69
+.debug_macro    0x00000000     0xcc59
  .debug_macro   0x00000000       0x63 out/01_GPIO/libs/startup/src/startup.o
  .debug_macro   0x00000063      0xaea out/01_GPIO/libs/startup/src/startup.o
  .debug_macro   0x00000b4d       0x22 out/01_GPIO/libs/startup/src/startup.o
@@ -4997,184 +4997,184 @@ LOAD linker stubs
  .debug_macro   0x00004d27       0x18 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
  .debug_macro   0x00004d3f       0x22 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
  .debug_macro   0x00004d61       0x40 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
- .debug_macro   0x00004da1       0xa6 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
- .debug_macro   0x00004e47       0x5e out/01_GPIO/projects/01_GPIO/Core/Src/main.o
- .debug_macro   0x00004ea5      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_macro   0x000051ba      0x321 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
- .debug_macro   0x000054db      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
- .debug_macro   0x000057f0      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
- .debug_macro   0x00005b05      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_macro   0x00005e1a      0x31b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_macro   0x00006135      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
- .debug_macro   0x0000644a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
- .debug_macro   0x0000675f      0x31b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
- .debug_macro   0x00006a7a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
- .debug_macro   0x00006d8f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
- .debug_macro   0x000070a4      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
- .debug_macro   0x000073b9      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_macro   0x000076ce      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
- .debug_macro   0x000079e3      0x327 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_macro   0x00007d0a      0x31b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
- .debug_macro   0x00008025      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
- .debug_macro   0x0000833a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
- .debug_macro   0x0000864f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
- .debug_macro   0x00008964      0x321 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
- .debug_macro   0x00008c85      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
- .debug_macro   0x00008f9a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
- .debug_macro   0x000092af      0x13b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x000093ea       0x75 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x0000945f       0x2a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009489       0x5c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x000094e5       0x3c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009521       0x34 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009555      0x189 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x000096de       0x57 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009735      0x372 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009aa7       0x16 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009abd       0x4a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009b07       0x34 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009b3b       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009b4b       0x58 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009ba3      0x1e5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009d88       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009d98       0x3c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009dd4       0x6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009e40       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_macro   0x00009e50      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
- .debug_macro   0x0000a165      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
- .debug_macro   0x0000a47a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
- .debug_macro   0x0000a78f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
- .debug_macro   0x0000aaa4      0x3c0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
- .debug_macro   0x0000ae64       0x7b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
- .debug_macro   0x0000aedf      0x327 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
- .debug_macro   0x0000b206      0x3c6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
- .debug_macro   0x0000b5cc      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
- .debug_macro   0x0000b8e1      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_macro   0x0000bbf6      0x31f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
- .debug_macro   0x0000bf15      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_macro   0x0000c22a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_macro   0x0000c53f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_macro   0x0000c854      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
+ .debug_macro   0x00004da1      0x166 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+ .debug_macro   0x00004f07       0x8e out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+ .debug_macro   0x00004f95      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_macro   0x000052aa      0x321 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+ .debug_macro   0x000055cb      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+ .debug_macro   0x000058e0      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+ .debug_macro   0x00005bf5      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_macro   0x00005f0a      0x31b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_macro   0x00006225      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+ .debug_macro   0x0000653a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+ .debug_macro   0x0000684f      0x31b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+ .debug_macro   0x00006b6a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+ .debug_macro   0x00006e7f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+ .debug_macro   0x00007194      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+ .debug_macro   0x000074a9      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_macro   0x000077be      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
+ .debug_macro   0x00007ad3      0x327 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_macro   0x00007dfa      0x31b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+ .debug_macro   0x00008115      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+ .debug_macro   0x0000842a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+ .debug_macro   0x0000873f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+ .debug_macro   0x00008a54      0x321 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+ .debug_macro   0x00008d75      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
+ .debug_macro   0x0000908a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
+ .debug_macro   0x0000939f      0x13b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x000094da       0x75 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x0000954f       0x2a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009579       0x5c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x000095d5       0x3c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009611       0x34 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009645      0x189 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x000097ce       0x57 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009825      0x372 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009b97       0x16 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009bad       0x4a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009bf7       0x34 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009c2b       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009c3b       0x58 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009c93      0x1e5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009e78       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009e88       0x3c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009ec4       0x6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009f30       0x10 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_macro   0x00009f40      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+ .debug_macro   0x0000a255      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+ .debug_macro   0x0000a56a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+ .debug_macro   0x0000a87f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+ .debug_macro   0x0000ab94      0x3c0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+ .debug_macro   0x0000af54       0x7b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+ .debug_macro   0x0000afcf      0x327 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+ .debug_macro   0x0000b2f6      0x3c6 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+ .debug_macro   0x0000b6bc      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+ .debug_macro   0x0000b9d1      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_macro   0x0000bce6      0x31f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+ .debug_macro   0x0000c005      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_macro   0x0000c31a      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_macro   0x0000c62f      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_macro   0x0000c944      0x315 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
 
-.debug_line     0x00000000    0x18d5e
+.debug_line     0x00000000    0x18f65
  .debug_line    0x00000000      0x298 out/01_GPIO/libs/startup/src/startup.o
- .debug_line    0x00000298      0x9dc out/01_GPIO/projects/01_GPIO/Core/Src/main.o
- .debug_line    0x00000c74      0xa33 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_line    0x000016a7      0x8c4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
- .debug_line    0x00001f6b      0x7b4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
- .debug_line    0x0000271f      0xc56 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
- .debug_line    0x00003375      0x7ca out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_line    0x00003b3f     0x136f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_line    0x00004eae      0x7b9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
- .debug_line    0x00005667      0x85d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
- .debug_line    0x00005ec4      0xbd9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
- .debug_line    0x00006a9d      0x929 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
- .debug_line    0x000073c6      0x867 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
- .debug_line    0x00007c2d      0xe89 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
- .debug_line    0x00008ab6      0x751 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_line    0x00009207      0x742 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
- .debug_line    0x00009949     0x104a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_line    0x0000a993      0xc2f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
- .debug_line    0x0000b5c2      0xb48 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
- .debug_line    0x0000c10a      0xa77 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
- .debug_line    0x0000cb81      0xa48 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
- .debug_line    0x0000d5c9      0x885 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
- .debug_line    0x0000de4e      0x73f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
- .debug_line    0x0000e58d      0x76d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
- .debug_line    0x0000ecfa      0x62e out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_line    0x0000f328      0x800 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
- .debug_line    0x0000fb28      0xab5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
- .debug_line    0x000105dd      0x7ce out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
- .debug_line    0x00010dab      0x879 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
- .debug_line    0x00011624      0xa7d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
- .debug_line    0x000120a1      0xf0c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
- .debug_line    0x00012fad     0x10dc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
- .debug_line    0x00014089      0xa98 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
- .debug_line    0x00014b21     0x1259 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_line    0x00015d7a      0x828 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
- .debug_line    0x000165a2      0x91b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_line    0x00016ebd      0x82b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_line    0x000176e8      0xeda out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_line    0x000185c2      0x79c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
+ .debug_line    0x00000298      0xbe3 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+ .debug_line    0x00000e7b      0xa33 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_line    0x000018ae      0x8c4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+ .debug_line    0x00002172      0x7b4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+ .debug_line    0x00002926      0xc56 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+ .debug_line    0x0000357c      0x7ca out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_line    0x00003d46     0x136f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_line    0x000050b5      0x7b9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+ .debug_line    0x0000586e      0x85d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+ .debug_line    0x000060cb      0xbd9 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+ .debug_line    0x00006ca4      0x929 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+ .debug_line    0x000075cd      0x867 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+ .debug_line    0x00007e34      0xe89 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+ .debug_line    0x00008cbd      0x751 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_line    0x0000940e      0x742 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
+ .debug_line    0x00009b50     0x104a out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_line    0x0000ab9a      0xc2f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+ .debug_line    0x0000b7c9      0xb48 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+ .debug_line    0x0000c311      0xa77 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+ .debug_line    0x0000cd88      0xa48 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+ .debug_line    0x0000d7d0      0x885 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+ .debug_line    0x0000e055      0x73f out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
+ .debug_line    0x0000e794      0x76d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
+ .debug_line    0x0000ef01      0x62e out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_line    0x0000f52f      0x800 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+ .debug_line    0x0000fd2f      0xab5 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+ .debug_line    0x000107e4      0x7ce out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+ .debug_line    0x00010fb2      0x879 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+ .debug_line    0x0001182b      0xa7d out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+ .debug_line    0x000122a8      0xf0c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+ .debug_line    0x000131b4     0x10dc out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+ .debug_line    0x00014290      0xa98 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+ .debug_line    0x00014d28     0x1259 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_line    0x00015f81      0x828 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+ .debug_line    0x000167a9      0x91b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_line    0x000170c4      0x82b out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_line    0x000178ef      0xeda out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_line    0x000187c9      0x79c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
 
-.debug_str      0x00000000    0x20537
- .debug_str     0x00000000    0x20537 out/01_GPIO/libs/startup/src/startup.o
+.debug_str      0x00000000    0x209e2
+ .debug_str     0x00000000    0x209e2 out/01_GPIO/libs/startup/src/startup.o
                                0x3dc9 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
-                              0x17b08 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+                              0x17fa7 (size before relaxing)
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
                               0x1719a (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
                               0x1760f (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
                               0x169e6 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
                               0x170bc (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
                               0x1775c (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
                               0x17bd6 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
                               0x16dc1 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
                               0x16e86 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
                               0x16f0a (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
                               0x177a5 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
                               0x16c3a (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
                               0x17c0c (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
                               0x16951 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpiogroup_18xx_43xx.o
                               0x168f5 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
                               0x17931 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
                               0x16f9e (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
                               0x16f6f (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
                               0x16cf1 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
                               0x17621 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
                               0x175b3 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pinint_18xx_43xx.o
                               0x168f2 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
                               0x16a10 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
                                0x7019 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
                               0x16e0b (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
                               0x16cf2 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
                               0x16f83 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
                               0x16ff9 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
                               0x19e06 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
                               0x1786c (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
                               0x1a843 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
                               0x17100 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
                               0x17390 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
                               0x17489 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
                               0x17650 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
                               0x16e5b (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
                               0x17810 (size before relaxing)
- .debug_str     0x00020537        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
+ .debug_str     0x000209e2        0x0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
                               0x16974 (size before relaxing)
 
 .comment        0x00000000       0x45
@@ -5348,48 +5348,48 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000898       0x34 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
 
-.debug_frame    0x00000000     0x2174
+.debug_frame    0x00000000     0x215c
  .debug_frame   0x00000000       0x38 out/01_GPIO/libs/startup/src/startup.o
- .debug_frame   0x00000038       0x68 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
- .debug_frame   0x000000a0      0x160 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_frame   0x00000200      0x130 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
- .debug_frame   0x00000330       0x30 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
- .debug_frame   0x00000360      0x198 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
- .debug_frame   0x000004f8       0x70 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_frame   0x00000568      0x2f0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_frame   0x00000858       0x60 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
- .debug_frame   0x000008b8       0x68 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
- .debug_frame   0x00000920       0xf0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
- .debug_frame   0x00000a10       0xa4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
- .debug_frame   0x00000ab4       0x50 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
- .debug_frame   0x00000b04      0x194 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
- .debug_frame   0x00000c98       0x30 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_frame   0x00000cc8      0x24c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_frame   0x00000f14       0xd8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
- .debug_frame   0x00000fec       0xf0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
- .debug_frame   0x000010dc      0x164 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
- .debug_frame   0x00001240       0x80 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
- .debug_frame   0x000012c0       0xb8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
- .debug_frame   0x00001378       0x30 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
- .debug_frame   0x000013a8       0x90 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
- .debug_frame   0x00001438       0x6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
- .debug_frame   0x000014a4      0x10c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
- .debug_frame   0x000015b0       0x60 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
- .debug_frame   0x00001610       0x44 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
- .debug_frame   0x00001654       0xb4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
- .debug_frame   0x00001708      0x20c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
- .debug_frame   0x00001914      0x158 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
- .debug_frame   0x00001a6c      0x138 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
- .debug_frame   0x00001ba4      0x170 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_frame   0x00001d14       0x88 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
- .debug_frame   0x00001d9c       0x90 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_frame   0x00001e2c       0x78 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_frame   0x00001ea4      0x1d8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_frame   0x0000207c       0x40 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
- .debug_frame   0x000020bc       0x2c C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x000020e8       0x44 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000212c       0x20 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
- .debug_frame   0x0000214c       0x28 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00000038       0x50 out/01_GPIO/projects/01_GPIO/Core/Src/main.o
+ .debug_frame   0x00000088      0x160 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_frame   0x000001e8      0x130 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/aes_18xx_43xx.o
+ .debug_frame   0x00000318       0x30 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/atimer_18xx_43xx.o
+ .debug_frame   0x00000348      0x198 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ccan_18xx_43xx.o
+ .debug_frame   0x000004e0       0x70 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_frame   0x00000550      0x2f0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_frame   0x00000840       0x60 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/dac_18xx_43xx.o
+ .debug_frame   0x000008a0       0x68 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/eeprom_18xx_43xx.o
+ .debug_frame   0x00000908       0xf0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/emc_18xx_43xx.o
+ .debug_frame   0x000009f8       0xa4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/enet_18xx_43xx.o
+ .debug_frame   0x00000a9c       0x50 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/evrt_18xx_43xx.o
+ .debug_frame   0x00000aec      0x194 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpdma_18xx_43xx.o
+ .debug_frame   0x00000c80       0x30 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_frame   0x00000cb0      0x24c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_frame   0x00000efc       0xd8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2cm_18xx_43xx.o
+ .debug_frame   0x00000fd4       0xf0 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/i2s_18xx_43xx.o
+ .debug_frame   0x000010c4      0x164 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/iap_18xx_43xx.o
+ .debug_frame   0x00001228       0x80 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/lcd_18xx_43xx.o
+ .debug_frame   0x000012a8       0xb8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/otp_18xx_43xx.o
+ .debug_frame   0x00001360       0x30 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/pmc_18xx_43xx.o
+ .debug_frame   0x00001390       0x90 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ring_buffer.o
+ .debug_frame   0x00001420       0x6c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o
+ .debug_frame   0x0000148c      0x10c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/rtc_18xx_43xx.o
+ .debug_frame   0x00001598       0x60 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_18xx_43xx.o
+ .debug_frame   0x000015f8       0x44 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sct_pwm_18xx_43xx.o
+ .debug_frame   0x0000163c       0xb4 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdif_18xx_43xx.o
+ .debug_frame   0x000016f0      0x20c out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdio_18xx_43xx.o
+ .debug_frame   0x000018fc      0x158 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sdmmc_18xx_43xx.o
+ .debug_frame   0x00001a54      0x138 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/spi_18xx_43xx.o
+ .debug_frame   0x00001b8c      0x170 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_frame   0x00001cfc       0x88 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/stopwatch_18xx_43xx.o
+ .debug_frame   0x00001d84       0x90 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_frame   0x00001e14       0x78 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_frame   0x00001e8c      0x1d8 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_frame   0x00002064       0x40 out/01_GPIO/libs/lpc_open/lpc_chip_43xx/src/wwdt_18xx_43xx.o
+ .debug_frame   0x000020a4       0x2c C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000020d0       0x44 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00002114       0x20 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+ .debug_frame   0x00002134       0x28 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_rnglists
                 0x00000000       0xe3

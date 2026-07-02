@@ -156,7 +156,7 @@ void App_UpdateMEF(void) {
         case STATE_PAUSED:
             if ((currentTick - lastBlinkTick) >= BLINK_INTERVAL) {
                 lastBlinkTick = currentTick;
-                displayVisible = !displayVisible; // Invertimos el estado (Toggel)
+                displayVisible = !displayVisible; // Invertimos el estado (Toggle)
 
                 if (displayVisible) {
                     App_DisplayOutput(currentCount); // Muestra el número
