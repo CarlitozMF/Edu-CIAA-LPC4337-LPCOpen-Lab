@@ -4,7 +4,7 @@
  * @brief Aplicación principal: Orquestación de I/O mediante SysTick y Drivers.
  */
 
-#include "main_project_02.h"
+#include "hardware.h"
 #include "sys_core.h"
 #include "led.h"
 
@@ -22,17 +22,17 @@ const uint32_t BUTTON_DEBOUNCE_MS = 50;
 // Variables para LED1 (Rojo)
 uint32_t lastToggleTime1 = 0;
 //GPIO_PinState ledState1 = GPIO_PIN_RESET;
-const uint32_t togglePeriod1 = 100; // 100 ms de alternancia
+const uint32_t togglePeriod1 = 1000; // 1000 ms de alternancia
 
 // Variables para LED2 (Amarillo)
 uint32_t lastToggleTime2 = 0;
 //GPIO_PinState ledState2 = GPIO_PIN_RESET;
-const uint32_t togglePeriod2 = 300; // 300 ms de alternancia
+const uint32_t togglePeriod2 = 500; // 300 ms de alternancia
 
 // Variables para LED3 (Verde)
 uint32_t lastToggleTime3 = 0;
 //GPIO_PinState ledState3 = GPIO_PIN_RESET;
-const uint32_t togglePeriod3 = 600; // 600 ms de alternancia
+const uint32_t togglePeriod3 = 250; // 600 ms de alternancia
 
     while (1) {
 
@@ -48,7 +48,7 @@ const uint32_t togglePeriod3 = 600; // 600 ms de alternancia
         // Validación por tiempo: ¿Estuvo presionado lo suficiente?
             if ((SysTick_GetTicks() - btn_press_start_tick) >= BUTTON_DEBOUNCE_MS) {
             
-                CIAA_LED_Toggle(CIAA_LED_B);
+                CIAA_LED_Toggle(CIAA_LED_G);
             }
         }
 

@@ -5,7 +5,7 @@
  */
 
 #include "chip.h"
-#include "main_project_01.h"
+#include "main.h"
 
 /* Definición de frecuencias de reloj externas para la EDU-CIAA */
 /* Estos valores los requiere LPCOpen (chip_43xx) para calcular los PLLs */
@@ -91,10 +91,10 @@ int main(void) {
 
     while(1) {
        // Ejemplo de parpadeo usando las macros de main.h
-        LEDB_ON();
+        LEDG_ON();
         delay(1000000); 
         
-        LEDB_OFF();
+        LEDG_OFF();
         delay(1000000);
     }
 

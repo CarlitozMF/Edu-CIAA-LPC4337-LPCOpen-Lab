@@ -4,11 +4,7 @@
         {
             "label": "🛠️ MAKE BUILD",
             "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "-j4"
-            ],
+            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" -j4",
             "windows": {
                 "options": {
                     "shell": {
@@ -40,11 +36,7 @@
         {
             "label": "🚀 MAKE FLASH",
             "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "flash"
-            ],
+            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" flash",
             "windows": {
                 "options": {
                     "shell": {
@@ -60,9 +52,6 @@
                         "args": ["-c"]
                     }
                 }
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
             },
             "group": {
                 "kind": "test",
@@ -81,11 +70,7 @@
         {
             "label": "🧹 MAKE CLEAN",
             "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "clean"
-            ],
+            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" clean",
             "windows": {
                 "options": {
                     "shell": {
@@ -101,9 +86,6 @@
                         "args": ["-c"]
                     }
                 }
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
             },
             "group": "build",
             "problemMatcher": "$gcc",
@@ -117,11 +99,7 @@
         {
             "label": "🐞 MAKE DEBUG (Server)",
             "type": "shell",
-            "command": "make",
-            "args": [
-                "PROJECT=${input:projectName}",
-                "debug"
-            ],
+            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" debug",
             "windows": {
                 "options": {
                     "shell": {
@@ -138,9 +116,6 @@
                     }
                 }
             },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
             "isBackground": true,
             "problemMatcher": {
                 "pattern": {
@@ -152,19 +127,6 @@
                     "endsPattern": "Esperando conexión"
                 }
             }
-        }
-    ],
-    "inputs": [
-        {
-            "id": "projectName",
-            "type": "pickString",
-            "description": "Seleccioná el laboratorio a procesar:",
-            "options": [
-                "01_GPIO",
-                "02_GPIO_Abstraction",
-                "03_External_Counter_MEF"
-            ],
-            "default": "01_GPIO"
         }
     ]
 }

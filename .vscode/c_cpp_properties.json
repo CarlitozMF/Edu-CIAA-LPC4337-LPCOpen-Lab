@@ -6,7 +6,7 @@
                 "${workspaceFolder}/libs/**",
                 "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc",
                 "${workspaceFolder}/libs/cmsis_core/inc",
-                "${workspaceFolder}/projects/**" 
+                "${workspaceFolder}/projects/**"
             ],
             "defines": [
                 "CORE_M4",
@@ -15,8 +15,7 @@
                 "BOARD=edu_ciaa_nxp",
                 "__GNUC__"
             ],
-            /* Encapsulamos la ruta entre comillas dobles por los espacios en el nombre de usuario */
-            "compilerPath": "${workspaceFolder}/tools/gcc-arm/bin/arm-none-eabi-gcc.exe",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-arm",
