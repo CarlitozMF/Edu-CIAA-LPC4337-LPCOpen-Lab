@@ -1,15 +1,18 @@
 Archive member included to satisfy reference by file (symbol)
 
-C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+/usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
                               out/obj/i2s_18xx_43xx.o (__aeabi_uldivmod)
-C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                              C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
-C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
-                              C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
-C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+/usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+                              /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+/usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+                              /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+/usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
                               out/obj/clock_18xx_43xx.o (memset)
-C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+/usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
                               out/obj/ring_buffer.o (memcpy)
+
+Merging object attributes
+
 
 Discarded input sections
 
@@ -77,7 +80,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/main.o
  .group         0x00000000        0xc out/obj/main.o
  .group         0x00000000        0xc out/obj/main.o
- .debug_macro   0x00000000      0xaea out/obj/main.o
+ .debug_macro   0x00000000      0xaf0 out/obj/main.o
  .debug_macro   0x00000000       0x22 out/obj/main.o
  .debug_macro   0x00000000       0x56 out/obj/main.o
  .debug_macro   0x00000000       0x51 out/obj/main.o
@@ -139,7 +142,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/ciaa_board.o
  .group         0x00000000        0xc out/obj/ciaa_board.o
  .group         0x00000000        0xc out/obj/ciaa_board.o
- .debug_macro   0x00000000      0xaea out/obj/ciaa_board.o
+ .debug_macro   0x00000000      0xaf0 out/obj/ciaa_board.o
  .debug_macro   0x00000000       0x10 out/obj/ciaa_board.o
  .debug_macro   0x00000000       0x22 out/obj/ciaa_board.o
  .debug_macro   0x00000000       0x56 out/obj/ciaa_board.o
@@ -249,7 +252,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/gpio.o
  .group         0x00000000        0xc out/obj/gpio.o
  .group         0x00000000        0xc out/obj/gpio.o
- .debug_macro   0x00000000      0xaea out/obj/gpio.o
+ .debug_macro   0x00000000      0xaf0 out/obj/gpio.o
  .debug_macro   0x00000000       0x10 out/obj/gpio.o
  .debug_macro   0x00000000       0x22 out/obj/gpio.o
  .debug_macro   0x00000000       0x56 out/obj/gpio.o
@@ -360,7 +363,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/sys_core.o
  .group         0x00000000        0xc out/obj/sys_core.o
  .group         0x00000000        0xc out/obj/sys_core.o
- .debug_macro   0x00000000      0xaea out/obj/sys_core.o
+ .debug_macro   0x00000000      0xaf0 out/obj/sys_core.o
  .debug_macro   0x00000000       0x10 out/obj/sys_core.o
  .debug_macro   0x00000000       0x22 out/obj/sys_core.o
  .debug_macro   0x00000000       0x56 out/obj/sys_core.o
@@ -471,7 +474,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/systick.o
  .group         0x00000000        0xc out/obj/systick.o
  .group         0x00000000        0xc out/obj/systick.o
- .debug_macro   0x00000000      0xaea out/obj/systick.o
+ .debug_macro   0x00000000      0xaf0 out/obj/systick.o
  .debug_macro   0x00000000       0x10 out/obj/systick.o
  .debug_macro   0x00000000       0x22 out/obj/systick.o
  .debug_macro   0x00000000       0x56 out/obj/systick.o
@@ -581,7 +584,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/adc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/adc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/adc_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/adc_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/adc_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/adc_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/adc_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/adc_18xx_43xx.o
@@ -691,7 +694,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/aes_18xx_43xx.o
  .group         0x00000000        0xc out/obj/aes_18xx_43xx.o
  .group         0x00000000        0xc out/obj/aes_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/aes_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/aes_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/aes_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/aes_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/aes_18xx_43xx.o
@@ -801,7 +804,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/atimer_18xx_43xx.o
  .group         0x00000000        0xc out/obj/atimer_18xx_43xx.o
  .group         0x00000000        0xc out/obj/atimer_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/atimer_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/atimer_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/atimer_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/atimer_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/atimer_18xx_43xx.o
@@ -911,7 +914,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/ccan_18xx_43xx.o
  .group         0x00000000        0xc out/obj/ccan_18xx_43xx.o
  .group         0x00000000        0xc out/obj/ccan_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/ccan_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/ccan_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/ccan_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/ccan_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/ccan_18xx_43xx.o
@@ -1021,7 +1024,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/chip_18xx_43xx.o
  .group         0x00000000        0xc out/obj/chip_18xx_43xx.o
  .group         0x00000000        0xc out/obj/chip_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/chip_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/chip_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/chip_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/chip_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/chip_18xx_43xx.o
@@ -1131,7 +1134,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/clock_18xx_43xx.o
  .group         0x00000000        0xc out/obj/clock_18xx_43xx.o
  .group         0x00000000        0xc out/obj/clock_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/clock_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/clock_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/clock_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/clock_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/clock_18xx_43xx.o
@@ -1241,7 +1244,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/dac_18xx_43xx.o
  .group         0x00000000        0xc out/obj/dac_18xx_43xx.o
  .group         0x00000000        0xc out/obj/dac_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/dac_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/dac_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/dac_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/dac_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/dac_18xx_43xx.o
@@ -1351,7 +1354,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/eeprom_18xx_43xx.o
  .group         0x00000000        0xc out/obj/eeprom_18xx_43xx.o
  .group         0x00000000        0xc out/obj/eeprom_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/eeprom_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/eeprom_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/eeprom_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/eeprom_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/eeprom_18xx_43xx.o
@@ -1461,7 +1464,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/emc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/emc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/emc_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/emc_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/emc_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/emc_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/emc_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/emc_18xx_43xx.o
@@ -1571,7 +1574,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/enet_18xx_43xx.o
  .group         0x00000000        0xc out/obj/enet_18xx_43xx.o
  .group         0x00000000        0xc out/obj/enet_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/enet_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/enet_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/enet_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/enet_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/enet_18xx_43xx.o
@@ -1681,7 +1684,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/evrt_18xx_43xx.o
  .group         0x00000000        0xc out/obj/evrt_18xx_43xx.o
  .group         0x00000000        0xc out/obj/evrt_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/evrt_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/evrt_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/evrt_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/evrt_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/evrt_18xx_43xx.o
@@ -1791,7 +1794,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/gpdma_18xx_43xx.o
  .group         0x00000000        0xc out/obj/gpdma_18xx_43xx.o
  .group         0x00000000        0xc out/obj/gpdma_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/gpdma_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/gpdma_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/gpdma_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/gpdma_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/gpdma_18xx_43xx.o
@@ -1901,7 +1904,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/gpio_18xx_43xx.o
  .group         0x00000000        0xc out/obj/gpio_18xx_43xx.o
  .group         0x00000000        0xc out/obj/gpio_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/gpio_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/gpio_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/gpio_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/gpio_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/gpio_18xx_43xx.o
@@ -2011,7 +2014,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/gpiogroup_18xx_43xx.o
  .group         0x00000000        0xc out/obj/gpiogroup_18xx_43xx.o
  .group         0x00000000        0xc out/obj/gpiogroup_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/gpiogroup_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/gpiogroup_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/gpiogroup_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/gpiogroup_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/gpiogroup_18xx_43xx.o
@@ -2121,7 +2124,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/i2c_18xx_43xx.o
  .group         0x00000000        0xc out/obj/i2c_18xx_43xx.o
  .group         0x00000000        0xc out/obj/i2c_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/i2c_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/i2c_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/i2c_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/i2c_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/i2c_18xx_43xx.o
@@ -2231,7 +2234,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/i2cm_18xx_43xx.o
  .group         0x00000000        0xc out/obj/i2cm_18xx_43xx.o
  .group         0x00000000        0xc out/obj/i2cm_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/i2cm_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/i2cm_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/i2cm_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/i2cm_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/i2cm_18xx_43xx.o
@@ -2341,7 +2344,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/i2s_18xx_43xx.o
  .group         0x00000000        0xc out/obj/i2s_18xx_43xx.o
  .group         0x00000000        0xc out/obj/i2s_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/i2s_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/i2s_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/i2s_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/i2s_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/i2s_18xx_43xx.o
@@ -2451,7 +2454,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/iap_18xx_43xx.o
  .group         0x00000000        0xc out/obj/iap_18xx_43xx.o
  .group         0x00000000        0xc out/obj/iap_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/iap_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/iap_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/iap_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/iap_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/iap_18xx_43xx.o
@@ -2561,7 +2564,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/lcd_18xx_43xx.o
  .group         0x00000000        0xc out/obj/lcd_18xx_43xx.o
  .group         0x00000000        0xc out/obj/lcd_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/lcd_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/lcd_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/lcd_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/lcd_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/lcd_18xx_43xx.o
@@ -2671,7 +2674,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/otp_18xx_43xx.o
  .group         0x00000000        0xc out/obj/otp_18xx_43xx.o
  .group         0x00000000        0xc out/obj/otp_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/otp_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/otp_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/otp_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/otp_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/otp_18xx_43xx.o
@@ -2781,7 +2784,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/pinint_18xx_43xx.o
  .group         0x00000000        0xc out/obj/pinint_18xx_43xx.o
  .group         0x00000000        0xc out/obj/pinint_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/pinint_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/pinint_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/pinint_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/pinint_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/pinint_18xx_43xx.o
@@ -2891,7 +2894,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/pmc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/pmc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/pmc_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/pmc_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/pmc_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/pmc_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/pmc_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/pmc_18xx_43xx.o
@@ -2970,7 +2973,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/ring_buffer.o
  .group         0x00000000        0xc out/obj/ring_buffer.o
  .group         0x00000000        0xc out/obj/ring_buffer.o
- .debug_macro   0x00000000      0xaea out/obj/ring_buffer.o
+ .debug_macro   0x00000000      0xaf0 out/obj/ring_buffer.o
  .debug_macro   0x00000000       0x22 out/obj/ring_buffer.o
  .debug_macro   0x00000000      0x103 out/obj/ring_buffer.o
  .debug_macro   0x00000000       0x6a out/obj/ring_buffer.o
@@ -3031,7 +3034,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/ritimer_18xx_43xx.o
  .group         0x00000000        0xc out/obj/ritimer_18xx_43xx.o
  .group         0x00000000        0xc out/obj/ritimer_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/ritimer_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/ritimer_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/ritimer_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/ritimer_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/ritimer_18xx_43xx.o
@@ -3141,7 +3144,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/rtc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/rtc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/rtc_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/rtc_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/rtc_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/rtc_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/rtc_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/rtc_18xx_43xx.o
@@ -3251,7 +3254,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/sct_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sct_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sct_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/sct_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/sct_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sct_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/sct_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/sct_18xx_43xx.o
@@ -3361,7 +3364,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/sct_pwm_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sct_pwm_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sct_pwm_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/sct_pwm_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/sct_pwm_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sct_pwm_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/sct_pwm_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/sct_pwm_18xx_43xx.o
@@ -3485,7 +3488,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/sdif_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sdif_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sdif_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/sdif_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/sdif_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sdif_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/sdif_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/sdif_18xx_43xx.o
@@ -3550,7 +3553,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 out/obj/sdif_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sdif_18xx_43xx.o
  .debug_macro   0x00000000       0x58 out/obj/sdif_18xx_43xx.o
- .debug_macro   0x00000000      0x1e5 out/obj/sdif_18xx_43xx.o
+ .debug_macro   0x00000000      0x1de out/obj/sdif_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sdif_18xx_43xx.o
  .debug_macro   0x00000000       0x3c out/obj/sdif_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sdio_18xx_43xx.o
@@ -3608,7 +3611,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/sdio_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sdio_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sdio_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/sdio_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/sdio_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sdio_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/sdio_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/sdio_18xx_43xx.o
@@ -3732,7 +3735,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/sdmmc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sdmmc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sdmmc_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/sdmmc_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/sdmmc_18xx_43xx.o
@@ -3787,7 +3790,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x18 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x40 out/obj/sdmmc_18xx_43xx.o
- .debug_macro   0x00000000       0x7b out/obj/sdmmc_18xx_43xx.o
+ .debug_macro   0x00000000       0x74 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x2a out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x3c out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x34 out/obj/sdmmc_18xx_43xx.o
@@ -3798,7 +3801,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x58 out/obj/sdmmc_18xx_43xx.o
- .debug_macro   0x00000000      0x1e5 out/obj/sdmmc_18xx_43xx.o
+ .debug_macro   0x00000000      0x1de out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sdmmc_18xx_43xx.o
  .debug_macro   0x00000000       0x3c out/obj/sdmmc_18xx_43xx.o
  .group         0x00000000        0xc out/obj/spi_18xx_43xx.o
@@ -3856,7 +3859,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/spi_18xx_43xx.o
  .group         0x00000000        0xc out/obj/spi_18xx_43xx.o
  .group         0x00000000        0xc out/obj/spi_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/spi_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/spi_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/spi_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/spi_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/spi_18xx_43xx.o
@@ -3966,7 +3969,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/ssp_18xx_43xx.o
  .group         0x00000000        0xc out/obj/ssp_18xx_43xx.o
  .group         0x00000000        0xc out/obj/ssp_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/ssp_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/ssp_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/ssp_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/ssp_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/ssp_18xx_43xx.o
@@ -4076,7 +4079,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/stopwatch_18xx_43xx.o
  .group         0x00000000        0xc out/obj/stopwatch_18xx_43xx.o
  .group         0x00000000        0xc out/obj/stopwatch_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/stopwatch_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/stopwatch_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/stopwatch_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/stopwatch_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/stopwatch_18xx_43xx.o
@@ -4186,7 +4189,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/sysinit_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sysinit_18xx_43xx.o
  .group         0x00000000        0xc out/obj/sysinit_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/sysinit_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/sysinit_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/sysinit_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/sysinit_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/sysinit_18xx_43xx.o
@@ -4296,7 +4299,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/timer_18xx_43xx.o
  .group         0x00000000        0xc out/obj/timer_18xx_43xx.o
  .group         0x00000000        0xc out/obj/timer_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/timer_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/timer_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/timer_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/timer_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/timer_18xx_43xx.o
@@ -4406,7 +4409,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/uart_18xx_43xx.o
  .group         0x00000000        0xc out/obj/uart_18xx_43xx.o
  .group         0x00000000        0xc out/obj/uart_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/uart_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/uart_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/uart_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/uart_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/uart_18xx_43xx.o
@@ -4516,7 +4519,7 @@ Discarded input sections
  .group         0x00000000        0xc out/obj/wwdt_18xx_43xx.o
  .group         0x00000000        0xc out/obj/wwdt_18xx_43xx.o
  .group         0x00000000        0xc out/obj/wwdt_18xx_43xx.o
- .debug_macro   0x00000000      0xaea out/obj/wwdt_18xx_43xx.o
+ .debug_macro   0x00000000      0xaf0 out/obj/wwdt_18xx_43xx.o
  .debug_macro   0x00000000       0x10 out/obj/wwdt_18xx_43xx.o
  .debug_macro   0x00000000       0x22 out/obj/wwdt_18xx_43xx.o
  .debug_macro   0x00000000       0x56 out/obj/wwdt_18xx_43xx.o
@@ -4572,9 +4575,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 out/obj/wwdt_18xx_43xx.o
  .debug_macro   0x00000000       0x40 out/obj/wwdt_18xx_43xx.o
  .ARM.extab.text.__udivmoddi4
-                0x00000000        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
  .ARM.exidx.text.__udivmoddi4
-                0x00000000        0x8 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x00000000        0x8 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
 
 Memory Configuration
 
@@ -4630,16 +4633,16 @@ LOAD out/obj/timer_18xx_43xx.o
 LOAD out/obj/uart_18xx_43xx.o
 LOAD out/obj/wwdt_18xx_43xx.o
 START GROUP
-LOAD C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a
-LOAD C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
+LOAD /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
 END GROUP
 START GROUP
-LOAD C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a
-LOAD C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
+LOAD /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
 END GROUP
                 0x10008000                        __stack_end = 0x10008000
 
-.text           0x1a000000     0x5c34
+.text           0x1a000000     0x5b10
  FILL mask 0xff
                 0x1a000000                        __vectors_start__ = .
  *(.isr_vector)
@@ -4657,411 +4660,411 @@ END GROUP
                 0x1a000300                PendSV_Handler
                 0x1a000300                NMI_Handler
                 0x1a000300                UsageFault_Handler
-                0x1a000300                BusFault_Handler
                 0x1a000300                Default_Handler
                 0x1a000300                MemManage_Handler
                 0x1a000300                SVC_Handler
+                0x1a000300                BusFault_Handler
                 0x1a000302                Reset_Handler
- .text          0x1a000344      0x1e4 out/obj/main.o
+ .text          0x1a000344      0x1e0 out/obj/main.o
                 0x1a000344                App_DisplayOutput
                 0x1a00037c                App_ReadButtonDebounced
                 0x1a0003b6                App_DisplayClear
                 0x1a0003d8                App_UpdateMEF
-                0x1a0004dc                main
- .text          0x1a000528       0x98 out/obj/ciaa_board.o
-                0x1a000528                CIAA_Board_Init
-                0x1a000568                CIAA_LED_Set
-                0x1a000584                CIAA_LED_Toggle
-                0x1a0005a0                CIAA_TEC_Get
- .text          0x1a0005c0       0xe0 out/obj/gpio.o
-                0x1a0005c0                GPIO_Write
-                0x1a0005d8                GPIO_Init
-                0x1a000670                GPIO_Read
-                0x1a000688                GPIO_Toggle
- .text          0x1a0006a0       0x18 out/obj/sys_core.o
-                0x1a0006a0                Sys_Init
- .text          0x1a0006b8       0x78 out/obj/systick.o
-                0x1a0006b8                SysTick_Handler
-                0x1a0006c8                SysTick_Init
-                0x1a000710                SysTick_GetTicks
-                0x1a00071c                SysTick_Delay
- .text          0x1a000730      0x1d8 out/obj/adc_18xx_43xx.o
-                0x1a00077a                setStartMode
-                0x1a000788                readAdcVal
-                0x1a0007a0                Chip_ADC_Init
-                0x1a0007e0                Chip_ADC_DeInit
-                0x1a0007f6                Chip_ADC_ReadValue
-                0x1a0007fe                Chip_ADC_ReadStatus
-                0x1a000830                Chip_ADC_Int_SetChannelCmd
-                0x1a00084c                Chip_ADC_SetStartMode
-                0x1a00086c                Chip_ADC_SetSampleRate
-                0x1a00089e                Chip_ADC_SetResolution
-                0x1a0008aa                Chip_ADC_EnableChannel
-                0x1a0008ce                Chip_ADC_SetBurstCmd
-                0x1a0008f0                Chip_ADC_ReadByte
- .text          0x1a000908      0x110 out/obj/aes_18xx_43xx.o
-                0x1a000908                Chip_AES_Init
-                0x1a000954                Chip_AES_SetMode
-                0x1a000964                Chip_AES_LoadKey
-                0x1a00097c                Chip_AES_LoadKeyRNG
-                0x1a00098c                Chip_AES_LoadKeySW
-                0x1a00099c                Chip_AES_LoadIV_SW
-                0x1a0009ac                Chip_AES_LoadIV_IC
-                0x1a0009bc                Chip_AES_Operate
-                0x1a0009cc                Chip_AES_ProgramKey
-                0x1a0009e8                Chip_AES_Config_DMA
-                0x1a0009f8                Chip_AES_OperateDMA
-                0x1a000a08                Chip_AES_GetStatusDMA
- .text          0x1a000a18       0x16 out/obj/atimer_18xx_43xx.o
-                0x1a000a18                Chip_ATIMER_Init
-                0x1a000a22                Chip_ATIMER_DeInit
- *fill*         0x1a000a2e        0x2 ff
- .text          0x1a000a30      0x3e4 out/obj/ccan_18xx_43xx.o
-                0x1a000ad4                Chip_CCAN_DeInit
-                0x1a000ae0                Chip_CCAN_SetBitRate
-                0x1a000b5a                Chip_CCAN_ClearStatus
-                0x1a000b68                Chip_CCAN_TransferMsgObject
-                0x1a000b8e                Chip_CCAN_SetMsgObject
-                0x1a000c78                Chip_CCAN_GetMsgObject
-                0x1a000ce6                Chip_CCAN_SetValidMsg
-                0x1a000d2c                Chip_CCAN_Init
-                0x1a000d5e                Chip_CCAN_Send
-                0x1a000db0                Chip_CCAN_AddReceiveID
-                0x1a000dda                Chip_CCAN_DeleteReceiveID
- .text          0x1a000e14       0xc4 out/obj/chip_18xx_43xx.o
-                0x1a000e48                Chip_USB0_Init
-                0x1a000e7c                Chip_USB1_Init
-                0x1a000ec4                SystemCoreClockUpdate
- .text          0x1a000ed8      0x96c out/obj/clock_18xx_43xx.o
-                0x1a001104                Chip_Clock_EnableCrystal
-                0x1a001150                Chip_Clock_DisableCrystal
-                0x1a001160                Chip_Clock_SetDivider
-                0x1a0011b4                Chip_Clock_GetDividerSource
-                0x1a0011d0                Chip_Clock_GetDividerDivisor
-                0x1a0011ec                Chip_Clock_GetClockInputHz
-                0x1a0012d4                Chip_Clock_CalcMainPLLValue
-                0x1a001354                Chip_Clock_SetupMainPLLMult
-                0x1a0013f0                Chip_Clock_SetupMainPLLHz
-                0x1a0014b6                Chip_Clock_GetMainPLLHz
-                0x1a001540                Chip_Clock_SetBaseClock
-                0x1a0015a0                Chip_Clock_GetBaseClockOpts
-                0x1a0015de                Chip_Clock_EnableBaseClock
-                0x1a0015fa                Chip_Clock_DisableBaseClock
-                0x1a001616                Chip_Clock_IsBaseClockEnabled
-                0x1a001638                Chip_Clock_GetBaseClock
-                0x1a001660                Chip_Clock_GetBaseClocktHz
-                0x1a00166c                Chip_Clock_EnableOpts
-                0x1a0016a8                Chip_Clock_Enable
-                0x1a0016dc                Chip_Clock_RTCEnable
-                0x1a0016f4                Chip_Clock_Disable
-                0x1a001728                Chip_Clock_StartPowerDown
-                0x1a00173c                Chip_Clock_ClearPowerDown
-                0x1a001750                Chip_Clock_GetRate
-                0x1a001798                Chip_Clock_GetEMCRate
-                0x1a0017cc                Chip_Clock_SetupPLL
-                0x1a00180c                Chip_Clock_EnablePLL
-                0x1a001820                Chip_Clock_DisablePLL
-                0x1a001834                Chip_Clock_GetPLLStatus
- .text          0x1a001844       0x4c out/obj/dac_18xx_43xx.o
-                0x1a001844                Chip_DAC_DeInit
-                0x1a00184e                Chip_DAC_UpdateValue
-                0x1a00185e                Chip_DAC_SetBias
-                0x1a001876                Chip_DAC_Init
- .text          0x1a001890       0x58 out/obj/eeprom_18xx_43xx.o
-                0x1a0018ac                Chip_EEPROM_Init
-                0x1a0018c4                Chip_EEPROM_WaitForIntStatus
-                0x1a0018d4                Chip_EEPROM_EraseProgramPage
- .text          0x1a0018e8      0x348 out/obj/emc_18xx_43xx.o
-                0x1a001946                initDynMem
-                0x1a001af2                initStaticMem
-                0x1a001b5a                Chip_EMC_Dynamic_Init
-                0x1a001b74                Chip_EMC_Dynamic_Enable
-                0x1a001b94                Chip_EMC_Static_Init
-                0x1a001bac                Chip_EMC_Mirror
-                0x1a001bcc                Chip_EMC_Enable
-                0x1a001bec                Chip_EMC_LowPowerMode
-                0x1a001c0c                Chip_EMC_Init
- .text          0x1a001c30      0x16c out/obj/enet_18xx_43xx.o
-                0x1a001c90                Chip_ENET_DeInit
-                0x1a001caa                Chip_ENET_SetupMII
-                0x1a001cbc                Chip_ENET_Init
-                0x1a001d38                Chip_ENET_StartMIIWrite
-                0x1a001d58                Chip_ENET_StartMIIRead
-                0x1a001d70                Chip_ENET_SetDuplex
-                0x1a001d86                Chip_ENET_SetSpeed
- .text          0x1a001d9c       0xdc out/obj/evrt_18xx_43xx.o
-                0x1a001d9c                Chip_EVRT_Init
-                0x1a001dcc                Chip_EVRT_ConfigIntSrcActiveType
-                0x1a001e3c                Chip_EVRT_SetUpIntSrc
-                0x1a001e5c                Chip_EVRT_IsSourceInterrupting
- .text          0x1a001e78      0x6a0 out/obj/gpdma_18xx_43xx.o
-                0x1a001fdc                makeCtrlWord
-                0x1a0020ba                setupChannel
-                0x1a00214c                Chip_GPDMA_Init
-                0x1a002190                Chip_GPDMA_DeInit
-                0x1a00219a                Chip_GPDMA_InitChannelCfg
-                0x1a00221c                Chip_GPDMA_IntGetStatus
-                0x1a002278                Chip_GPDMA_ClearIntPending
-                0x1a00228e                Chip_GPDMA_Interrupt
-                0x1a0022d8                Chip_GPDMA_ChannelCmd
-                0x1a002300                Chip_GPDMA_Stop
-                0x1a002348                Chip_GPDMA_Transfer
-                0x1a0023ec                Chip_GPDMA_PrepareDescriptor
-                0x1a00246c                Chip_GPDMA_SGTransfer
-                0x1a0024de                Chip_GPDMA_GetFreeChannel
- .text          0x1a002518        0x4 out/obj/gpio_18xx_43xx.o
-                0x1a002518                Chip_GPIO_Init
-                0x1a00251a                Chip_GPIO_DeInit
- .text          0x1a00251c        0x0 out/obj/gpiogroup_18xx_43xx.o
- .text          0x1a00251c      0x6dc out/obj/i2c_18xx_43xx.o
-                0x1a0025a2                Chip_I2C_EventHandler
-                0x1a0025c0                handleMasterXferState
-                0x1a0026c4                getSlaveIndex
-                0x1a0026f8                handleSlaveXferState
-                0x1a0027ec                Chip_I2C_Init
-                0x1a002814                Chip_I2C_DeInit
-                0x1a002838                Chip_I2C_SetClockRate
-                0x1a002874                Chip_I2C_GetClockRate
-                0x1a0028a0                Chip_I2C_SetMasterEventHandler
-                0x1a0028d4                Chip_I2C_GetMasterEventHandler
-                0x1a0028e8                Chip_I2C_MasterTransfer
-                0x1a002978                Chip_I2C_MasterSend
-                0x1a0029aa                Chip_I2C_MasterCmdRead
-                0x1a0029ec                Chip_I2C_MasterRead
-                0x1a002a1e                Chip_I2C_IsMasterActive
-                0x1a002a3c                Chip_I2C_MasterStateHandler
-                0x1a002a70                Chip_I2C_SlaveSetup
-                0x1a002afc                Chip_I2C_SlaveStateHandler
-                0x1a002b98                Chip_I2C_Disable
-                0x1a002bac                Chip_I2C_IsStateChanged
-                0x1a002bc4                Chip_I2C_EventHandlerPolling
- .text          0x1a002bf8      0x23c out/obj/i2cm_18xx_43xx.o
-                0x1a002c0c                Chip_I2CM_Init
-                0x1a002c1e                Chip_I2CM_DeInit
-                0x1a002c2e                Chip_I2CM_SetBusSpeed
-                0x1a002c50                Chip_I2CM_XferHandler
-                0x1a002d4c                Chip_I2CM_Xfer
-                0x1a002d5a                Chip_I2CM_XferBlocking
-                0x1a002d7e                Chip_I2CM_Write
-                0x1a002dd8                Chip_I2CM_Read
- .text          0x1a002e34      0x284 out/obj/i2s_18xx_43xx.o
-                0x1a002f0c                Chip_I2S_Init
-                0x1a002f16                Chip_I2S_DeInit
-                0x1a002f38                Chip_I2S_TxConfig
-                0x1a002fa8                Chip_I2S_RxConfig
-                0x1a003018                Chip_I2S_Int_TxCmd
-                0x1a003040                Chip_I2S_Int_RxCmd
-                0x1a003068                Chip_I2S_DMA_TxCmd
-                0x1a003090                Chip_I2S_DMA_RxCmd
- .text          0x1a0030b8      0x20c out/obj/iap_18xx_43xx.o
-                0x1a0030b8                Chip_IAP_Init
-                0x1a0030dc                Chip_IAP_PreSectorForReadWrite
-                0x1a003100                Chip_IAP_CopyRamToFlash
-                0x1a00313c                Chip_IAP_EraseSector
-                0x1a003178                Chip_IAP_BlankCheckSector
-                0x1a00319c                Chip_IAP_ReadPID
-                0x1a0031b8                Chip_IAP_ReadBootCode
-                0x1a0031d8                Chip_IAP_Compare
-                0x1a0031fc                Chip_IAP_ReinvokeISP
-                0x1a00321c                Chip_IAP_ReadUID
-                0x1a003254                Chip_IAP_ErasePage
-                0x1a00328c                Chip_IAP_SetBootFlashBank
- .text          0x1a0032c4      0x1f0 out/obj/lcd_18xx_43xx.o
-                0x1a0032c4                Chip_LCD_Init
-                0x1a0033f0                Chip_LCD_DeInit
-                0x1a0033fa                Chip_LCD_Cursor_Config
-                0x1a003414                Chip_LCD_Cursor_WriteImage
-                0x1a003444                Chip_LCD_LoadPalette
- .text          0x1a0034b4       0xc4 out/obj/otp_18xx_43xx.o
-                0x1a0034b4                Chip_OTP_Init
-                0x1a0034f0                Chip_OTP_ProgBootSrc
-                0x1a003500                Chip_OTP_ProgJTAGDis
-                0x1a003510                Chip_OTP_ProgUSBID
-                0x1a003520                Chip_OTP_ProgGPWord
-                0x1a00354c                Chip_OTP_ProgKey
-                0x1a003568                Chip_OTP_GenRand
- .text          0x1a003578        0x0 out/obj/pinint_18xx_43xx.o
- .text          0x1a003578       0x1c out/obj/pmc_18xx_43xx.o
-                0x1a003578                Chip_PMC_Sleep
-                0x1a00357c                Chip_PMC_Set_PwrState
- .text          0x1a003594      0x16a out/obj/ring_buffer.o
-                0x1a003594                RingBuffer_Init
-                0x1a0035a4                RingBuffer_Insert
-                0x1a0035d4                RingBuffer_InsertMult
-                0x1a003656                RingBuffer_Pop
-                0x1a003686                RingBuffer_PopMult
- *fill*         0x1a0036fe        0x2 ff
- .text          0x1a003700       0x68 out/obj/ritimer_18xx_43xx.o
-                0x1a003700                Chip_RIT_Init
-                0x1a003722                Chip_RIT_DeInit
-                0x1a003730                Chip_RIT_SetTimerInterval
-                0x1a003758                Chip_RIT_GetIntStatus
- .text          0x1a003768      0x1dc out/obj/rtc_18xx_43xx.o
-                0x1a003768                Chip_RTC_DeInit
-                0x1a00376e                Chip_RTC_ResetClockTickCounter
-                0x1a003790                Chip_RTC_Enable
-                0x1a0037a8                Chip_RTC_CntIncrIntConfig
-                0x1a0037c6                Chip_RTC_AlarmIntConfig
-                0x1a0037e4                Chip_RTC_SetFullTime
-                0x1a00381e                Chip_RTC_GetFullTime
-                0x1a00384a                Chip_RTC_SetFullAlarmTime
-                0x1a00386c                Chip_RTC_GetFullAlarmTime
-                0x1a003886                Chip_RTC_CalibCounterCmd
-                0x1a0038a6                Chip_RTC_Init
-                0x1a0038ec                Chip_RTC_EV_GetFirstTimeStamp
-                0x1a003918                Chip_RTC_EV_GetLastTimeStamp
- .text          0x1a003944       0x44 out/obj/sct_18xx_43xx.o
-                0x1a003944                Chip_SCT_Init
-                0x1a003954                Chip_SCT_DeInit
-                0x1a00395e                Chip_SCT_SetClrControl
-                0x1a003970                Chip_SCT_SetConflictResolution
- .text          0x1a003988       0x96 out/obj/sct_pwm_18xx_43xx.o
-                0x1a003988                Chip_SCTPWM_SetOutPin
-                0x1a0039d4                Chip_SCTPWM_SetRate
- *fill*         0x1a003a1e        0x2 ff
- .text          0x1a003a20      0x194 out/obj/sdif_18xx_43xx.o
-                0x1a003a20                Chip_SDIF_Init
-                0x1a003a6c                Chip_SDIF_DeInit
-                0x1a003a76                Chip_SDIF_SendCmd
-                0x1a003ac0                Chip_SDIF_GetResponse
-                0x1a003ad2                Chip_SDIF_SetClock
-                0x1a003b20                Chip_SDIF_SetClearIntFifo
-                0x1a003b38                Chip_SDIF_DmaSetup
- .text          0x1a003bb4      0x63c out/obj/sdio_18xx_43xx.o
-                0x1a003bb4                SDIO_Card_GetBlockSize
-                0x1a003bd0                SDIO_Setup_Callback
-                0x1a003bdc                SDIO_Send_Command
-                0x1a003c44                SDIO_Card_WriteData
-                0x1a003cf8                SDIO_Card_ReadData
-                0x1a003e58                SDIO_Write_Direct
-                0x1a003e98                SDIO_WriteRead_Direct
-                0x1a003ed0                SDIO_Card_SetBlockSize
-                0x1a003f86                SDIO_Read_Direct
-                0x1a003fc0                SDIO_Card_EnableInt
-                0x1a004010                SDIO_Card_DisableInt
-                0x1a00406c                SDIO_Card_Init
-                0x1a004148                SDIO_Handler
- .text          0x1a0041f0      0x7ec out/obj/sdmmc_18xx_43xx.o
-                0x1a004588                Chip_SDMMC_GetState
-                0x1a0045c0                Chip_SDMMC_Acquire
-                0x1a004880                Chip_SDMMC_GetDeviceSize
-                0x1a004890                Chip_SDMMC_GetDeviceBlocks
-                0x1a0048a0                Chip_SDMMC_ReadBlocks
-                0x1a004934                Chip_SDMMC_WriteBlocks
- .text          0x1a0049dc      0x1e4 out/obj/spi_18xx_43xx.o
-                0x1a004a3e                Chip_SPI_Int_FlushData
-                0x1a004a52                Chip_SPI_RWFrames_Blocking
-                0x1a004ad6                Chip_SPI_Int_RWFrames
-                0x1a004b40                Chip_SPI_Int_RWFrames8Bits
-                0x1a004b4a                Chip_SPI_Int_RWFrames16Bits
-                0x1a004b54                Chip_SPI_SetBitRate
-                0x1a004b7c                Chip_SPI_Init
-                0x1a004bb4                Chip_SPI_DeInit
- .text          0x1a004bc0      0x440 out/obj/ssp_18xx_43xx.o
-                0x1a004c74                Chip_SSP_SetClockRate
-                0x1a004c86                Chip_SSP_RWFrames_Blocking
-                0x1a004d26                Chip_SSP_WriteFrames_Blocking
-                0x1a004dc4                Chip_SSP_ReadFrames_Blocking
-                0x1a004e68                Chip_SSP_Int_FlushData
-                0x1a004e8a                Chip_SSP_Int_RWFrames8Bits
-                0x1a004eec                Chip_SSP_Int_RWFrames16Bits
-                0x1a004f4e                Chip_SSP_SetMaster
-                0x1a004f64                Chip_SSP_SetBitRate
-                0x1a004fa6                Chip_SSP_Init
-                0x1a004fe0                Chip_SSP_DeInit
- .text          0x1a005000       0xa0 out/obj/stopwatch_18xx_43xx.o
-                0x1a005000                StopWatch_Init
-                0x1a005048                StopWatch_Start
-                0x1a005054                StopWatch_TicksPerSecond
-                0x1a005060                StopWatch_TicksToMs
-                0x1a005070                StopWatch_TicksToUs
-                0x1a005080                StopWatch_MsToTicks
-                0x1a005090                StopWatch_UsToTicks
- .text          0x1a0050a0      0x158 out/obj/sysinit_18xx_43xx.o
-                0x1a0050c8                Chip_SetupCoreClock
-                0x1a0051c8                Chip_SetupXtalClocking
-                0x1a0051dc                Chip_SetupIrcClocking
-                0x1a0051f0                Chip_SystemInit
- .text          0x1a0051f8       0x94 out/obj/timer_18xx_43xx.o
-                0x1a005224                Chip_TIMER_Init
-                0x1a005230                Chip_TIMER_DeInit
-                0x1a00523c                Chip_TIMER_Reset
-                0x1a005254                Chip_TIMER_ExtMatchControlSet
- .text          0x1a00528c      0x3c8 out/obj/uart_18xx_43xx.o
-                0x1a0052fc                Chip_UART_Init
-                0x1a005354                Chip_UART_DeInit
-                0x1a005370                Chip_UART_Send
-                0x1a00538e                Chip_UART_CheckBusy
-                0x1a00539e                Chip_UART_SendBlocking
-                0x1a0053c2                Chip_UART_Read
-                0x1a0053e0                Chip_UART_ReadBlocking
-                0x1a005404                Chip_UART_SetBaud
-                0x1a005448                Chip_UART_RXIntHandlerRB
-                0x1a00546e                Chip_UART_TXIntHandlerRB
-                0x1a0054aa                Chip_UART_SendRB
-                0x1a0054ec                Chip_UART_ReadRB
-                0x1a0054fa                Chip_UART_IRQRBHandler
-                0x1a005532                Chip_UART_SetBaudFDR
-                0x1a005610                Chip_UART_GetABEOStatus
-                0x1a00561c                Chip_UART_ABCmd
- .text          0x1a005654       0x36 out/obj/wwdt_18xx_43xx.o
-                0x1a005654                Chip_WWDT_Init
-                0x1a00566a                Chip_WWDT_DeInit
-                0x1a00566c                Chip_WWDT_ClearStatusFlag
- *fill*         0x1a00568a        0x2 ff
- .text          0x1a00568c       0x30 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
-                0x1a00568c                __aeabi_uldivmod
- .text          0x1a0056bc        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x1a0004d8                main
+ .text          0x1a000524       0x98 out/obj/ciaa_board.o
+                0x1a000524                CIAA_Board_Init
+                0x1a000564                CIAA_LED_Set
+                0x1a000580                CIAA_LED_Toggle
+                0x1a00059c                CIAA_TEC_Get
+ .text          0x1a0005bc       0xdc out/obj/gpio.o
+                0x1a0005bc                GPIO_Write
+                0x1a0005d4                GPIO_Init
+                0x1a000668                GPIO_Read
+                0x1a000680                GPIO_Toggle
+ .text          0x1a000698       0x18 out/obj/sys_core.o
+                0x1a000698                Sys_Init
+ .text          0x1a0006b0       0x78 out/obj/systick.o
+                0x1a0006b0                SysTick_Handler
+                0x1a0006c0                SysTick_Init
+                0x1a000708                SysTick_GetTicks
+                0x1a000714                SysTick_Delay
+ .text          0x1a000728      0x1d8 out/obj/adc_18xx_43xx.o
+                0x1a000772                setStartMode
+                0x1a000780                readAdcVal
+                0x1a000798                Chip_ADC_Init
+                0x1a0007d8                Chip_ADC_DeInit
+                0x1a0007ee                Chip_ADC_ReadValue
+                0x1a0007f6                Chip_ADC_ReadStatus
+                0x1a000828                Chip_ADC_Int_SetChannelCmd
+                0x1a000844                Chip_ADC_SetStartMode
+                0x1a000864                Chip_ADC_SetSampleRate
+                0x1a000896                Chip_ADC_SetResolution
+                0x1a0008a2                Chip_ADC_EnableChannel
+                0x1a0008c6                Chip_ADC_SetBurstCmd
+                0x1a0008e8                Chip_ADC_ReadByte
+ .text          0x1a000900      0x110 out/obj/aes_18xx_43xx.o
+                0x1a000900                Chip_AES_Init
+                0x1a00094c                Chip_AES_SetMode
+                0x1a00095c                Chip_AES_LoadKey
+                0x1a000974                Chip_AES_LoadKeyRNG
+                0x1a000984                Chip_AES_LoadKeySW
+                0x1a000994                Chip_AES_LoadIV_SW
+                0x1a0009a4                Chip_AES_LoadIV_IC
+                0x1a0009b4                Chip_AES_Operate
+                0x1a0009c4                Chip_AES_ProgramKey
+                0x1a0009e0                Chip_AES_Config_DMA
+                0x1a0009f0                Chip_AES_OperateDMA
+                0x1a000a00                Chip_AES_GetStatusDMA
+ .text          0x1a000a10       0x16 out/obj/atimer_18xx_43xx.o
+                0x1a000a10                Chip_ATIMER_Init
+                0x1a000a1a                Chip_ATIMER_DeInit
+ *fill*         0x1a000a26        0x2 ff
+ .text          0x1a000a28      0x3e4 out/obj/ccan_18xx_43xx.o
+                0x1a000acc                Chip_CCAN_DeInit
+                0x1a000ad8                Chip_CCAN_SetBitRate
+                0x1a000b52                Chip_CCAN_ClearStatus
+                0x1a000b60                Chip_CCAN_TransferMsgObject
+                0x1a000b86                Chip_CCAN_SetMsgObject
+                0x1a000c70                Chip_CCAN_GetMsgObject
+                0x1a000cde                Chip_CCAN_SetValidMsg
+                0x1a000d24                Chip_CCAN_Init
+                0x1a000d56                Chip_CCAN_Send
+                0x1a000da8                Chip_CCAN_AddReceiveID
+                0x1a000dd2                Chip_CCAN_DeleteReceiveID
+ .text          0x1a000e0c       0xc4 out/obj/chip_18xx_43xx.o
+                0x1a000e40                Chip_USB0_Init
+                0x1a000e74                Chip_USB1_Init
+                0x1a000ebc                SystemCoreClockUpdate
+ .text          0x1a000ed0      0x938 out/obj/clock_18xx_43xx.o
+                0x1a00110c                Chip_Clock_EnableCrystal
+                0x1a001158                Chip_Clock_DisableCrystal
+                0x1a001168                Chip_Clock_SetDivider
+                0x1a0011bc                Chip_Clock_GetDividerSource
+                0x1a0011d8                Chip_Clock_GetDividerDivisor
+                0x1a0011f4                Chip_Clock_GetClockInputHz
+                0x1a0012ac                Chip_Clock_CalcMainPLLValue
+                0x1a00131c                Chip_Clock_SetupMainPLLMult
+                0x1a0013b8                Chip_Clock_SetupMainPLLHz
+                0x1a00147e                Chip_Clock_GetMainPLLHz
+                0x1a001508                Chip_Clock_SetBaseClock
+                0x1a001568                Chip_Clock_GetBaseClockOpts
+                0x1a0015a6                Chip_Clock_EnableBaseClock
+                0x1a0015c2                Chip_Clock_DisableBaseClock
+                0x1a0015de                Chip_Clock_IsBaseClockEnabled
+                0x1a001600                Chip_Clock_GetBaseClock
+                0x1a001624                Chip_Clock_GetBaseClocktHz
+                0x1a001630                Chip_Clock_EnableOpts
+                0x1a00166c                Chip_Clock_Enable
+                0x1a0016a0                Chip_Clock_RTCEnable
+                0x1a0016b8                Chip_Clock_Disable
+                0x1a0016ec                Chip_Clock_StartPowerDown
+                0x1a001700                Chip_Clock_ClearPowerDown
+                0x1a001714                Chip_Clock_GetRate
+                0x1a00175c                Chip_Clock_GetEMCRate
+                0x1a001790                Chip_Clock_SetupPLL
+                0x1a0017d0                Chip_Clock_EnablePLL
+                0x1a0017e4                Chip_Clock_DisablePLL
+                0x1a0017f8                Chip_Clock_GetPLLStatus
+ .text          0x1a001808       0x4c out/obj/dac_18xx_43xx.o
+                0x1a001808                Chip_DAC_DeInit
+                0x1a001812                Chip_DAC_UpdateValue
+                0x1a001822                Chip_DAC_SetBias
+                0x1a00183a                Chip_DAC_Init
+ .text          0x1a001854       0x58 out/obj/eeprom_18xx_43xx.o
+                0x1a001870                Chip_EEPROM_Init
+                0x1a001888                Chip_EEPROM_WaitForIntStatus
+                0x1a001898                Chip_EEPROM_EraseProgramPage
+ .text          0x1a0018ac      0x348 out/obj/emc_18xx_43xx.o
+                0x1a00190a                initDynMem
+                0x1a001ab6                initStaticMem
+                0x1a001b1e                Chip_EMC_Dynamic_Init
+                0x1a001b38                Chip_EMC_Dynamic_Enable
+                0x1a001b58                Chip_EMC_Static_Init
+                0x1a001b70                Chip_EMC_Mirror
+                0x1a001b90                Chip_EMC_Enable
+                0x1a001bb0                Chip_EMC_LowPowerMode
+                0x1a001bd0                Chip_EMC_Init
+ .text          0x1a001bf4      0x16c out/obj/enet_18xx_43xx.o
+                0x1a001c54                Chip_ENET_DeInit
+                0x1a001c6e                Chip_ENET_SetupMII
+                0x1a001c80                Chip_ENET_Init
+                0x1a001cfc                Chip_ENET_StartMIIWrite
+                0x1a001d1c                Chip_ENET_StartMIIRead
+                0x1a001d34                Chip_ENET_SetDuplex
+                0x1a001d4a                Chip_ENET_SetSpeed
+ .text          0x1a001d60       0xd4 out/obj/evrt_18xx_43xx.o
+                0x1a001d60                Chip_EVRT_Init
+                0x1a001d90                Chip_EVRT_ConfigIntSrcActiveType
+                0x1a001df8                Chip_EVRT_SetUpIntSrc
+                0x1a001e18                Chip_EVRT_IsSourceInterrupting
+ .text          0x1a001e34      0x640 out/obj/gpdma_18xx_43xx.o
+                0x1a001f3c                makeCtrlWord
+                0x1a002022                setupChannel
+                0x1a0020b4                Chip_GPDMA_Init
+                0x1a0020f8                Chip_GPDMA_DeInit
+                0x1a002102                Chip_GPDMA_InitChannelCfg
+                0x1a002180                Chip_GPDMA_IntGetStatus
+                0x1a0021d8                Chip_GPDMA_ClearIntPending
+                0x1a0021ee                Chip_GPDMA_Interrupt
+                0x1a002238                Chip_GPDMA_ChannelCmd
+                0x1a002260                Chip_GPDMA_Stop
+                0x1a0022a8                Chip_GPDMA_Transfer
+                0x1a00234c                Chip_GPDMA_PrepareDescriptor
+                0x1a0023c8                Chip_GPDMA_SGTransfer
+                0x1a00243a                Chip_GPDMA_GetFreeChannel
+ .text          0x1a002474        0x4 out/obj/gpio_18xx_43xx.o
+                0x1a002474                Chip_GPIO_Init
+                0x1a002476                Chip_GPIO_DeInit
+ .text          0x1a002478        0x0 out/obj/gpiogroup_18xx_43xx.o
+ .text          0x1a002478      0x710 out/obj/i2c_18xx_43xx.o
+                0x1a0024fe                Chip_I2C_EventHandler
+                0x1a00251c                handleMasterXferState
+                0x1a002636                getSlaveIndex
+                0x1a00266e                handleSlaveXferState
+                0x1a00277e                Chip_I2C_Init
+                0x1a0027a4                Chip_I2C_DeInit
+                0x1a0027c8                Chip_I2C_SetClockRate
+                0x1a002804                Chip_I2C_GetClockRate
+                0x1a002830                Chip_I2C_SetMasterEventHandler
+                0x1a002864                Chip_I2C_GetMasterEventHandler
+                0x1a002878                Chip_I2C_MasterTransfer
+                0x1a002908                Chip_I2C_MasterSend
+                0x1a00293a                Chip_I2C_MasterCmdRead
+                0x1a00297c                Chip_I2C_MasterRead
+                0x1a0029ae                Chip_I2C_IsMasterActive
+                0x1a0029cc                Chip_I2C_MasterStateHandler
+                0x1a002a00                Chip_I2C_SlaveSetup
+                0x1a002a8c                Chip_I2C_SlaveStateHandler
+                0x1a002b28                Chip_I2C_Disable
+                0x1a002b3c                Chip_I2C_IsStateChanged
+                0x1a002b54                Chip_I2C_EventHandlerPolling
+ .text          0x1a002b88      0x268 out/obj/i2cm_18xx_43xx.o
+                0x1a002b9c                Chip_I2CM_Init
+                0x1a002bae                Chip_I2CM_DeInit
+                0x1a002bbe                Chip_I2CM_SetBusSpeed
+                0x1a002be0                Chip_I2CM_XferHandler
+                0x1a002cfe                Chip_I2CM_Xfer
+                0x1a002d0c                Chip_I2CM_XferBlocking
+                0x1a002d30                Chip_I2CM_Write
+                0x1a002d98                Chip_I2CM_Read
+ .text          0x1a002df0      0x284 out/obj/i2s_18xx_43xx.o
+                0x1a002ec8                Chip_I2S_Init
+                0x1a002ed2                Chip_I2S_DeInit
+                0x1a002ef4                Chip_I2S_TxConfig
+                0x1a002f64                Chip_I2S_RxConfig
+                0x1a002fd4                Chip_I2S_Int_TxCmd
+                0x1a002ffc                Chip_I2S_Int_RxCmd
+                0x1a003024                Chip_I2S_DMA_TxCmd
+                0x1a00304c                Chip_I2S_DMA_RxCmd
+ .text          0x1a003074      0x20c out/obj/iap_18xx_43xx.o
+                0x1a003074                Chip_IAP_Init
+                0x1a003098                Chip_IAP_PreSectorForReadWrite
+                0x1a0030bc                Chip_IAP_CopyRamToFlash
+                0x1a0030f8                Chip_IAP_EraseSector
+                0x1a003134                Chip_IAP_BlankCheckSector
+                0x1a003158                Chip_IAP_ReadPID
+                0x1a003174                Chip_IAP_ReadBootCode
+                0x1a003194                Chip_IAP_Compare
+                0x1a0031b8                Chip_IAP_ReinvokeISP
+                0x1a0031d8                Chip_IAP_ReadUID
+                0x1a003210                Chip_IAP_ErasePage
+                0x1a003248                Chip_IAP_SetBootFlashBank
+ .text          0x1a003280      0x1e4 out/obj/lcd_18xx_43xx.o
+                0x1a003280                Chip_LCD_Init
+                0x1a0033ac                Chip_LCD_DeInit
+                0x1a0033b6                Chip_LCD_Cursor_Config
+                0x1a0033d0                Chip_LCD_Cursor_WriteImage
+                0x1a003400                Chip_LCD_LoadPalette
+ .text          0x1a003464       0xc4 out/obj/otp_18xx_43xx.o
+                0x1a003464                Chip_OTP_Init
+                0x1a0034a0                Chip_OTP_ProgBootSrc
+                0x1a0034b0                Chip_OTP_ProgJTAGDis
+                0x1a0034c0                Chip_OTP_ProgUSBID
+                0x1a0034d0                Chip_OTP_ProgGPWord
+                0x1a0034fc                Chip_OTP_ProgKey
+                0x1a003518                Chip_OTP_GenRand
+ .text          0x1a003528        0x0 out/obj/pinint_18xx_43xx.o
+ .text          0x1a003528       0x1c out/obj/pmc_18xx_43xx.o
+                0x1a003528                Chip_PMC_Sleep
+                0x1a00352c                Chip_PMC_Set_PwrState
+ .text          0x1a003544      0x16a out/obj/ring_buffer.o
+                0x1a003544                RingBuffer_Init
+                0x1a003554                RingBuffer_Insert
+                0x1a003584                RingBuffer_InsertMult
+                0x1a003606                RingBuffer_Pop
+                0x1a003636                RingBuffer_PopMult
+ *fill*         0x1a0036ae        0x2 ff
+ .text          0x1a0036b0       0x68 out/obj/ritimer_18xx_43xx.o
+                0x1a0036b0                Chip_RIT_Init
+                0x1a0036d2                Chip_RIT_DeInit
+                0x1a0036e0                Chip_RIT_SetTimerInterval
+                0x1a003708                Chip_RIT_GetIntStatus
+ .text          0x1a003718      0x1dc out/obj/rtc_18xx_43xx.o
+                0x1a003718                Chip_RTC_DeInit
+                0x1a00371e                Chip_RTC_ResetClockTickCounter
+                0x1a003740                Chip_RTC_Enable
+                0x1a003758                Chip_RTC_CntIncrIntConfig
+                0x1a003776                Chip_RTC_AlarmIntConfig
+                0x1a003794                Chip_RTC_SetFullTime
+                0x1a0037ce                Chip_RTC_GetFullTime
+                0x1a0037fa                Chip_RTC_SetFullAlarmTime
+                0x1a00381c                Chip_RTC_GetFullAlarmTime
+                0x1a003836                Chip_RTC_CalibCounterCmd
+                0x1a003856                Chip_RTC_Init
+                0x1a00389c                Chip_RTC_EV_GetFirstTimeStamp
+                0x1a0038c8                Chip_RTC_EV_GetLastTimeStamp
+ .text          0x1a0038f4       0x44 out/obj/sct_18xx_43xx.o
+                0x1a0038f4                Chip_SCT_Init
+                0x1a003904                Chip_SCT_DeInit
+                0x1a00390e                Chip_SCT_SetClrControl
+                0x1a003920                Chip_SCT_SetConflictResolution
+ .text          0x1a003938       0x96 out/obj/sct_pwm_18xx_43xx.o
+                0x1a003938                Chip_SCTPWM_SetOutPin
+                0x1a003984                Chip_SCTPWM_SetRate
+ *fill*         0x1a0039ce        0x2 ff
+ .text          0x1a0039d0      0x194 out/obj/sdif_18xx_43xx.o
+                0x1a0039d0                Chip_SDIF_Init
+                0x1a003a1c                Chip_SDIF_DeInit
+                0x1a003a26                Chip_SDIF_SendCmd
+                0x1a003a70                Chip_SDIF_GetResponse
+                0x1a003a82                Chip_SDIF_SetClock
+                0x1a003ad0                Chip_SDIF_SetClearIntFifo
+                0x1a003ae8                Chip_SDIF_DmaSetup
+ .text          0x1a003b64      0x630 out/obj/sdio_18xx_43xx.o
+                0x1a003b64                SDIO_Card_GetBlockSize
+                0x1a003b80                SDIO_Setup_Callback
+                0x1a003b8c                SDIO_Send_Command
+                0x1a003bf4                SDIO_Card_WriteData
+                0x1a003ca4                SDIO_Card_ReadData
+                0x1a003dfc                SDIO_Write_Direct
+                0x1a003e3c                SDIO_WriteRead_Direct
+                0x1a003e74                SDIO_Card_SetBlockSize
+                0x1a003f2a                SDIO_Read_Direct
+                0x1a003f64                SDIO_Card_EnableInt
+                0x1a003fb4                SDIO_Card_DisableInt
+                0x1a004010                SDIO_Card_Init
+                0x1a0040ec                SDIO_Handler
+ .text          0x1a004194      0x7a8 out/obj/sdmmc_18xx_43xx.o
+                0x1a004528                Chip_SDMMC_GetState
+                0x1a004560                Chip_SDMMC_Acquire
+                0x1a0047f4                Chip_SDMMC_GetDeviceSize
+                0x1a004804                Chip_SDMMC_GetDeviceBlocks
+                0x1a004814                Chip_SDMMC_ReadBlocks
+                0x1a0048a0                Chip_SDMMC_WriteBlocks
+ .text          0x1a00493c      0x1e0 out/obj/spi_18xx_43xx.o
+                0x1a00499e                Chip_SPI_Int_FlushData
+                0x1a0049b2                Chip_SPI_RWFrames_Blocking
+                0x1a004a36                Chip_SPI_Int_RWFrames
+                0x1a004a9e                Chip_SPI_Int_RWFrames8Bits
+                0x1a004aa8                Chip_SPI_Int_RWFrames16Bits
+                0x1a004ab2                Chip_SPI_SetBitRate
+                0x1a004ada                Chip_SPI_Init
+                0x1a004b10                Chip_SPI_DeInit
+ .text          0x1a004b1c      0x428 out/obj/ssp_18xx_43xx.o
+                0x1a004bd0                Chip_SSP_SetClockRate
+                0x1a004be2                Chip_SSP_RWFrames_Blocking
+                0x1a004c82                Chip_SSP_WriteFrames_Blocking
+                0x1a004d20                Chip_SSP_ReadFrames_Blocking
+                0x1a004dc4                Chip_SSP_Int_FlushData
+                0x1a004de6                Chip_SSP_Int_RWFrames8Bits
+                0x1a004e3c                Chip_SSP_Int_RWFrames16Bits
+                0x1a004e92                Chip_SSP_SetMaster
+                0x1a004ea8                Chip_SSP_SetBitRate
+                0x1a004eea                Chip_SSP_Init
+                0x1a004f24                Chip_SSP_DeInit
+ .text          0x1a004f44       0xa0 out/obj/stopwatch_18xx_43xx.o
+                0x1a004f44                StopWatch_Init
+                0x1a004f8c                StopWatch_Start
+                0x1a004f98                StopWatch_TicksPerSecond
+                0x1a004fa4                StopWatch_TicksToMs
+                0x1a004fb4                StopWatch_TicksToUs
+                0x1a004fc4                StopWatch_MsToTicks
+                0x1a004fd4                StopWatch_UsToTicks
+ .text          0x1a004fe4      0x158 out/obj/sysinit_18xx_43xx.o
+                0x1a00500c                Chip_SetupCoreClock
+                0x1a00510c                Chip_SetupXtalClocking
+                0x1a005120                Chip_SetupIrcClocking
+                0x1a005134                Chip_SystemInit
+ .text          0x1a00513c       0x94 out/obj/timer_18xx_43xx.o
+                0x1a005168                Chip_TIMER_Init
+                0x1a005174                Chip_TIMER_DeInit
+                0x1a005180                Chip_TIMER_Reset
+                0x1a005198                Chip_TIMER_ExtMatchControlSet
+ .text          0x1a0051d0      0x3c8 out/obj/uart_18xx_43xx.o
+                0x1a005240                Chip_UART_Init
+                0x1a005298                Chip_UART_DeInit
+                0x1a0052b4                Chip_UART_Send
+                0x1a0052d2                Chip_UART_CheckBusy
+                0x1a0052e2                Chip_UART_SendBlocking
+                0x1a005306                Chip_UART_Read
+                0x1a005324                Chip_UART_ReadBlocking
+                0x1a005348                Chip_UART_SetBaud
+                0x1a00538c                Chip_UART_RXIntHandlerRB
+                0x1a0053b2                Chip_UART_TXIntHandlerRB
+                0x1a0053ee                Chip_UART_SendRB
+                0x1a005430                Chip_UART_ReadRB
+                0x1a00543e                Chip_UART_IRQRBHandler
+                0x1a005476                Chip_UART_SetBaudFDR
+                0x1a005554                Chip_UART_GetABEOStatus
+                0x1a005560                Chip_UART_ABCmd
+ .text          0x1a005598       0x36 out/obj/wwdt_18xx_43xx.o
+                0x1a005598                Chip_WWDT_Init
+                0x1a0055ae                Chip_WWDT_DeInit
+                0x1a0055b0                Chip_WWDT_ClearStatusFlag
+ *fill*         0x1a0055ce        0x2 ff
+ .text          0x1a0055d0       0x30 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+                0x1a0055d0                __aeabi_uldivmod
+ .text          0x1a005600        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
  .text.__udivmoddi4
-                0x1a0056bc      0x320 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x1a0056bc                __udivmoddi4
- .text          0x1a0059dc        0x4 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
-                0x1a0059dc                __aeabi_idiv0
-                0x1a0059dc                __aeabi_ldiv0
- .text          0x1a0059e0        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
- .text.memset   0x1a0059e0       0x10 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
-                0x1a0059e0                memset
- .text          0x1a0059f0        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
- .text.memcpy   0x1a0059f0       0x1c C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
-                0x1a0059f0                memcpy
+                0x1a005600      0x2b8 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+                0x1a005600                __udivmoddi4
+ .text          0x1a0058b8        0x4 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+                0x1a0058b8                __aeabi_ldiv0
+                0x1a0058b8                __aeabi_idiv0
+ .text          0x1a0058bc        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .text.memset   0x1a0058bc       0x10 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+                0x1a0058bc                memset
+ .text          0x1a0058cc        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
+ .text.memcpy   0x1a0058cc       0x1c /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
+                0x1a0058cc                memcpy
  *(.rodata*)
- .rodata        0x1a005a0c       0x4a out/obj/main.o
- *fill*         0x1a005a56        0x2 ff
- .rodata        0x1a005a58       0x3c out/obj/ciaa_board.o
- .rodata        0x1a005a94        0x8 out/obj/sys_core.o
-                0x1a005a94                ExtRateIn
-                0x1a005a98                OscRateIn
- .rodata        0x1a005a9c       0x14 out/obj/chip_18xx_43xx.o
+ .rodata        0x1a0058e8       0x4a out/obj/main.o
+ *fill*         0x1a005932        0x2 ff
+ .rodata        0x1a005934       0x3c out/obj/ciaa_board.o
+ .rodata        0x1a005970        0x8 out/obj/sys_core.o
+                0x1a005970                ExtRateIn
+                0x1a005974                OscRateIn
+ .rodata        0x1a005978       0x14 out/obj/chip_18xx_43xx.o
  .rodata.str1.4
-                0x1a005ab0        0x6 out/obj/clock_18xx_43xx.o
+                0x1a00598c        0x6 out/obj/clock_18xx_43xx.o
+ *fill*         0x1a005992        0x2 ff
+ .rodata        0x1a005994       0x6c out/obj/clock_18xx_43xx.o
+ .rodata        0x1a005a00       0xb6 out/obj/gpdma_18xx_43xx.o
  *fill*         0x1a005ab6        0x2 ff
- .rodata        0x1a005ab8       0x6c out/obj/clock_18xx_43xx.o
- .rodata        0x1a005b24       0xb6 out/obj/gpdma_18xx_43xx.o
- *fill*         0x1a005bda        0x2 ff
- .rodata        0x1a005bdc       0x48 out/obj/sysinit_18xx_43xx.o
- .rodata        0x1a005c24       0x10 out/obj/uart_18xx_43xx.o
-                0x1a005c34                        . = ALIGN (0x4)
-                0x1a005c34                        _etext = .
+ .rodata        0x1a005ab8       0x48 out/obj/sysinit_18xx_43xx.o
+ .rodata        0x1a005b00       0x10 out/obj/uart_18xx_43xx.o
+                0x1a005b10                        . = ALIGN (0x4)
+                0x1a005b10                        _etext = .
 
-.glue_7         0x1a005c34        0x0
- .glue_7        0x1a005c34        0x0 linker stubs
+.glue_7         0x1a005b10        0x0
+ .glue_7        0x1a005b10        0x0 linker stubs
 
-.glue_7t        0x1a005c34        0x0
- .glue_7t       0x1a005c34        0x0 linker stubs
+.glue_7t        0x1a005b10        0x0
+ .glue_7t       0x1a005b10        0x0 linker stubs
 
-.vfp11_veneer   0x1a005c34        0x0
- .vfp11_veneer  0x1a005c34        0x0 linker stubs
+.vfp11_veneer   0x1a005b10        0x0
+ .vfp11_veneer  0x1a005b10        0x0 linker stubs
 
-.v4_bx          0x1a005c34        0x0
- .v4_bx         0x1a005c34        0x0 linker stubs
+.v4_bx          0x1a005b10        0x0
+ .v4_bx         0x1a005b10        0x0 linker stubs
 
-.iplt           0x1a005c34        0x0
- .iplt          0x1a005c34        0x0 out/obj/startup.o
+.iplt           0x1a005b10        0x0
+ .iplt          0x1a005b10        0x0 out/obj/startup.o
 
-.rel.dyn        0x1a005c34        0x0
- .rel.iplt      0x1a005c34        0x0 out/obj/startup.o
+.rel.dyn        0x1a005b10        0x0
+ .rel.iplt      0x1a005b10        0x0 out/obj/startup.o
 
-.data           0x10000000       0x50 load address 0x1a005c34
+.data           0x10000000       0x50 load address 0x1a005b10
                 0x10000000                        _data = .
  *(vtable)
  *(.ramfunc*)
@@ -5110,19 +5113,19 @@ END GROUP
  .data          0x1000004d        0x0 out/obj/timer_18xx_43xx.o
  .data          0x1000004d        0x0 out/obj/uart_18xx_43xx.o
  .data          0x1000004d        0x0 out/obj/wwdt_18xx_43xx.o
- .data          0x1000004d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .data          0x1000004d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .data          0x1000004d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
- .data          0x1000004d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
- .data          0x1000004d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+ .data          0x1000004d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x1000004d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .data          0x1000004d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+ .data          0x1000004d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .data          0x1000004d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
                 0x10000050                        . = ALIGN (0x4)
  *fill*         0x1000004d        0x3 
                 0x10000050                        _edata = .
 
-.igot.plt       0x10000050        0x0 load address 0x1a005c84
+.igot.plt       0x10000050        0x0 load address 0x1a005b60
  .igot.plt      0x10000050        0x0 out/obj/startup.o
 
-.bss            0x10000050      0x230 load address 0x1a005c84
+.bss            0x10000050      0x230 load address 0x1a005b60
                 0x10000050                        _bss = .
  *(.bss*)
  .bss           0x10000050        0x0 out/obj/startup.o
@@ -5169,11 +5172,11 @@ END GROUP
  .bss           0x1000027c        0x0 out/obj/timer_18xx_43xx.o
  .bss           0x1000027c        0x1 out/obj/uart_18xx_43xx.o
  .bss           0x1000027d        0x0 out/obj/wwdt_18xx_43xx.o
- .bss           0x1000027d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .bss           0x1000027d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .bss           0x1000027d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
- .bss           0x1000027d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
- .bss           0x1000027d        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+ .bss           0x1000027d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x1000027d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .bss           0x1000027d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+ .bss           0x1000027d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .bss           0x1000027d        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
  *(COMMON)
                 0x10000280                        . = ALIGN (0x4)
  *fill*         0x1000027d        0x3 
@@ -5187,52 +5190,57 @@ END GROUP
 OUTPUT(out/03_External_Counter_MEF.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000    0x1be4f
+.debug_info     0x00000000    0x1c7d7
  .debug_info    0x00000000      0x17b out/obj/startup.o
- .debug_info    0x0000017b      0x6b6 out/obj/main.o
- .debug_info    0x00000831      0x869 out/obj/ciaa_board.o
- .debug_info    0x0000109a      0x771 out/obj/gpio.o
- .debug_info    0x0000180b      0x5e3 out/obj/sys_core.o
- .debug_info    0x00001dee      0xb49 out/obj/systick.o
- .debug_info    0x00002937      0xba9 out/obj/adc_18xx_43xx.o
- .debug_info    0x000034e0      0xa5b out/obj/aes_18xx_43xx.o
- .debug_info    0x00003f3b      0x278 out/obj/atimer_18xx_43xx.o
- .debug_info    0x000041b3      0xf6c out/obj/ccan_18xx_43xx.o
- .debug_info    0x0000511f      0xca8 out/obj/chip_18xx_43xx.o
- .debug_info    0x00005dc7     0x1a71 out/obj/clock_18xx_43xx.o
- .debug_info    0x00007838      0x416 out/obj/dac_18xx_43xx.o
- .debug_info    0x00007c4e      0x6c9 out/obj/eeprom_18xx_43xx.o
- .debug_info    0x00008317      0xb8f out/obj/emc_18xx_43xx.o
- .debug_info    0x00008ea6      0xcc1 out/obj/enet_18xx_43xx.o
- .debug_info    0x00009b67      0x323 out/obj/evrt_18xx_43xx.o
- .debug_info    0x00009e8a     0x1b33 out/obj/gpdma_18xx_43xx.o
- .debug_info    0x0000b9bd      0x1ce out/obj/gpio_18xx_43xx.o
- .debug_info    0x0000bb8b       0x77 out/obj/gpiogroup_18xx_43xx.o
- .debug_info    0x0000bc02     0x1496 out/obj/i2c_18xx_43xx.o
- .debug_info    0x0000d098      0xafb out/obj/i2cm_18xx_43xx.o
- .debug_info    0x0000db93      0x8e7 out/obj/i2s_18xx_43xx.o
- .debug_info    0x0000e47a      0xae0 out/obj/iap_18xx_43xx.o
- .debug_info    0x0000ef5a      0xbae out/obj/lcd_18xx_43xx.o
- .debug_info    0x0000fb08      0x89d out/obj/otp_18xx_43xx.o
- .debug_info    0x000103a5       0x77 out/obj/pinint_18xx_43xx.o
- .debug_info    0x0001041c      0x303 out/obj/pmc_18xx_43xx.o
- .debug_info    0x0001071f      0x557 out/obj/ring_buffer.o
- .debug_info    0x00010c76      0x528 out/obj/ritimer_18xx_43xx.o
- .debug_info    0x0001119e      0x70c out/obj/rtc_18xx_43xx.o
- .debug_info    0x000118aa      0x9b0 out/obj/sct_18xx_43xx.o
- .debug_info    0x0001225a      0xb36 out/obj/sct_pwm_18xx_43xx.o
- .debug_info    0x00012d90      0x7d7 out/obj/sdif_18xx_43xx.o
- .debug_info    0x00013567     0x1959 out/obj/sdio_18xx_43xx.o
- .debug_info    0x00014ec0     0x1720 out/obj/sdmmc_18xx_43xx.o
- .debug_info    0x000165e0      0xc99 out/obj/spi_18xx_43xx.o
- .debug_info    0x00017279     0x192a out/obj/ssp_18xx_43xx.o
- .debug_info    0x00018ba3      0x867 out/obj/stopwatch_18xx_43xx.o
- .debug_info    0x0001940a      0xab0 out/obj/sysinit_18xx_43xx.o
- .debug_info    0x00019eba      0x553 out/obj/timer_18xx_43xx.o
- .debug_info    0x0001a40d     0x18c9 out/obj/uart_18xx_43xx.o
- .debug_info    0x0001bcd6      0x179 out/obj/wwdt_18xx_43xx.o
+ .debug_info    0x0000017b      0x6b2 out/obj/main.o
+ .debug_info    0x0000082d      0x869 out/obj/ciaa_board.o
+ .debug_info    0x00001096      0x771 out/obj/gpio.o
+ .debug_info    0x00001807      0x5e3 out/obj/sys_core.o
+ .debug_info    0x00001dea      0xb49 out/obj/systick.o
+ .debug_info    0x00002933      0xba9 out/obj/adc_18xx_43xx.o
+ .debug_info    0x000034dc      0xa5b out/obj/aes_18xx_43xx.o
+ .debug_info    0x00003f37      0x278 out/obj/atimer_18xx_43xx.o
+ .debug_info    0x000041af      0xf6d out/obj/ccan_18xx_43xx.o
+ .debug_info    0x0000511c      0xca8 out/obj/chip_18xx_43xx.o
+ .debug_info    0x00005dc4     0x1a71 out/obj/clock_18xx_43xx.o
+ .debug_info    0x00007835      0x416 out/obj/dac_18xx_43xx.o
+ .debug_info    0x00007c4b      0x6c9 out/obj/eeprom_18xx_43xx.o
+ .debug_info    0x00008314      0xb8f out/obj/emc_18xx_43xx.o
+ .debug_info    0x00008ea3      0xcc3 out/obj/enet_18xx_43xx.o
+ .debug_info    0x00009b66      0x323 out/obj/evrt_18xx_43xx.o
+ .debug_info    0x00009e89     0x1b3e out/obj/gpdma_18xx_43xx.o
+ .debug_info    0x0000b9c7      0x1ce out/obj/gpio_18xx_43xx.o
+ .debug_info    0x0000bb95       0x77 out/obj/gpiogroup_18xx_43xx.o
+ .debug_info    0x0000bc0c     0x1495 out/obj/i2c_18xx_43xx.o
+ .debug_info    0x0000d0a1      0xafd out/obj/i2cm_18xx_43xx.o
+ .debug_info    0x0000db9e      0x8e7 out/obj/i2s_18xx_43xx.o
+ .debug_info    0x0000e485      0xae0 out/obj/iap_18xx_43xx.o
+ .debug_info    0x0000ef65      0xbae out/obj/lcd_18xx_43xx.o
+ .debug_info    0x0000fb13      0x89d out/obj/otp_18xx_43xx.o
+ .debug_info    0x000103b0       0x77 out/obj/pinint_18xx_43xx.o
+ .debug_info    0x00010427      0x303 out/obj/pmc_18xx_43xx.o
+ .debug_info    0x0001072a      0x557 out/obj/ring_buffer.o
+ .debug_info    0x00010c81      0x528 out/obj/ritimer_18xx_43xx.o
+ .debug_info    0x000111a9      0x70c out/obj/rtc_18xx_43xx.o
+ .debug_info    0x000118b5      0x9b0 out/obj/sct_18xx_43xx.o
+ .debug_info    0x00012265      0xb36 out/obj/sct_pwm_18xx_43xx.o
+ .debug_info    0x00012d9b      0x7d7 out/obj/sdif_18xx_43xx.o
+ .debug_info    0x00013572     0x195d out/obj/sdio_18xx_43xx.o
+ .debug_info    0x00014ecf     0x171f out/obj/sdmmc_18xx_43xx.o
+ .debug_info    0x000165ee      0xc99 out/obj/spi_18xx_43xx.o
+ .debug_info    0x00017287     0x1936 out/obj/ssp_18xx_43xx.o
+ .debug_info    0x00018bbd      0x867 out/obj/stopwatch_18xx_43xx.o
+ .debug_info    0x00019424      0xab3 out/obj/sysinit_18xx_43xx.o
+ .debug_info    0x00019ed7      0x553 out/obj/timer_18xx_43xx.o
+ .debug_info    0x0001a42a     0x18cd out/obj/uart_18xx_43xx.o
+ .debug_info    0x0001bcf7      0x179 out/obj/wwdt_18xx_43xx.o
+ .debug_info    0x0001be70       0x24 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x0001be94      0x6fc /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_info    0x0001c590       0x3c /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x0001c5cc       0xe5 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .debug_info    0x0001c6b1      0x126 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
-.debug_abbrev   0x00000000     0x5ae1
+.debug_abbrev   0x00000000     0x5ec7
  .debug_abbrev  0x00000000      0x109 out/obj/startup.o
  .debug_abbrev  0x00000109      0x202 out/obj/main.o
  .debug_abbrev  0x0000030b      0x1c7 out/obj/ciaa_board.o
@@ -5242,43 +5250,48 @@ LOAD linker stubs
  .debug_abbrev  0x00000a70      0x21c out/obj/adc_18xx_43xx.o
  .debug_abbrev  0x00000c8c      0x199 out/obj/aes_18xx_43xx.o
  .debug_abbrev  0x00000e25      0x13d out/obj/atimer_18xx_43xx.o
- .debug_abbrev  0x00000f62      0x3e5 out/obj/ccan_18xx_43xx.o
- .debug_abbrev  0x00001347      0x223 out/obj/chip_18xx_43xx.o
- .debug_abbrev  0x0000156a      0x3dd out/obj/clock_18xx_43xx.o
- .debug_abbrev  0x00001947      0x153 out/obj/dac_18xx_43xx.o
- .debug_abbrev  0x00001a9a      0x22f out/obj/eeprom_18xx_43xx.o
- .debug_abbrev  0x00001cc9      0x245 out/obj/emc_18xx_43xx.o
- .debug_abbrev  0x00001f0e      0x286 out/obj/enet_18xx_43xx.o
- .debug_abbrev  0x00002194      0x160 out/obj/evrt_18xx_43xx.o
- .debug_abbrev  0x000022f4      0x2c6 out/obj/gpdma_18xx_43xx.o
- .debug_abbrev  0x000025ba       0xe9 out/obj/gpio_18xx_43xx.o
- .debug_abbrev  0x000026a3       0x28 out/obj/gpiogroup_18xx_43xx.o
- .debug_abbrev  0x000026cb      0x3c4 out/obj/i2c_18xx_43xx.o
- .debug_abbrev  0x00002a8f      0x2c8 out/obj/i2cm_18xx_43xx.o
- .debug_abbrev  0x00002d57      0x230 out/obj/i2s_18xx_43xx.o
- .debug_abbrev  0x00002f87      0x198 out/obj/iap_18xx_43xx.o
- .debug_abbrev  0x0000311f      0x1d6 out/obj/lcd_18xx_43xx.o
- .debug_abbrev  0x000032f5      0x17c out/obj/otp_18xx_43xx.o
- .debug_abbrev  0x00003471       0x28 out/obj/pinint_18xx_43xx.o
- .debug_abbrev  0x00003499      0x122 out/obj/pmc_18xx_43xx.o
- .debug_abbrev  0x000035bb      0x1b2 out/obj/ring_buffer.o
- .debug_abbrev  0x0000376d      0x1df out/obj/ritimer_18xx_43xx.o
- .debug_abbrev  0x0000394c      0x1ff out/obj/rtc_18xx_43xx.o
- .debug_abbrev  0x00003b4b      0x22c out/obj/sct_18xx_43xx.o
- .debug_abbrev  0x00003d77      0x2ba out/obj/sct_pwm_18xx_43xx.o
- .debug_abbrev  0x00004031      0x206 out/obj/sdif_18xx_43xx.o
- .debug_abbrev  0x00004237      0x3c2 out/obj/sdio_18xx_43xx.o
- .debug_abbrev  0x000045f9      0x37f out/obj/sdmmc_18xx_43xx.o
- .debug_abbrev  0x00004978      0x2cf out/obj/spi_18xx_43xx.o
- .debug_abbrev  0x00004c47      0x37a out/obj/ssp_18xx_43xx.o
- .debug_abbrev  0x00004fc1      0x252 out/obj/stopwatch_18xx_43xx.o
- .debug_abbrev  0x00005213      0x227 out/obj/sysinit_18xx_43xx.o
- .debug_abbrev  0x0000543a      0x1a5 out/obj/timer_18xx_43xx.o
- .debug_abbrev  0x000055df      0x433 out/obj/uart_18xx_43xx.o
- .debug_abbrev  0x00005a12       0xcf out/obj/wwdt_18xx_43xx.o
+ .debug_abbrev  0x00000f62      0x3e8 out/obj/ccan_18xx_43xx.o
+ .debug_abbrev  0x0000134a      0x223 out/obj/chip_18xx_43xx.o
+ .debug_abbrev  0x0000156d      0x3dd out/obj/clock_18xx_43xx.o
+ .debug_abbrev  0x0000194a      0x153 out/obj/dac_18xx_43xx.o
+ .debug_abbrev  0x00001a9d      0x22f out/obj/eeprom_18xx_43xx.o
+ .debug_abbrev  0x00001ccc      0x245 out/obj/emc_18xx_43xx.o
+ .debug_abbrev  0x00001f11      0x2a1 out/obj/enet_18xx_43xx.o
+ .debug_abbrev  0x000021b2      0x160 out/obj/evrt_18xx_43xx.o
+ .debug_abbrev  0x00002312      0x2c6 out/obj/gpdma_18xx_43xx.o
+ .debug_abbrev  0x000025d8       0xe9 out/obj/gpio_18xx_43xx.o
+ .debug_abbrev  0x000026c1       0x28 out/obj/gpiogroup_18xx_43xx.o
+ .debug_abbrev  0x000026e9      0x3e0 out/obj/i2c_18xx_43xx.o
+ .debug_abbrev  0x00002ac9      0x2e0 out/obj/i2cm_18xx_43xx.o
+ .debug_abbrev  0x00002da9      0x230 out/obj/i2s_18xx_43xx.o
+ .debug_abbrev  0x00002fd9      0x198 out/obj/iap_18xx_43xx.o
+ .debug_abbrev  0x00003171      0x1d6 out/obj/lcd_18xx_43xx.o
+ .debug_abbrev  0x00003347      0x17c out/obj/otp_18xx_43xx.o
+ .debug_abbrev  0x000034c3       0x28 out/obj/pinint_18xx_43xx.o
+ .debug_abbrev  0x000034eb      0x122 out/obj/pmc_18xx_43xx.o
+ .debug_abbrev  0x0000360d      0x1b2 out/obj/ring_buffer.o
+ .debug_abbrev  0x000037bf      0x1df out/obj/ritimer_18xx_43xx.o
+ .debug_abbrev  0x0000399e      0x1ff out/obj/rtc_18xx_43xx.o
+ .debug_abbrev  0x00003b9d      0x22c out/obj/sct_18xx_43xx.o
+ .debug_abbrev  0x00003dc9      0x2ba out/obj/sct_pwm_18xx_43xx.o
+ .debug_abbrev  0x00004083      0x206 out/obj/sdif_18xx_43xx.o
+ .debug_abbrev  0x00004289      0x3c4 out/obj/sdio_18xx_43xx.o
+ .debug_abbrev  0x0000464d      0x37f out/obj/sdmmc_18xx_43xx.o
+ .debug_abbrev  0x000049cc      0x2cf out/obj/spi_18xx_43xx.o
+ .debug_abbrev  0x00004c9b      0x3ab out/obj/ssp_18xx_43xx.o
+ .debug_abbrev  0x00005046      0x252 out/obj/stopwatch_18xx_43xx.o
+ .debug_abbrev  0x00005298      0x23f out/obj/sysinit_18xx_43xx.o
+ .debug_abbrev  0x000054d7      0x1a5 out/obj/timer_18xx_43xx.o
+ .debug_abbrev  0x0000567c      0x467 out/obj/uart_18xx_43xx.o
+ .debug_abbrev  0x00005ae3       0xcf out/obj/wwdt_18xx_43xx.o
+ .debug_abbrev  0x00005bb2       0x14 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x00005bc6      0x170 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x00005d36       0x26 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x00005d5c       0xa4 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x00005e00       0xc7 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_loclists
-                0x00000000     0x8604
+                0x00000000     0x90b8
  .debug_loclists
                 0x00000000       0x53 out/obj/startup.o
  .debug_loclists
@@ -5286,73 +5299,79 @@ LOAD linker stubs
  .debug_loclists
                 0x00000145       0xa0 out/obj/ciaa_board.o
  .debug_loclists
-                0x000001e5      0x1d0 out/obj/gpio.o
+                0x000001e5      0x1df out/obj/gpio.o
  .debug_loclists
-                0x000003b5       0x44 out/obj/systick.o
+                0x000003c4       0x44 out/obj/systick.o
  .debug_loclists
-                0x000003f9      0x4f5 out/obj/adc_18xx_43xx.o
+                0x00000408      0x4f5 out/obj/adc_18xx_43xx.o
  .debug_loclists
-                0x000008ee      0x210 out/obj/aes_18xx_43xx.o
+                0x000008fd      0x210 out/obj/aes_18xx_43xx.o
  .debug_loclists
-                0x00000afe       0x34 out/obj/atimer_18xx_43xx.o
+                0x00000b0d       0x34 out/obj/atimer_18xx_43xx.o
  .debug_loclists
-                0x00000b32      0x70f out/obj/ccan_18xx_43xx.o
+                0x00000b41      0x70f out/obj/ccan_18xx_43xx.o
  .debug_loclists
-                0x00001241      0xf84 out/obj/clock_18xx_43xx.o
+                0x00001250      0xea3 out/obj/clock_18xx_43xx.o
  .debug_loclists
-                0x000021c5       0x5a out/obj/dac_18xx_43xx.o
+                0x000020f3       0x5a out/obj/dac_18xx_43xx.o
  .debug_loclists
-                0x0000221f       0xe1 out/obj/eeprom_18xx_43xx.o
+                0x0000214d       0xe1 out/obj/eeprom_18xx_43xx.o
  .debug_loclists
-                0x00002300      0x2e1 out/obj/emc_18xx_43xx.o
+                0x0000222e      0x2e1 out/obj/emc_18xx_43xx.o
  .debug_loclists
-                0x000025e1       0xde out/obj/enet_18xx_43xx.o
+                0x0000250f       0xde out/obj/enet_18xx_43xx.o
  .debug_loclists
-                0x000026bf       0xc5 out/obj/evrt_18xx_43xx.o
+                0x000025ed       0xc5 out/obj/evrt_18xx_43xx.o
  .debug_loclists
-                0x00002784      0xd7a out/obj/gpdma_18xx_43xx.o
+                0x000026b2     0x1091 out/obj/gpdma_18xx_43xx.o
  .debug_loclists
-                0x000034fe      0xa05 out/obj/i2c_18xx_43xx.o
+                0x00003743      0x946 out/obj/i2c_18xx_43xx.o
  .debug_loclists
-                0x00003f03      0x38d out/obj/i2cm_18xx_43xx.o
+                0x00004089      0x38f out/obj/i2cm_18xx_43xx.o
  .debug_loclists
-                0x00004290      0x376 out/obj/i2s_18xx_43xx.o
+                0x00004418      0x376 out/obj/i2s_18xx_43xx.o
  .debug_loclists
-                0x00004606      0x582 out/obj/iap_18xx_43xx.o
+                0x0000478e      0x582 out/obj/iap_18xx_43xx.o
  .debug_loclists
-                0x00004b88      0x34f out/obj/lcd_18xx_43xx.o
+                0x00004d10      0x348 out/obj/lcd_18xx_43xx.o
  .debug_loclists
-                0x00004ed7      0x1f8 out/obj/otp_18xx_43xx.o
+                0x00005058      0x1f8 out/obj/otp_18xx_43xx.o
  .debug_loclists
-                0x000050cf      0x37f out/obj/ring_buffer.o
+                0x00005250      0x37f out/obj/ring_buffer.o
  .debug_loclists
-                0x0000544e      0x11e out/obj/ritimer_18xx_43xx.o
+                0x000055cf      0x11e out/obj/ritimer_18xx_43xx.o
  .debug_loclists
-                0x0000556c      0x103 out/obj/rtc_18xx_43xx.o
+                0x000056ed      0x10d out/obj/rtc_18xx_43xx.o
  .debug_loclists
-                0x0000566f       0x83 out/obj/sct_18xx_43xx.o
+                0x000057fa       0x83 out/obj/sct_18xx_43xx.o
  .debug_loclists
-                0x000056f2       0xeb out/obj/sct_pwm_18xx_43xx.o
+                0x0000587d       0xeb out/obj/sct_pwm_18xx_43xx.o
  .debug_loclists
-                0x000057dd      0x1de out/obj/sdif_18xx_43xx.o
+                0x00005968      0x1de out/obj/sdif_18xx_43xx.o
  .debug_loclists
-                0x000059bb      0x9a8 out/obj/sdio_18xx_43xx.o
+                0x00005b46      0x972 out/obj/sdio_18xx_43xx.o
  .debug_loclists
-                0x00006363      0x947 out/obj/sdmmc_18xx_43xx.o
+                0x000064b8      0x86f out/obj/sdmmc_18xx_43xx.o
  .debug_loclists
-                0x00006caa      0x3ac out/obj/spi_18xx_43xx.o
+                0x00006d27      0x3be out/obj/spi_18xx_43xx.o
  .debug_loclists
-                0x00007056      0x953 out/obj/ssp_18xx_43xx.o
+                0x000070e5      0x8f9 out/obj/ssp_18xx_43xx.o
  .debug_loclists
-                0x000079a9       0xa5 out/obj/stopwatch_18xx_43xx.o
+                0x000079de       0xa5 out/obj/stopwatch_18xx_43xx.o
  .debug_loclists
-                0x00007a4e      0x13a out/obj/sysinit_18xx_43xx.o
+                0x00007a83      0x13a out/obj/sysinit_18xx_43xx.o
  .debug_loclists
-                0x00007b88      0x112 out/obj/timer_18xx_43xx.o
+                0x00007bbd      0x112 out/obj/timer_18xx_43xx.o
  .debug_loclists
-                0x00007c9a      0x96a out/obj/uart_18xx_43xx.o
+                0x00007ccf      0x96a out/obj/uart_18xx_43xx.o
+ .debug_loclists
+                0x00008639      0x995 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_loclists
+                0x00008fce       0x4d /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .debug_loclists
+                0x0000901b       0x9d /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
-.debug_aranges  0x00000000      0x550
+.debug_aranges  0x00000000      0x5f0
  .debug_aranges
                 0x00000000       0x20 out/obj/startup.o
  .debug_aranges
@@ -5439,348 +5458,379 @@ LOAD linker stubs
                 0x00000510       0x20 out/obj/uart_18xx_43xx.o
  .debug_aranges
                 0x00000530       0x20 out/obj/wwdt_18xx_43xx.o
+ .debug_aranges
+                0x00000550       0x20 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_aranges
+                0x00000570       0x20 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_aranges
+                0x00000590       0x20 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+ .debug_aranges
+                0x000005b0       0x20 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .debug_aranges
+                0x000005d0       0x20 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
-.debug_macro    0x00000000     0xd768
+.debug_macro    0x00000000     0xd759
  .debug_macro   0x00000000       0x63 out/obj/startup.o
- .debug_macro   0x00000063      0xaea out/obj/startup.o
- .debug_macro   0x00000b4d       0x22 out/obj/startup.o
- .debug_macro   0x00000b6f       0x56 out/obj/startup.o
- .debug_macro   0x00000bc5       0x51 out/obj/startup.o
- .debug_macro   0x00000c16      0x103 out/obj/startup.o
- .debug_macro   0x00000d19       0x6a out/obj/startup.o
- .debug_macro   0x00000d83      0x1df out/obj/startup.o
- .debug_macro   0x00000f62      0x35b out/obj/main.o
- .debug_macro   0x000012bd       0x10 out/obj/main.o
- .debug_macro   0x000012cd       0x22 out/obj/main.o
- .debug_macro   0x000012ef       0x73 out/obj/main.o
- .debug_macro   0x00001362       0x28 out/obj/main.o
- .debug_macro   0x0000138a       0x1c out/obj/main.o
- .debug_macro   0x000013a6       0x22 out/obj/main.o
- .debug_macro   0x000013c8       0xd9 out/obj/main.o
- .debug_macro   0x000014a1     0x102d out/obj/main.o
- .debug_macro   0x000024ce      0x11f out/obj/main.o
- .debug_macro   0x000025ed      0x2c3 out/obj/main.o
- .debug_macro   0x000028b0      0x112 out/obj/main.o
- .debug_macro   0x000029c2       0x11 out/obj/main.o
- .debug_macro   0x000029d3       0x2a out/obj/main.o
- .debug_macro   0x000029fd       0x16 out/obj/main.o
- .debug_macro   0x00002a13      0x2e6 out/obj/main.o
- .debug_macro   0x00002cf9       0x82 out/obj/main.o
- .debug_macro   0x00002d7b      0x13d out/obj/main.o
- .debug_macro   0x00002eb8      0x198 out/obj/main.o
- .debug_macro   0x00003050       0x34 out/obj/main.o
- .debug_macro   0x00003084       0x58 out/obj/main.o
- .debug_macro   0x000030dc      0x236 out/obj/main.o
- .debug_macro   0x00003312      0x572 out/obj/main.o
- .debug_macro   0x00003884       0x16 out/obj/main.o
- .debug_macro   0x0000389a      0x18a out/obj/main.o
- .debug_macro   0x00003a24       0x88 out/obj/main.o
- .debug_macro   0x00003aac      0x1b9 out/obj/main.o
- .debug_macro   0x00003c65      0x1da out/obj/main.o
- .debug_macro   0x00003e3f       0x40 out/obj/main.o
- .debug_macro   0x00003e7f       0x1c out/obj/main.o
- .debug_macro   0x00003e9b       0x2e out/obj/main.o
- .debug_macro   0x00003ec9       0x2e out/obj/main.o
- .debug_macro   0x00003ef7       0x22 out/obj/main.o
- .debug_macro   0x00003f19      0x201 out/obj/main.o
- .debug_macro   0x0000411a       0xe0 out/obj/main.o
- .debug_macro   0x000041fa      0x34c out/obj/main.o
- .debug_macro   0x00004546       0xdc out/obj/main.o
- .debug_macro   0x00004622       0xc4 out/obj/main.o
- .debug_macro   0x000046e6       0x8f out/obj/main.o
- .debug_macro   0x00004775       0x94 out/obj/main.o
- .debug_macro   0x00004809       0xb8 out/obj/main.o
- .debug_macro   0x000048c1       0x4c out/obj/main.o
- .debug_macro   0x0000490d       0x16 out/obj/main.o
- .debug_macro   0x00004923      0x328 out/obj/main.o
- .debug_macro   0x00004c4b       0x3a out/obj/main.o
- .debug_macro   0x00004c85       0xd0 out/obj/main.o
- .debug_macro   0x00004d55       0x18 out/obj/main.o
- .debug_macro   0x00004d6d       0x22 out/obj/main.o
- .debug_macro   0x00004d8f       0x40 out/obj/main.o
- .debug_macro   0x00004dcf       0x16 out/obj/main.o
- .debug_macro   0x00004de5       0x16 out/obj/main.o
- .debug_macro   0x00004dfb      0x329 out/obj/ciaa_board.o
- .debug_macro   0x00005124      0x31f out/obj/gpio.o
- .debug_macro   0x00005443      0x342 out/obj/sys_core.o
- .debug_macro   0x00005785      0x31f out/obj/systick.o
- .debug_macro   0x00005aa4      0x315 out/obj/adc_18xx_43xx.o
- .debug_macro   0x00005db9      0x321 out/obj/aes_18xx_43xx.o
- .debug_macro   0x000060da      0x315 out/obj/atimer_18xx_43xx.o
- .debug_macro   0x000063ef      0x315 out/obj/ccan_18xx_43xx.o
- .debug_macro   0x00006704      0x315 out/obj/chip_18xx_43xx.o
- .debug_macro   0x00006a19      0x31b out/obj/clock_18xx_43xx.o
- .debug_macro   0x00006d34      0x315 out/obj/dac_18xx_43xx.o
- .debug_macro   0x00007049      0x315 out/obj/eeprom_18xx_43xx.o
- .debug_macro   0x0000735e      0x31b out/obj/emc_18xx_43xx.o
- .debug_macro   0x00007679      0x315 out/obj/enet_18xx_43xx.o
- .debug_macro   0x0000798e      0x315 out/obj/evrt_18xx_43xx.o
- .debug_macro   0x00007ca3      0x315 out/obj/gpdma_18xx_43xx.o
- .debug_macro   0x00007fb8      0x315 out/obj/gpio_18xx_43xx.o
- .debug_macro   0x000082cd      0x315 out/obj/gpiogroup_18xx_43xx.o
- .debug_macro   0x000085e2      0x327 out/obj/i2c_18xx_43xx.o
- .debug_macro   0x00008909      0x31b out/obj/i2cm_18xx_43xx.o
- .debug_macro   0x00008c24      0x315 out/obj/i2s_18xx_43xx.o
- .debug_macro   0x00008f39      0x315 out/obj/iap_18xx_43xx.o
- .debug_macro   0x0000924e      0x315 out/obj/lcd_18xx_43xx.o
- .debug_macro   0x00009563      0x321 out/obj/otp_18xx_43xx.o
- .debug_macro   0x00009884      0x315 out/obj/pinint_18xx_43xx.o
- .debug_macro   0x00009b99      0x315 out/obj/pmc_18xx_43xx.o
- .debug_macro   0x00009eae      0x13b out/obj/ring_buffer.o
- .debug_macro   0x00009fe9       0x75 out/obj/ring_buffer.o
- .debug_macro   0x0000a05e       0x2a out/obj/ring_buffer.o
- .debug_macro   0x0000a088       0x5c out/obj/ring_buffer.o
- .debug_macro   0x0000a0e4       0x3c out/obj/ring_buffer.o
- .debug_macro   0x0000a120       0x34 out/obj/ring_buffer.o
- .debug_macro   0x0000a154      0x189 out/obj/ring_buffer.o
- .debug_macro   0x0000a2dd       0x57 out/obj/ring_buffer.o
- .debug_macro   0x0000a334      0x372 out/obj/ring_buffer.o
- .debug_macro   0x0000a6a6       0x16 out/obj/ring_buffer.o
- .debug_macro   0x0000a6bc       0x4a out/obj/ring_buffer.o
- .debug_macro   0x0000a706       0x34 out/obj/ring_buffer.o
- .debug_macro   0x0000a73a       0x10 out/obj/ring_buffer.o
- .debug_macro   0x0000a74a       0x58 out/obj/ring_buffer.o
- .debug_macro   0x0000a7a2      0x1e5 out/obj/ring_buffer.o
- .debug_macro   0x0000a987       0x10 out/obj/ring_buffer.o
- .debug_macro   0x0000a997       0x3c out/obj/ring_buffer.o
- .debug_macro   0x0000a9d3       0x6c out/obj/ring_buffer.o
- .debug_macro   0x0000aa3f       0x10 out/obj/ring_buffer.o
- .debug_macro   0x0000aa4f      0x315 out/obj/ritimer_18xx_43xx.o
- .debug_macro   0x0000ad64      0x315 out/obj/rtc_18xx_43xx.o
- .debug_macro   0x0000b079      0x315 out/obj/sct_18xx_43xx.o
- .debug_macro   0x0000b38e      0x315 out/obj/sct_pwm_18xx_43xx.o
- .debug_macro   0x0000b6a3      0x3c0 out/obj/sdif_18xx_43xx.o
- .debug_macro   0x0000ba63       0x7b out/obj/sdif_18xx_43xx.o
- .debug_macro   0x0000bade      0x327 out/obj/sdio_18xx_43xx.o
- .debug_macro   0x0000be05      0x3c6 out/obj/sdmmc_18xx_43xx.o
- .debug_macro   0x0000c1cb      0x315 out/obj/spi_18xx_43xx.o
- .debug_macro   0x0000c4e0      0x315 out/obj/ssp_18xx_43xx.o
- .debug_macro   0x0000c7f5      0x31f out/obj/stopwatch_18xx_43xx.o
- .debug_macro   0x0000cb14      0x315 out/obj/sysinit_18xx_43xx.o
- .debug_macro   0x0000ce29      0x315 out/obj/timer_18xx_43xx.o
- .debug_macro   0x0000d13e      0x315 out/obj/uart_18xx_43xx.o
- .debug_macro   0x0000d453      0x315 out/obj/wwdt_18xx_43xx.o
+ .debug_macro   0x00000063      0xaf0 out/obj/startup.o
+ .debug_macro   0x00000b53       0x22 out/obj/startup.o
+ .debug_macro   0x00000b75       0x56 out/obj/startup.o
+ .debug_macro   0x00000bcb       0x51 out/obj/startup.o
+ .debug_macro   0x00000c1c      0x103 out/obj/startup.o
+ .debug_macro   0x00000d1f       0x6a out/obj/startup.o
+ .debug_macro   0x00000d89      0x1df out/obj/startup.o
+ .debug_macro   0x00000f68      0x35b out/obj/main.o
+ .debug_macro   0x000012c3       0x10 out/obj/main.o
+ .debug_macro   0x000012d3       0x22 out/obj/main.o
+ .debug_macro   0x000012f5       0x73 out/obj/main.o
+ .debug_macro   0x00001368       0x28 out/obj/main.o
+ .debug_macro   0x00001390       0x1c out/obj/main.o
+ .debug_macro   0x000013ac       0x22 out/obj/main.o
+ .debug_macro   0x000013ce       0xd9 out/obj/main.o
+ .debug_macro   0x000014a7     0x102d out/obj/main.o
+ .debug_macro   0x000024d4      0x11f out/obj/main.o
+ .debug_macro   0x000025f3      0x2c3 out/obj/main.o
+ .debug_macro   0x000028b6      0x112 out/obj/main.o
+ .debug_macro   0x000029c8       0x11 out/obj/main.o
+ .debug_macro   0x000029d9       0x2a out/obj/main.o
+ .debug_macro   0x00002a03       0x16 out/obj/main.o
+ .debug_macro   0x00002a19      0x2e6 out/obj/main.o
+ .debug_macro   0x00002cff       0x82 out/obj/main.o
+ .debug_macro   0x00002d81      0x13d out/obj/main.o
+ .debug_macro   0x00002ebe      0x198 out/obj/main.o
+ .debug_macro   0x00003056       0x34 out/obj/main.o
+ .debug_macro   0x0000308a       0x58 out/obj/main.o
+ .debug_macro   0x000030e2      0x236 out/obj/main.o
+ .debug_macro   0x00003318      0x572 out/obj/main.o
+ .debug_macro   0x0000388a       0x16 out/obj/main.o
+ .debug_macro   0x000038a0      0x18a out/obj/main.o
+ .debug_macro   0x00003a2a       0x88 out/obj/main.o
+ .debug_macro   0x00003ab2      0x1b9 out/obj/main.o
+ .debug_macro   0x00003c6b      0x1da out/obj/main.o
+ .debug_macro   0x00003e45       0x40 out/obj/main.o
+ .debug_macro   0x00003e85       0x1c out/obj/main.o
+ .debug_macro   0x00003ea1       0x2e out/obj/main.o
+ .debug_macro   0x00003ecf       0x2e out/obj/main.o
+ .debug_macro   0x00003efd       0x22 out/obj/main.o
+ .debug_macro   0x00003f1f      0x201 out/obj/main.o
+ .debug_macro   0x00004120       0xe0 out/obj/main.o
+ .debug_macro   0x00004200      0x34c out/obj/main.o
+ .debug_macro   0x0000454c       0xdc out/obj/main.o
+ .debug_macro   0x00004628       0xc4 out/obj/main.o
+ .debug_macro   0x000046ec       0x8f out/obj/main.o
+ .debug_macro   0x0000477b       0x94 out/obj/main.o
+ .debug_macro   0x0000480f       0xb8 out/obj/main.o
+ .debug_macro   0x000048c7       0x4c out/obj/main.o
+ .debug_macro   0x00004913       0x16 out/obj/main.o
+ .debug_macro   0x00004929      0x328 out/obj/main.o
+ .debug_macro   0x00004c51       0x3a out/obj/main.o
+ .debug_macro   0x00004c8b       0xd0 out/obj/main.o
+ .debug_macro   0x00004d5b       0x18 out/obj/main.o
+ .debug_macro   0x00004d73       0x22 out/obj/main.o
+ .debug_macro   0x00004d95       0x40 out/obj/main.o
+ .debug_macro   0x00004dd5       0x16 out/obj/main.o
+ .debug_macro   0x00004deb       0x16 out/obj/main.o
+ .debug_macro   0x00004e01      0x329 out/obj/ciaa_board.o
+ .debug_macro   0x0000512a      0x31f out/obj/gpio.o
+ .debug_macro   0x00005449      0x342 out/obj/sys_core.o
+ .debug_macro   0x0000578b      0x31f out/obj/systick.o
+ .debug_macro   0x00005aaa      0x315 out/obj/adc_18xx_43xx.o
+ .debug_macro   0x00005dbf      0x321 out/obj/aes_18xx_43xx.o
+ .debug_macro   0x000060e0      0x315 out/obj/atimer_18xx_43xx.o
+ .debug_macro   0x000063f5      0x315 out/obj/ccan_18xx_43xx.o
+ .debug_macro   0x0000670a      0x315 out/obj/chip_18xx_43xx.o
+ .debug_macro   0x00006a1f      0x31b out/obj/clock_18xx_43xx.o
+ .debug_macro   0x00006d3a      0x315 out/obj/dac_18xx_43xx.o
+ .debug_macro   0x0000704f      0x315 out/obj/eeprom_18xx_43xx.o
+ .debug_macro   0x00007364      0x31b out/obj/emc_18xx_43xx.o
+ .debug_macro   0x0000767f      0x315 out/obj/enet_18xx_43xx.o
+ .debug_macro   0x00007994      0x315 out/obj/evrt_18xx_43xx.o
+ .debug_macro   0x00007ca9      0x315 out/obj/gpdma_18xx_43xx.o
+ .debug_macro   0x00007fbe      0x315 out/obj/gpio_18xx_43xx.o
+ .debug_macro   0x000082d3      0x315 out/obj/gpiogroup_18xx_43xx.o
+ .debug_macro   0x000085e8      0x327 out/obj/i2c_18xx_43xx.o
+ .debug_macro   0x0000890f      0x31b out/obj/i2cm_18xx_43xx.o
+ .debug_macro   0x00008c2a      0x315 out/obj/i2s_18xx_43xx.o
+ .debug_macro   0x00008f3f      0x315 out/obj/iap_18xx_43xx.o
+ .debug_macro   0x00009254      0x315 out/obj/lcd_18xx_43xx.o
+ .debug_macro   0x00009569      0x321 out/obj/otp_18xx_43xx.o
+ .debug_macro   0x0000988a      0x315 out/obj/pinint_18xx_43xx.o
+ .debug_macro   0x00009b9f      0x315 out/obj/pmc_18xx_43xx.o
+ .debug_macro   0x00009eb4      0x13b out/obj/ring_buffer.o
+ .debug_macro   0x00009fef       0x6e out/obj/ring_buffer.o
+ .debug_macro   0x0000a05d       0x2a out/obj/ring_buffer.o
+ .debug_macro   0x0000a087       0x5c out/obj/ring_buffer.o
+ .debug_macro   0x0000a0e3       0x3c out/obj/ring_buffer.o
+ .debug_macro   0x0000a11f       0x34 out/obj/ring_buffer.o
+ .debug_macro   0x0000a153      0x189 out/obj/ring_buffer.o
+ .debug_macro   0x0000a2dc       0x57 out/obj/ring_buffer.o
+ .debug_macro   0x0000a333      0x372 out/obj/ring_buffer.o
+ .debug_macro   0x0000a6a5       0x16 out/obj/ring_buffer.o
+ .debug_macro   0x0000a6bb       0x4a out/obj/ring_buffer.o
+ .debug_macro   0x0000a705       0x34 out/obj/ring_buffer.o
+ .debug_macro   0x0000a739       0x10 out/obj/ring_buffer.o
+ .debug_macro   0x0000a749       0x58 out/obj/ring_buffer.o
+ .debug_macro   0x0000a7a1      0x1de out/obj/ring_buffer.o
+ .debug_macro   0x0000a97f       0x10 out/obj/ring_buffer.o
+ .debug_macro   0x0000a98f       0x3c out/obj/ring_buffer.o
+ .debug_macro   0x0000a9cb       0x6c out/obj/ring_buffer.o
+ .debug_macro   0x0000aa37       0x10 out/obj/ring_buffer.o
+ .debug_macro   0x0000aa47      0x315 out/obj/ritimer_18xx_43xx.o
+ .debug_macro   0x0000ad5c      0x315 out/obj/rtc_18xx_43xx.o
+ .debug_macro   0x0000b071      0x315 out/obj/sct_18xx_43xx.o
+ .debug_macro   0x0000b386      0x315 out/obj/sct_pwm_18xx_43xx.o
+ .debug_macro   0x0000b69b      0x3c0 out/obj/sdif_18xx_43xx.o
+ .debug_macro   0x0000ba5b       0x74 out/obj/sdif_18xx_43xx.o
+ .debug_macro   0x0000bacf      0x327 out/obj/sdio_18xx_43xx.o
+ .debug_macro   0x0000bdf6      0x3c6 out/obj/sdmmc_18xx_43xx.o
+ .debug_macro   0x0000c1bc      0x315 out/obj/spi_18xx_43xx.o
+ .debug_macro   0x0000c4d1      0x315 out/obj/ssp_18xx_43xx.o
+ .debug_macro   0x0000c7e6      0x31f out/obj/stopwatch_18xx_43xx.o
+ .debug_macro   0x0000cb05      0x315 out/obj/sysinit_18xx_43xx.o
+ .debug_macro   0x0000ce1a      0x315 out/obj/timer_18xx_43xx.o
+ .debug_macro   0x0000d12f      0x315 out/obj/uart_18xx_43xx.o
+ .debug_macro   0x0000d444      0x315 out/obj/wwdt_18xx_43xx.o
 
-.debug_line     0x00000000    0x1b190
- .debug_line    0x00000000      0x29e out/obj/startup.o
- .debug_line    0x0000029e      0xa6d out/obj/main.o
- .debug_line    0x00000d0b      0x824 out/obj/ciaa_board.o
- .debug_line    0x0000152f      0x893 out/obj/gpio.o
- .debug_line    0x00001dc2      0x822 out/obj/sys_core.o
- .debug_line    0x000025e4      0x82e out/obj/systick.o
- .debug_line    0x00002e12      0xa45 out/obj/adc_18xx_43xx.o
- .debug_line    0x00003857      0x8d6 out/obj/aes_18xx_43xx.o
- .debug_line    0x0000412d      0x7c6 out/obj/atimer_18xx_43xx.o
- .debug_line    0x000048f3      0xc68 out/obj/ccan_18xx_43xx.o
- .debug_line    0x0000555b      0x7dc out/obj/chip_18xx_43xx.o
- .debug_line    0x00005d37     0x1381 out/obj/clock_18xx_43xx.o
- .debug_line    0x000070b8      0x7cb out/obj/dac_18xx_43xx.o
- .debug_line    0x00007883      0x86f out/obj/eeprom_18xx_43xx.o
- .debug_line    0x000080f2      0xbeb out/obj/emc_18xx_43xx.o
- .debug_line    0x00008cdd      0x93b out/obj/enet_18xx_43xx.o
- .debug_line    0x00009618      0x879 out/obj/evrt_18xx_43xx.o
- .debug_line    0x00009e91      0xe9b out/obj/gpdma_18xx_43xx.o
- .debug_line    0x0000ad2c      0x763 out/obj/gpio_18xx_43xx.o
- .debug_line    0x0000b48f      0x754 out/obj/gpiogroup_18xx_43xx.o
- .debug_line    0x0000bbe3     0x105c out/obj/i2c_18xx_43xx.o
- .debug_line    0x0000cc3f      0xc41 out/obj/i2cm_18xx_43xx.o
- .debug_line    0x0000d880      0xb5a out/obj/i2s_18xx_43xx.o
- .debug_line    0x0000e3da      0xa89 out/obj/iap_18xx_43xx.o
- .debug_line    0x0000ee63      0xa5a out/obj/lcd_18xx_43xx.o
- .debug_line    0x0000f8bd      0x897 out/obj/otp_18xx_43xx.o
- .debug_line    0x00010154      0x751 out/obj/pinint_18xx_43xx.o
- .debug_line    0x000108a5      0x77f out/obj/pmc_18xx_43xx.o
- .debug_line    0x00011024      0x63a out/obj/ring_buffer.o
- .debug_line    0x0001165e      0x812 out/obj/ritimer_18xx_43xx.o
- .debug_line    0x00011e70      0xac7 out/obj/rtc_18xx_43xx.o
- .debug_line    0x00012937      0x7e0 out/obj/sct_18xx_43xx.o
- .debug_line    0x00013117      0x88b out/obj/sct_pwm_18xx_43xx.o
- .debug_line    0x000139a2      0xa8f out/obj/sdif_18xx_43xx.o
- .debug_line    0x00014431      0xf1e out/obj/sdio_18xx_43xx.o
- .debug_line    0x0001534f     0x10ee out/obj/sdmmc_18xx_43xx.o
- .debug_line    0x0001643d      0xaaa out/obj/spi_18xx_43xx.o
- .debug_line    0x00016ee7     0x126b out/obj/ssp_18xx_43xx.o
- .debug_line    0x00018152      0x83a out/obj/stopwatch_18xx_43xx.o
- .debug_line    0x0001898c      0x92d out/obj/sysinit_18xx_43xx.o
- .debug_line    0x000192b9      0x83d out/obj/timer_18xx_43xx.o
- .debug_line    0x00019af6      0xeec out/obj/uart_18xx_43xx.o
- .debug_line    0x0001a9e2      0x7ae out/obj/wwdt_18xx_43xx.o
+.debug_line     0x00000000    0x18bf5
+ .debug_line    0x00000000      0x18a out/obj/startup.o
+ .debug_line    0x0000018a      0x948 out/obj/main.o
+ .debug_line    0x00000ad2      0x708 out/obj/ciaa_board.o
+ .debug_line    0x000011da      0x77c out/obj/gpio.o
+ .debug_line    0x00001956      0x706 out/obj/sys_core.o
+ .debug_line    0x0000205c      0x716 out/obj/systick.o
+ .debug_line    0x00002772      0x929 out/obj/adc_18xx_43xx.o
+ .debug_line    0x0000309b      0x7be out/obj/aes_18xx_43xx.o
+ .debug_line    0x00003859      0x6aa out/obj/atimer_18xx_43xx.o
+ .debug_line    0x00003f03      0xb4c out/obj/ccan_18xx_43xx.o
+ .debug_line    0x00004a4f      0x6c0 out/obj/chip_18xx_43xx.o
+ .debug_line    0x0000510f     0x127d out/obj/clock_18xx_43xx.o
+ .debug_line    0x0000638c      0x6af out/obj/dac_18xx_43xx.o
+ .debug_line    0x00006a3b      0x753 out/obj/eeprom_18xx_43xx.o
+ .debug_line    0x0000718e      0xacf out/obj/emc_18xx_43xx.o
+ .debug_line    0x00007c5d      0x81f out/obj/enet_18xx_43xx.o
+ .debug_line    0x0000847c      0x73c out/obj/evrt_18xx_43xx.o
+ .debug_line    0x00008bb8      0xee0 out/obj/gpdma_18xx_43xx.o
+ .debug_line    0x00009a98      0x647 out/obj/gpio_18xx_43xx.o
+ .debug_line    0x0000a0df      0x638 out/obj/gpiogroup_18xx_43xx.o
+ .debug_line    0x0000a717      0xed8 out/obj/i2c_18xx_43xx.o
+ .debug_line    0x0000b5ef      0xad1 out/obj/i2cm_18xx_43xx.o
+ .debug_line    0x0000c0c0      0xa3e out/obj/i2s_18xx_43xx.o
+ .debug_line    0x0000cafe      0x96d out/obj/iap_18xx_43xx.o
+ .debug_line    0x0000d46b      0x937 out/obj/lcd_18xx_43xx.o
+ .debug_line    0x0000dda2      0x783 out/obj/otp_18xx_43xx.o
+ .debug_line    0x0000e525      0x635 out/obj/pinint_18xx_43xx.o
+ .debug_line    0x0000eb5a      0x663 out/obj/pmc_18xx_43xx.o
+ .debug_line    0x0000f1bd      0x51e out/obj/ring_buffer.o
+ .debug_line    0x0000f6db      0x6f6 out/obj/ritimer_18xx_43xx.o
+ .debug_line    0x0000fdd1      0x9ac out/obj/rtc_18xx_43xx.o
+ .debug_line    0x0001077d      0x6c4 out/obj/sct_18xx_43xx.o
+ .debug_line    0x00010e41      0x76f out/obj/sct_pwm_18xx_43xx.o
+ .debug_line    0x000115b0      0x983 out/obj/sdif_18xx_43xx.o
+ .debug_line    0x00011f33      0xdff out/obj/sdio_18xx_43xx.o
+ .debug_line    0x00012d32      0xfc7 out/obj/sdmmc_18xx_43xx.o
+ .debug_line    0x00013cf9      0x9a4 out/obj/spi_18xx_43xx.o
+ .debug_line    0x0001469d     0x11b4 out/obj/ssp_18xx_43xx.o
+ .debug_line    0x00015851      0x722 out/obj/stopwatch_18xx_43xx.o
+ .debug_line    0x00015f73      0x811 out/obj/sysinit_18xx_43xx.o
+ .debug_line    0x00016784      0x721 out/obj/timer_18xx_43xx.o
+ .debug_line    0x00016ea5      0xdf2 out/obj/uart_18xx_43xx.o
+ .debug_line    0x00017c97      0x692 out/obj/wwdt_18xx_43xx.o
+ .debug_line    0x00018329       0x4e /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x00018377      0x565 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_line    0x000188dc       0x4a /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x00018926      0x12e /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .debug_line    0x00018a54      0x1a1 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
-.debug_str      0x00000000    0x208ca
- .debug_str     0x00000000    0x208ca out/obj/startup.o
-                               0x3df0 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/main.o
-                              0x16cf2 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/ciaa_board.o
-                              0x17548 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/gpio.o
-                              0x16b64 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/sys_core.o
-                              0x17446 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/systick.o
-                              0x17804 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/adc_18xx_43xx.o
-                              0x171c1 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/aes_18xx_43xx.o
-                              0x17636 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/atimer_18xx_43xx.o
-                              0x16a0d (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/ccan_18xx_43xx.o
-                              0x170e3 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/chip_18xx_43xx.o
-                              0x17783 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/clock_18xx_43xx.o
-                              0x17bfd (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/dac_18xx_43xx.o
-                              0x16de8 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/eeprom_18xx_43xx.o
-                              0x16ead (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/emc_18xx_43xx.o
-                              0x16f31 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/enet_18xx_43xx.o
-                              0x177cc (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/evrt_18xx_43xx.o
-                              0x16c61 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/gpdma_18xx_43xx.o
-                              0x17c33 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/gpio_18xx_43xx.o
-                              0x16978 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/gpiogroup_18xx_43xx.o
-                              0x1691c (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/i2c_18xx_43xx.o
-                              0x17958 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/i2cm_18xx_43xx.o
-                              0x16fc5 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/i2s_18xx_43xx.o
-                              0x16f96 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/iap_18xx_43xx.o
-                              0x16d18 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/lcd_18xx_43xx.o
-                              0x17648 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/otp_18xx_43xx.o
-                              0x175da (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/pinint_18xx_43xx.o
-                              0x16919 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/pmc_18xx_43xx.o
-                              0x16a37 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/ring_buffer.o
-                               0x7040 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/ritimer_18xx_43xx.o
-                              0x16e32 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/rtc_18xx_43xx.o
-                              0x16d19 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/sct_18xx_43xx.o
-                              0x16faa (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/sct_pwm_18xx_43xx.o
-                              0x17020 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/sdif_18xx_43xx.o
-                              0x19e2d (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/sdio_18xx_43xx.o
-                              0x17893 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/sdmmc_18xx_43xx.o
-                              0x1a86a (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/spi_18xx_43xx.o
-                              0x17127 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/ssp_18xx_43xx.o
-                              0x173b7 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/stopwatch_18xx_43xx.o
-                              0x174b0 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/sysinit_18xx_43xx.o
-                              0x17677 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/timer_18xx_43xx.o
-                              0x16e82 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/uart_18xx_43xx.o
-                              0x17837 (size before relaxing)
- .debug_str     0x000208ca        0x0 out/obj/wwdt_18xx_43xx.o
-                              0x1699b (size before relaxing)
+.debug_str      0x00000000    0x21097
+ .debug_str     0x00000000    0x21097 out/obj/startup.o
+                               0x3e05 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/main.o
+                              0x16d07 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/ciaa_board.o
+                              0x1755d (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/gpio.o
+                              0x16b79 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/sys_core.o
+                              0x1745b (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/systick.o
+                              0x17819 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/adc_18xx_43xx.o
+                              0x171d6 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/aes_18xx_43xx.o
+                              0x1764b (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/atimer_18xx_43xx.o
+                              0x16a22 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/ccan_18xx_43xx.o
+                              0x170f8 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/chip_18xx_43xx.o
+                              0x17798 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/clock_18xx_43xx.o
+                              0x17c12 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/dac_18xx_43xx.o
+                              0x16dfd (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/eeprom_18xx_43xx.o
+                              0x16ec2 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/emc_18xx_43xx.o
+                              0x16f46 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/enet_18xx_43xx.o
+                              0x177e1 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/evrt_18xx_43xx.o
+                              0x16c76 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/gpdma_18xx_43xx.o
+                              0x17c48 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/gpio_18xx_43xx.o
+                              0x1698d (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/gpiogroup_18xx_43xx.o
+                              0x16931 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/i2c_18xx_43xx.o
+                              0x1796d (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/i2cm_18xx_43xx.o
+                              0x16fda (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/i2s_18xx_43xx.o
+                              0x16fab (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/iap_18xx_43xx.o
+                              0x16d2d (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/lcd_18xx_43xx.o
+                              0x1765d (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/otp_18xx_43xx.o
+                              0x175ef (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/pinint_18xx_43xx.o
+                              0x1692e (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/pmc_18xx_43xx.o
+                              0x16a4c (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/ring_buffer.o
+                               0x6ffd (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/ritimer_18xx_43xx.o
+                              0x16e47 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/rtc_18xx_43xx.o
+                              0x16d2e (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/sct_18xx_43xx.o
+                              0x16fbf (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/sct_pwm_18xx_43xx.o
+                              0x17035 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/sdif_18xx_43xx.o
+                              0x19dea (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/sdio_18xx_43xx.o
+                              0x178a8 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/sdmmc_18xx_43xx.o
+                              0x1a827 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/spi_18xx_43xx.o
+                              0x1713c (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/ssp_18xx_43xx.o
+                              0x173cc (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/stopwatch_18xx_43xx.o
+                              0x174c5 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/sysinit_18xx_43xx.o
+                              0x1768c (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/timer_18xx_43xx.o
+                              0x16e97 (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/uart_18xx_43xx.o
+                              0x1784c (size before relaxing)
+ .debug_str     0x00021097        0x0 out/obj/wwdt_18xx_43xx.o
+                              0x169b0 (size before relaxing)
+ .debug_str     0x00021097        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+                                 0x9e (size before relaxing)
+ .debug_str     0x00021097        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+                                0x697 (size before relaxing)
+ .debug_str     0x00021097        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+                                 0xbe (size before relaxing)
+ .debug_str     0x00021097        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+                                0x1bf (size before relaxing)
+ .debug_str     0x00021097        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
+                                0x1dd (size before relaxing)
 
-.comment        0x00000000       0x45
- .comment       0x00000000       0x45 out/obj/startup.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/main.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/ciaa_board.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/gpio.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/sys_core.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/systick.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/adc_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/aes_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/atimer_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/ccan_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/chip_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/clock_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/dac_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/eeprom_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/emc_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/enet_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/evrt_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/gpdma_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/gpio_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/gpiogroup_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/i2c_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/i2cm_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/i2s_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/iap_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/lcd_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/otp_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/pinint_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/pmc_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/ring_buffer.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/ritimer_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/rtc_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/sct_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/sct_pwm_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/sdif_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/sdio_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/sdmmc_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/spi_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/ssp_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/stopwatch_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/sysinit_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/timer_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/uart_18xx_43xx.o
-                                 0x46 (size before relaxing)
- .comment       0x00000045        0x0 out/obj/wwdt_18xx_43xx.o
-                                 0x46 (size before relaxing)
+.comment        0x00000000       0x1e
+ .comment       0x00000000       0x1e out/obj/startup.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/main.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/ciaa_board.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/gpio.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/sys_core.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/systick.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/adc_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/aes_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/atimer_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/ccan_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/chip_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/clock_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/dac_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/eeprom_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/emc_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/enet_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/evrt_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/gpdma_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/gpio_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/gpiogroup_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/i2c_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/i2cm_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/i2s_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/iap_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/lcd_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/otp_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/pinint_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/pmc_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/ring_buffer.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/ritimer_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/rtc_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/sct_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/sct_pwm_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/sdif_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/sdio_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/sdmmc_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/spi_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/ssp_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/stopwatch_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/sysinit_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/timer_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/uart_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 out/obj/wwdt_18xx_43xx.o
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+                                 0x1f (size before relaxing)
+ .comment       0x0000001e        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
+                                 0x1f (size before relaxing)
 
 .ARM.attributes
                 0x00000000       0x34
@@ -5871,17 +5921,17 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000888       0x34 out/obj/wwdt_18xx_43xx.o
  .ARM.attributes
-                0x000008bc       0x22 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x000008bc       0x22 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x000008de       0x34 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x000008de       0x34 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000912       0x22 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x00000912       0x22 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000934       0x34 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+                0x00000934       0x34 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
  .ARM.attributes
-                0x00000968       0x34 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+                0x00000968       0x34 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
-.debug_frame    0x00000000     0x22ec
+.debug_frame    0x00000000     0x22e0
  .debug_frame   0x00000000       0x38 out/obj/startup.o
  .debug_frame   0x00000038       0xa0 out/obj/main.o
  .debug_frame   0x000000d8       0x70 out/obj/ciaa_board.o
@@ -5893,19 +5943,19 @@ LOAD linker stubs
  .debug_frame   0x000004a8       0x30 out/obj/atimer_18xx_43xx.o
  .debug_frame   0x000004d8      0x198 out/obj/ccan_18xx_43xx.o
  .debug_frame   0x00000670       0x70 out/obj/chip_18xx_43xx.o
- .debug_frame   0x000006e0      0x2f0 out/obj/clock_18xx_43xx.o
- .debug_frame   0x000009d0       0x60 out/obj/dac_18xx_43xx.o
- .debug_frame   0x00000a30       0x68 out/obj/eeprom_18xx_43xx.o
- .debug_frame   0x00000a98       0xf0 out/obj/emc_18xx_43xx.o
- .debug_frame   0x00000b88       0xa4 out/obj/enet_18xx_43xx.o
- .debug_frame   0x00000c2c       0x50 out/obj/evrt_18xx_43xx.o
- .debug_frame   0x00000c7c      0x194 out/obj/gpdma_18xx_43xx.o
- .debug_frame   0x00000e10       0x30 out/obj/gpio_18xx_43xx.o
- .debug_frame   0x00000e40      0x24c out/obj/i2c_18xx_43xx.o
- .debug_frame   0x0000108c       0xd8 out/obj/i2cm_18xx_43xx.o
- .debug_frame   0x00001164       0xf0 out/obj/i2s_18xx_43xx.o
- .debug_frame   0x00001254      0x164 out/obj/iap_18xx_43xx.o
- .debug_frame   0x000013b8       0x80 out/obj/lcd_18xx_43xx.o
+ .debug_frame   0x000006e0      0x2f4 out/obj/clock_18xx_43xx.o
+ .debug_frame   0x000009d4       0x60 out/obj/dac_18xx_43xx.o
+ .debug_frame   0x00000a34       0x68 out/obj/eeprom_18xx_43xx.o
+ .debug_frame   0x00000a9c       0xf0 out/obj/emc_18xx_43xx.o
+ .debug_frame   0x00000b8c       0xa4 out/obj/enet_18xx_43xx.o
+ .debug_frame   0x00000c30       0x50 out/obj/evrt_18xx_43xx.o
+ .debug_frame   0x00000c80      0x19c out/obj/gpdma_18xx_43xx.o
+ .debug_frame   0x00000e1c       0x30 out/obj/gpio_18xx_43xx.o
+ .debug_frame   0x00000e4c      0x24c out/obj/i2c_18xx_43xx.o
+ .debug_frame   0x00001098       0xd8 out/obj/i2cm_18xx_43xx.o
+ .debug_frame   0x00001170       0xf0 out/obj/i2s_18xx_43xx.o
+ .debug_frame   0x00001260      0x164 out/obj/iap_18xx_43xx.o
+ .debug_frame   0x000013c4       0x74 out/obj/lcd_18xx_43xx.o
  .debug_frame   0x00001438       0xb8 out/obj/otp_18xx_43xx.o
  .debug_frame   0x000014f0       0x30 out/obj/pmc_18xx_43xx.o
  .debug_frame   0x00001520       0x90 out/obj/ring_buffer.o
@@ -5915,41 +5965,41 @@ LOAD linker stubs
  .debug_frame   0x00001788       0x44 out/obj/sct_pwm_18xx_43xx.o
  .debug_frame   0x000017cc       0xb4 out/obj/sdif_18xx_43xx.o
  .debug_frame   0x00001880      0x20c out/obj/sdio_18xx_43xx.o
- .debug_frame   0x00001a8c      0x158 out/obj/sdmmc_18xx_43xx.o
- .debug_frame   0x00001be4      0x138 out/obj/spi_18xx_43xx.o
- .debug_frame   0x00001d1c      0x170 out/obj/ssp_18xx_43xx.o
- .debug_frame   0x00001e8c       0x88 out/obj/stopwatch_18xx_43xx.o
- .debug_frame   0x00001f14       0x90 out/obj/sysinit_18xx_43xx.o
- .debug_frame   0x00001fa4       0x78 out/obj/timer_18xx_43xx.o
- .debug_frame   0x0000201c      0x1d8 out/obj/uart_18xx_43xx.o
- .debug_frame   0x000021f4       0x40 out/obj/wwdt_18xx_43xx.o
- .debug_frame   0x00002234       0x2c C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00002260       0x44 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x000022a4       0x20 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
- .debug_frame   0x000022c4       0x28 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00001a8c      0x15c out/obj/sdmmc_18xx_43xx.o
+ .debug_frame   0x00001be8      0x138 out/obj/spi_18xx_43xx.o
+ .debug_frame   0x00001d20      0x170 out/obj/ssp_18xx_43xx.o
+ .debug_frame   0x00001e90       0x88 out/obj/stopwatch_18xx_43xx.o
+ .debug_frame   0x00001f18       0x90 out/obj/sysinit_18xx_43xx.o
+ .debug_frame   0x00001fa8       0x78 out/obj/timer_18xx_43xx.o
+ .debug_frame   0x00002020      0x1d8 out/obj/uart_18xx_43xx.o
+ .debug_frame   0x000021f8       0x40 out/obj/wwdt_18xx_43xx.o
+ .debug_frame   0x00002238       0x2c /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00002264       0x34 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00002298       0x20 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+ .debug_frame   0x000022b8       0x28 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_rnglists
-                0x00000000       0xe3
+                0x00000000      0x119
  .debug_rnglists
-                0x00000000       0x47 out/obj/clock_18xx_43xx.o
+                0x00000000       0x45 out/obj/clock_18xx_43xx.o
  .debug_rnglists
-                0x00000047       0x17 out/obj/emc_18xx_43xx.o
+                0x00000045       0x17 out/obj/emc_18xx_43xx.o
  .debug_rnglists
-                0x0000005e       0x17 out/obj/i2cm_18xx_43xx.o
+                0x0000005c       0x13 out/obj/spi_18xx_43xx.o
  .debug_rnglists
-                0x00000075       0x17 out/obj/sdio_18xx_43xx.o
+                0x0000006f       0x17 out/obj/uart_18xx_43xx.o
  .debug_rnglists
-                0x0000008c       0x13 out/obj/spi_18xx_43xx.o
+                0x00000086       0x6d /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
  .debug_rnglists
-                0x0000009f       0x2d out/obj/ssp_18xx_43xx.o
+                0x000000f3       0x13 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
  .debug_rnglists
-                0x000000cc       0x17 out/obj/uart_18xx_43xx.o
+                0x00000106       0x13 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_line_str
-                0x00000000       0xd9
+                0x00000000       0x9e
  .debug_line_str
-                0x00000000       0xd9 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
-                                 0xcd (size before relaxing)
+                0x00000000       0x9e /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+                                 0x92 (size before relaxing)
  .debug_line_str
-                0x000000d9        0x0 C:/Users/Carlitoz MF/Documents/Microcontroladores/CIAA-Github/tools/gcc-arm/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
-                                 0xd1 (size before relaxing)
+                0x0000009e        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+                                 0x96 (size before relaxing)

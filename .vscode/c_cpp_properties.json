@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "EDU-CIAA-PORTABLE-LINUX",
+            "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/projects/**",
                 "${workspaceFolder}/libs/**"
@@ -13,7 +13,7 @@
                 "BOARD=edu_ciaa_nxp",
                 "__GNUC__"
             ],
-            "compilerPath": "${workspaceFolder}/tools/gcc-arm/bin/arm-none-eabi-gcc",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
             "cStandard": "c99",
             "cppStandard": "c++11",
             "intelliSenseMode": "gcc-arm",
@@ -32,7 +32,7 @@
             }
         },
         {
-            "name": "EDU-CIAA-PORTABLE-WINDOWS",
+            "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/projects/**",
                 "${workspaceFolder}/libs/**"
