@@ -5433,7 +5433,7 @@ LOAD linker stubs
  .debug_aranges
                 0x00000530       0x20 out/obj/wwdt_18xx_43xx.o
 
-.debug_macro    0x00000000     0xd74d
+.debug_macro    0x00000000     0xd757
  .debug_macro   0x00000000       0x63 out/obj/startup.o
  .debug_macro   0x00000063      0xaea out/obj/startup.o
  .debug_macro   0x00000b4d       0x22 out/obj/startup.o
@@ -5442,248 +5442,248 @@ LOAD linker stubs
  .debug_macro   0x00000c16      0x103 out/obj/startup.o
  .debug_macro   0x00000d19       0x6a out/obj/startup.o
  .debug_macro   0x00000d83      0x1df out/obj/startup.o
- .debug_macro   0x00000f62      0x356 out/obj/main.o
- .debug_macro   0x000012b8       0x10 out/obj/main.o
- .debug_macro   0x000012c8       0x22 out/obj/main.o
- .debug_macro   0x000012ea       0x73 out/obj/main.o
- .debug_macro   0x0000135d       0x28 out/obj/main.o
- .debug_macro   0x00001385       0x1c out/obj/main.o
- .debug_macro   0x000013a1       0x22 out/obj/main.o
- .debug_macro   0x000013c3       0xd9 out/obj/main.o
- .debug_macro   0x0000149c     0x102d out/obj/main.o
- .debug_macro   0x000024c9      0x11f out/obj/main.o
- .debug_macro   0x000025e8      0x2c3 out/obj/main.o
- .debug_macro   0x000028ab      0x112 out/obj/main.o
- .debug_macro   0x000029bd       0x11 out/obj/main.o
- .debug_macro   0x000029ce       0x2a out/obj/main.o
- .debug_macro   0x000029f8       0x16 out/obj/main.o
- .debug_macro   0x00002a0e      0x2e6 out/obj/main.o
- .debug_macro   0x00002cf4       0x82 out/obj/main.o
- .debug_macro   0x00002d76      0x13d out/obj/main.o
- .debug_macro   0x00002eb3      0x198 out/obj/main.o
- .debug_macro   0x0000304b       0x34 out/obj/main.o
- .debug_macro   0x0000307f       0x58 out/obj/main.o
- .debug_macro   0x000030d7      0x236 out/obj/main.o
- .debug_macro   0x0000330d      0x572 out/obj/main.o
- .debug_macro   0x0000387f       0x16 out/obj/main.o
- .debug_macro   0x00003895      0x18a out/obj/main.o
- .debug_macro   0x00003a1f       0x88 out/obj/main.o
- .debug_macro   0x00003aa7      0x1b9 out/obj/main.o
- .debug_macro   0x00003c60      0x1da out/obj/main.o
- .debug_macro   0x00003e3a       0x40 out/obj/main.o
- .debug_macro   0x00003e7a       0x1c out/obj/main.o
- .debug_macro   0x00003e96       0x2e out/obj/main.o
- .debug_macro   0x00003ec4       0x2e out/obj/main.o
- .debug_macro   0x00003ef2       0x22 out/obj/main.o
- .debug_macro   0x00003f14      0x201 out/obj/main.o
- .debug_macro   0x00004115       0xe0 out/obj/main.o
- .debug_macro   0x000041f5      0x34c out/obj/main.o
- .debug_macro   0x00004541       0xdc out/obj/main.o
- .debug_macro   0x0000461d       0xc4 out/obj/main.o
- .debug_macro   0x000046e1       0x8f out/obj/main.o
- .debug_macro   0x00004770       0x94 out/obj/main.o
- .debug_macro   0x00004804       0xb8 out/obj/main.o
- .debug_macro   0x000048bc       0x4c out/obj/main.o
- .debug_macro   0x00004908       0x16 out/obj/main.o
- .debug_macro   0x0000491e      0x328 out/obj/main.o
- .debug_macro   0x00004c46       0x3a out/obj/main.o
- .debug_macro   0x00004c80       0xd0 out/obj/main.o
- .debug_macro   0x00004d50       0x18 out/obj/main.o
- .debug_macro   0x00004d68       0x22 out/obj/main.o
- .debug_macro   0x00004d8a       0x40 out/obj/main.o
- .debug_macro   0x00004dca       0x16 out/obj/main.o
- .debug_macro   0x00004de0      0x329 out/obj/ciaa_board.o
- .debug_macro   0x00005109      0x31f out/obj/gpio.o
- .debug_macro   0x00005428      0x342 out/obj/sys_core.o
- .debug_macro   0x0000576a      0x31f out/obj/systick.o
- .debug_macro   0x00005a89      0x315 out/obj/adc_18xx_43xx.o
- .debug_macro   0x00005d9e      0x321 out/obj/aes_18xx_43xx.o
- .debug_macro   0x000060bf      0x315 out/obj/atimer_18xx_43xx.o
- .debug_macro   0x000063d4      0x315 out/obj/ccan_18xx_43xx.o
- .debug_macro   0x000066e9      0x315 out/obj/chip_18xx_43xx.o
- .debug_macro   0x000069fe      0x31b out/obj/clock_18xx_43xx.o
- .debug_macro   0x00006d19      0x315 out/obj/dac_18xx_43xx.o
- .debug_macro   0x0000702e      0x315 out/obj/eeprom_18xx_43xx.o
- .debug_macro   0x00007343      0x31b out/obj/emc_18xx_43xx.o
- .debug_macro   0x0000765e      0x315 out/obj/enet_18xx_43xx.o
- .debug_macro   0x00007973      0x315 out/obj/evrt_18xx_43xx.o
- .debug_macro   0x00007c88      0x315 out/obj/gpdma_18xx_43xx.o
- .debug_macro   0x00007f9d      0x315 out/obj/gpio_18xx_43xx.o
- .debug_macro   0x000082b2      0x315 out/obj/gpiogroup_18xx_43xx.o
- .debug_macro   0x000085c7      0x327 out/obj/i2c_18xx_43xx.o
- .debug_macro   0x000088ee      0x31b out/obj/i2cm_18xx_43xx.o
- .debug_macro   0x00008c09      0x315 out/obj/i2s_18xx_43xx.o
- .debug_macro   0x00008f1e      0x315 out/obj/iap_18xx_43xx.o
- .debug_macro   0x00009233      0x315 out/obj/lcd_18xx_43xx.o
- .debug_macro   0x00009548      0x321 out/obj/otp_18xx_43xx.o
- .debug_macro   0x00009869      0x315 out/obj/pinint_18xx_43xx.o
- .debug_macro   0x00009b7e      0x315 out/obj/pmc_18xx_43xx.o
- .debug_macro   0x00009e93      0x13b out/obj/ring_buffer.o
- .debug_macro   0x00009fce       0x75 out/obj/ring_buffer.o
- .debug_macro   0x0000a043       0x2a out/obj/ring_buffer.o
- .debug_macro   0x0000a06d       0x5c out/obj/ring_buffer.o
- .debug_macro   0x0000a0c9       0x3c out/obj/ring_buffer.o
- .debug_macro   0x0000a105       0x34 out/obj/ring_buffer.o
- .debug_macro   0x0000a139      0x189 out/obj/ring_buffer.o
- .debug_macro   0x0000a2c2       0x57 out/obj/ring_buffer.o
- .debug_macro   0x0000a319      0x372 out/obj/ring_buffer.o
- .debug_macro   0x0000a68b       0x16 out/obj/ring_buffer.o
- .debug_macro   0x0000a6a1       0x4a out/obj/ring_buffer.o
- .debug_macro   0x0000a6eb       0x34 out/obj/ring_buffer.o
- .debug_macro   0x0000a71f       0x10 out/obj/ring_buffer.o
- .debug_macro   0x0000a72f       0x58 out/obj/ring_buffer.o
- .debug_macro   0x0000a787      0x1e5 out/obj/ring_buffer.o
- .debug_macro   0x0000a96c       0x10 out/obj/ring_buffer.o
- .debug_macro   0x0000a97c       0x3c out/obj/ring_buffer.o
- .debug_macro   0x0000a9b8       0x6c out/obj/ring_buffer.o
- .debug_macro   0x0000aa24       0x10 out/obj/ring_buffer.o
- .debug_macro   0x0000aa34      0x315 out/obj/ritimer_18xx_43xx.o
- .debug_macro   0x0000ad49      0x315 out/obj/rtc_18xx_43xx.o
- .debug_macro   0x0000b05e      0x315 out/obj/sct_18xx_43xx.o
- .debug_macro   0x0000b373      0x315 out/obj/sct_pwm_18xx_43xx.o
- .debug_macro   0x0000b688      0x3c0 out/obj/sdif_18xx_43xx.o
- .debug_macro   0x0000ba48       0x7b out/obj/sdif_18xx_43xx.o
- .debug_macro   0x0000bac3      0x327 out/obj/sdio_18xx_43xx.o
- .debug_macro   0x0000bdea      0x3c6 out/obj/sdmmc_18xx_43xx.o
- .debug_macro   0x0000c1b0      0x315 out/obj/spi_18xx_43xx.o
- .debug_macro   0x0000c4c5      0x315 out/obj/ssp_18xx_43xx.o
- .debug_macro   0x0000c7da      0x31f out/obj/stopwatch_18xx_43xx.o
- .debug_macro   0x0000caf9      0x315 out/obj/sysinit_18xx_43xx.o
- .debug_macro   0x0000ce0e      0x315 out/obj/timer_18xx_43xx.o
- .debug_macro   0x0000d123      0x315 out/obj/uart_18xx_43xx.o
- .debug_macro   0x0000d438      0x315 out/obj/wwdt_18xx_43xx.o
+ .debug_macro   0x00000f62      0x360 out/obj/main.o
+ .debug_macro   0x000012c2       0x10 out/obj/main.o
+ .debug_macro   0x000012d2       0x22 out/obj/main.o
+ .debug_macro   0x000012f4       0x73 out/obj/main.o
+ .debug_macro   0x00001367       0x28 out/obj/main.o
+ .debug_macro   0x0000138f       0x1c out/obj/main.o
+ .debug_macro   0x000013ab       0x22 out/obj/main.o
+ .debug_macro   0x000013cd       0xd9 out/obj/main.o
+ .debug_macro   0x000014a6     0x102d out/obj/main.o
+ .debug_macro   0x000024d3      0x11f out/obj/main.o
+ .debug_macro   0x000025f2      0x2c3 out/obj/main.o
+ .debug_macro   0x000028b5      0x112 out/obj/main.o
+ .debug_macro   0x000029c7       0x11 out/obj/main.o
+ .debug_macro   0x000029d8       0x2a out/obj/main.o
+ .debug_macro   0x00002a02       0x16 out/obj/main.o
+ .debug_macro   0x00002a18      0x2e6 out/obj/main.o
+ .debug_macro   0x00002cfe       0x82 out/obj/main.o
+ .debug_macro   0x00002d80      0x13d out/obj/main.o
+ .debug_macro   0x00002ebd      0x198 out/obj/main.o
+ .debug_macro   0x00003055       0x34 out/obj/main.o
+ .debug_macro   0x00003089       0x58 out/obj/main.o
+ .debug_macro   0x000030e1      0x236 out/obj/main.o
+ .debug_macro   0x00003317      0x572 out/obj/main.o
+ .debug_macro   0x00003889       0x16 out/obj/main.o
+ .debug_macro   0x0000389f      0x18a out/obj/main.o
+ .debug_macro   0x00003a29       0x88 out/obj/main.o
+ .debug_macro   0x00003ab1      0x1b9 out/obj/main.o
+ .debug_macro   0x00003c6a      0x1da out/obj/main.o
+ .debug_macro   0x00003e44       0x40 out/obj/main.o
+ .debug_macro   0x00003e84       0x1c out/obj/main.o
+ .debug_macro   0x00003ea0       0x2e out/obj/main.o
+ .debug_macro   0x00003ece       0x2e out/obj/main.o
+ .debug_macro   0x00003efc       0x22 out/obj/main.o
+ .debug_macro   0x00003f1e      0x201 out/obj/main.o
+ .debug_macro   0x0000411f       0xe0 out/obj/main.o
+ .debug_macro   0x000041ff      0x34c out/obj/main.o
+ .debug_macro   0x0000454b       0xdc out/obj/main.o
+ .debug_macro   0x00004627       0xc4 out/obj/main.o
+ .debug_macro   0x000046eb       0x8f out/obj/main.o
+ .debug_macro   0x0000477a       0x94 out/obj/main.o
+ .debug_macro   0x0000480e       0xb8 out/obj/main.o
+ .debug_macro   0x000048c6       0x4c out/obj/main.o
+ .debug_macro   0x00004912       0x16 out/obj/main.o
+ .debug_macro   0x00004928      0x328 out/obj/main.o
+ .debug_macro   0x00004c50       0x3a out/obj/main.o
+ .debug_macro   0x00004c8a       0xd0 out/obj/main.o
+ .debug_macro   0x00004d5a       0x18 out/obj/main.o
+ .debug_macro   0x00004d72       0x22 out/obj/main.o
+ .debug_macro   0x00004d94       0x40 out/obj/main.o
+ .debug_macro   0x00004dd4       0x16 out/obj/main.o
+ .debug_macro   0x00004dea      0x329 out/obj/ciaa_board.o
+ .debug_macro   0x00005113      0x31f out/obj/gpio.o
+ .debug_macro   0x00005432      0x342 out/obj/sys_core.o
+ .debug_macro   0x00005774      0x31f out/obj/systick.o
+ .debug_macro   0x00005a93      0x315 out/obj/adc_18xx_43xx.o
+ .debug_macro   0x00005da8      0x321 out/obj/aes_18xx_43xx.o
+ .debug_macro   0x000060c9      0x315 out/obj/atimer_18xx_43xx.o
+ .debug_macro   0x000063de      0x315 out/obj/ccan_18xx_43xx.o
+ .debug_macro   0x000066f3      0x315 out/obj/chip_18xx_43xx.o
+ .debug_macro   0x00006a08      0x31b out/obj/clock_18xx_43xx.o
+ .debug_macro   0x00006d23      0x315 out/obj/dac_18xx_43xx.o
+ .debug_macro   0x00007038      0x315 out/obj/eeprom_18xx_43xx.o
+ .debug_macro   0x0000734d      0x31b out/obj/emc_18xx_43xx.o
+ .debug_macro   0x00007668      0x315 out/obj/enet_18xx_43xx.o
+ .debug_macro   0x0000797d      0x315 out/obj/evrt_18xx_43xx.o
+ .debug_macro   0x00007c92      0x315 out/obj/gpdma_18xx_43xx.o
+ .debug_macro   0x00007fa7      0x315 out/obj/gpio_18xx_43xx.o
+ .debug_macro   0x000082bc      0x315 out/obj/gpiogroup_18xx_43xx.o
+ .debug_macro   0x000085d1      0x327 out/obj/i2c_18xx_43xx.o
+ .debug_macro   0x000088f8      0x31b out/obj/i2cm_18xx_43xx.o
+ .debug_macro   0x00008c13      0x315 out/obj/i2s_18xx_43xx.o
+ .debug_macro   0x00008f28      0x315 out/obj/iap_18xx_43xx.o
+ .debug_macro   0x0000923d      0x315 out/obj/lcd_18xx_43xx.o
+ .debug_macro   0x00009552      0x321 out/obj/otp_18xx_43xx.o
+ .debug_macro   0x00009873      0x315 out/obj/pinint_18xx_43xx.o
+ .debug_macro   0x00009b88      0x315 out/obj/pmc_18xx_43xx.o
+ .debug_macro   0x00009e9d      0x13b out/obj/ring_buffer.o
+ .debug_macro   0x00009fd8       0x75 out/obj/ring_buffer.o
+ .debug_macro   0x0000a04d       0x2a out/obj/ring_buffer.o
+ .debug_macro   0x0000a077       0x5c out/obj/ring_buffer.o
+ .debug_macro   0x0000a0d3       0x3c out/obj/ring_buffer.o
+ .debug_macro   0x0000a10f       0x34 out/obj/ring_buffer.o
+ .debug_macro   0x0000a143      0x189 out/obj/ring_buffer.o
+ .debug_macro   0x0000a2cc       0x57 out/obj/ring_buffer.o
+ .debug_macro   0x0000a323      0x372 out/obj/ring_buffer.o
+ .debug_macro   0x0000a695       0x16 out/obj/ring_buffer.o
+ .debug_macro   0x0000a6ab       0x4a out/obj/ring_buffer.o
+ .debug_macro   0x0000a6f5       0x34 out/obj/ring_buffer.o
+ .debug_macro   0x0000a729       0x10 out/obj/ring_buffer.o
+ .debug_macro   0x0000a739       0x58 out/obj/ring_buffer.o
+ .debug_macro   0x0000a791      0x1e5 out/obj/ring_buffer.o
+ .debug_macro   0x0000a976       0x10 out/obj/ring_buffer.o
+ .debug_macro   0x0000a986       0x3c out/obj/ring_buffer.o
+ .debug_macro   0x0000a9c2       0x6c out/obj/ring_buffer.o
+ .debug_macro   0x0000aa2e       0x10 out/obj/ring_buffer.o
+ .debug_macro   0x0000aa3e      0x315 out/obj/ritimer_18xx_43xx.o
+ .debug_macro   0x0000ad53      0x315 out/obj/rtc_18xx_43xx.o
+ .debug_macro   0x0000b068      0x315 out/obj/sct_18xx_43xx.o
+ .debug_macro   0x0000b37d      0x315 out/obj/sct_pwm_18xx_43xx.o
+ .debug_macro   0x0000b692      0x3c0 out/obj/sdif_18xx_43xx.o
+ .debug_macro   0x0000ba52       0x7b out/obj/sdif_18xx_43xx.o
+ .debug_macro   0x0000bacd      0x327 out/obj/sdio_18xx_43xx.o
+ .debug_macro   0x0000bdf4      0x3c6 out/obj/sdmmc_18xx_43xx.o
+ .debug_macro   0x0000c1ba      0x315 out/obj/spi_18xx_43xx.o
+ .debug_macro   0x0000c4cf      0x315 out/obj/ssp_18xx_43xx.o
+ .debug_macro   0x0000c7e4      0x31f out/obj/stopwatch_18xx_43xx.o
+ .debug_macro   0x0000cb03      0x315 out/obj/sysinit_18xx_43xx.o
+ .debug_macro   0x0000ce18      0x315 out/obj/timer_18xx_43xx.o
+ .debug_macro   0x0000d12d      0x315 out/obj/uart_18xx_43xx.o
+ .debug_macro   0x0000d442      0x315 out/obj/wwdt_18xx_43xx.o
 
-.debug_line     0x00000000    0x1b042
+.debug_line     0x00000000    0x1b04a
  .debug_line    0x00000000      0x29e out/obj/startup.o
- .debug_line    0x0000029e      0x91f out/obj/main.o
- .debug_line    0x00000bbd      0x824 out/obj/ciaa_board.o
- .debug_line    0x000013e1      0x893 out/obj/gpio.o
- .debug_line    0x00001c74      0x822 out/obj/sys_core.o
- .debug_line    0x00002496      0x82e out/obj/systick.o
- .debug_line    0x00002cc4      0xa45 out/obj/adc_18xx_43xx.o
- .debug_line    0x00003709      0x8d6 out/obj/aes_18xx_43xx.o
- .debug_line    0x00003fdf      0x7c6 out/obj/atimer_18xx_43xx.o
- .debug_line    0x000047a5      0xc68 out/obj/ccan_18xx_43xx.o
- .debug_line    0x0000540d      0x7dc out/obj/chip_18xx_43xx.o
- .debug_line    0x00005be9     0x1381 out/obj/clock_18xx_43xx.o
- .debug_line    0x00006f6a      0x7cb out/obj/dac_18xx_43xx.o
- .debug_line    0x00007735      0x86f out/obj/eeprom_18xx_43xx.o
- .debug_line    0x00007fa4      0xbeb out/obj/emc_18xx_43xx.o
- .debug_line    0x00008b8f      0x93b out/obj/enet_18xx_43xx.o
- .debug_line    0x000094ca      0x879 out/obj/evrt_18xx_43xx.o
- .debug_line    0x00009d43      0xe9b out/obj/gpdma_18xx_43xx.o
- .debug_line    0x0000abde      0x763 out/obj/gpio_18xx_43xx.o
- .debug_line    0x0000b341      0x754 out/obj/gpiogroup_18xx_43xx.o
- .debug_line    0x0000ba95     0x105c out/obj/i2c_18xx_43xx.o
- .debug_line    0x0000caf1      0xc41 out/obj/i2cm_18xx_43xx.o
- .debug_line    0x0000d732      0xb5a out/obj/i2s_18xx_43xx.o
- .debug_line    0x0000e28c      0xa89 out/obj/iap_18xx_43xx.o
- .debug_line    0x0000ed15      0xa5a out/obj/lcd_18xx_43xx.o
- .debug_line    0x0000f76f      0x897 out/obj/otp_18xx_43xx.o
- .debug_line    0x00010006      0x751 out/obj/pinint_18xx_43xx.o
- .debug_line    0x00010757      0x77f out/obj/pmc_18xx_43xx.o
- .debug_line    0x00010ed6      0x63a out/obj/ring_buffer.o
- .debug_line    0x00011510      0x812 out/obj/ritimer_18xx_43xx.o
- .debug_line    0x00011d22      0xac7 out/obj/rtc_18xx_43xx.o
- .debug_line    0x000127e9      0x7e0 out/obj/sct_18xx_43xx.o
- .debug_line    0x00012fc9      0x88b out/obj/sct_pwm_18xx_43xx.o
- .debug_line    0x00013854      0xa8f out/obj/sdif_18xx_43xx.o
- .debug_line    0x000142e3      0xf1e out/obj/sdio_18xx_43xx.o
- .debug_line    0x00015201     0x10ee out/obj/sdmmc_18xx_43xx.o
- .debug_line    0x000162ef      0xaaa out/obj/spi_18xx_43xx.o
- .debug_line    0x00016d99     0x126b out/obj/ssp_18xx_43xx.o
- .debug_line    0x00018004      0x83a out/obj/stopwatch_18xx_43xx.o
- .debug_line    0x0001883e      0x92d out/obj/sysinit_18xx_43xx.o
- .debug_line    0x0001916b      0x83d out/obj/timer_18xx_43xx.o
- .debug_line    0x000199a8      0xeec out/obj/uart_18xx_43xx.o
- .debug_line    0x0001a894      0x7ae out/obj/wwdt_18xx_43xx.o
+ .debug_line    0x0000029e      0x927 out/obj/main.o
+ .debug_line    0x00000bc5      0x824 out/obj/ciaa_board.o
+ .debug_line    0x000013e9      0x893 out/obj/gpio.o
+ .debug_line    0x00001c7c      0x822 out/obj/sys_core.o
+ .debug_line    0x0000249e      0x82e out/obj/systick.o
+ .debug_line    0x00002ccc      0xa45 out/obj/adc_18xx_43xx.o
+ .debug_line    0x00003711      0x8d6 out/obj/aes_18xx_43xx.o
+ .debug_line    0x00003fe7      0x7c6 out/obj/atimer_18xx_43xx.o
+ .debug_line    0x000047ad      0xc68 out/obj/ccan_18xx_43xx.o
+ .debug_line    0x00005415      0x7dc out/obj/chip_18xx_43xx.o
+ .debug_line    0x00005bf1     0x1381 out/obj/clock_18xx_43xx.o
+ .debug_line    0x00006f72      0x7cb out/obj/dac_18xx_43xx.o
+ .debug_line    0x0000773d      0x86f out/obj/eeprom_18xx_43xx.o
+ .debug_line    0x00007fac      0xbeb out/obj/emc_18xx_43xx.o
+ .debug_line    0x00008b97      0x93b out/obj/enet_18xx_43xx.o
+ .debug_line    0x000094d2      0x879 out/obj/evrt_18xx_43xx.o
+ .debug_line    0x00009d4b      0xe9b out/obj/gpdma_18xx_43xx.o
+ .debug_line    0x0000abe6      0x763 out/obj/gpio_18xx_43xx.o
+ .debug_line    0x0000b349      0x754 out/obj/gpiogroup_18xx_43xx.o
+ .debug_line    0x0000ba9d     0x105c out/obj/i2c_18xx_43xx.o
+ .debug_line    0x0000caf9      0xc41 out/obj/i2cm_18xx_43xx.o
+ .debug_line    0x0000d73a      0xb5a out/obj/i2s_18xx_43xx.o
+ .debug_line    0x0000e294      0xa89 out/obj/iap_18xx_43xx.o
+ .debug_line    0x0000ed1d      0xa5a out/obj/lcd_18xx_43xx.o
+ .debug_line    0x0000f777      0x897 out/obj/otp_18xx_43xx.o
+ .debug_line    0x0001000e      0x751 out/obj/pinint_18xx_43xx.o
+ .debug_line    0x0001075f      0x77f out/obj/pmc_18xx_43xx.o
+ .debug_line    0x00010ede      0x63a out/obj/ring_buffer.o
+ .debug_line    0x00011518      0x812 out/obj/ritimer_18xx_43xx.o
+ .debug_line    0x00011d2a      0xac7 out/obj/rtc_18xx_43xx.o
+ .debug_line    0x000127f1      0x7e0 out/obj/sct_18xx_43xx.o
+ .debug_line    0x00012fd1      0x88b out/obj/sct_pwm_18xx_43xx.o
+ .debug_line    0x0001385c      0xa8f out/obj/sdif_18xx_43xx.o
+ .debug_line    0x000142eb      0xf1e out/obj/sdio_18xx_43xx.o
+ .debug_line    0x00015209     0x10ee out/obj/sdmmc_18xx_43xx.o
+ .debug_line    0x000162f7      0xaaa out/obj/spi_18xx_43xx.o
+ .debug_line    0x00016da1     0x126b out/obj/ssp_18xx_43xx.o
+ .debug_line    0x0001800c      0x83a out/obj/stopwatch_18xx_43xx.o
+ .debug_line    0x00018846      0x92d out/obj/sysinit_18xx_43xx.o
+ .debug_line    0x00019173      0x83d out/obj/timer_18xx_43xx.o
+ .debug_line    0x000199b0      0xeec out/obj/uart_18xx_43xx.o
+ .debug_line    0x0001a89c      0x7ae out/obj/wwdt_18xx_43xx.o
 
-.debug_str      0x00000000    0x2075f
- .debug_str     0x00000000    0x2075f out/obj/startup.o
+.debug_str      0x00000000    0x20772
+ .debug_str     0x00000000    0x20772 out/obj/startup.o
                                0x3dec (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/main.o
-                              0x16b51 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/ciaa_board.o
+ .debug_str     0x00020772        0x0 out/obj/main.o
+                              0x16b64 (size before relaxing)
+ .debug_str     0x00020772        0x0 out/obj/ciaa_board.o
                               0x17544 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/gpio.o
+ .debug_str     0x00020772        0x0 out/obj/gpio.o
                               0x16b60 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/sys_core.o
+ .debug_str     0x00020772        0x0 out/obj/sys_core.o
                               0x17442 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/systick.o
+ .debug_str     0x00020772        0x0 out/obj/systick.o
                               0x17800 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/adc_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/adc_18xx_43xx.o
                               0x171bd (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/aes_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/aes_18xx_43xx.o
                               0x17632 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/atimer_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/atimer_18xx_43xx.o
                               0x16a09 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/ccan_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/ccan_18xx_43xx.o
                               0x170df (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/chip_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/chip_18xx_43xx.o
                               0x1777f (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/clock_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/clock_18xx_43xx.o
                               0x17bf9 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/dac_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/dac_18xx_43xx.o
                               0x16de4 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/eeprom_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/eeprom_18xx_43xx.o
                               0x16ea9 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/emc_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/emc_18xx_43xx.o
                               0x16f2d (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/enet_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/enet_18xx_43xx.o
                               0x177c8 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/evrt_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/evrt_18xx_43xx.o
                               0x16c5d (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/gpdma_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/gpdma_18xx_43xx.o
                               0x17c2f (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/gpio_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/gpio_18xx_43xx.o
                               0x16974 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/gpiogroup_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/gpiogroup_18xx_43xx.o
                               0x16918 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/i2c_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/i2c_18xx_43xx.o
                               0x17954 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/i2cm_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/i2cm_18xx_43xx.o
                               0x16fc1 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/i2s_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/i2s_18xx_43xx.o
                               0x16f92 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/iap_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/iap_18xx_43xx.o
                               0x16d14 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/lcd_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/lcd_18xx_43xx.o
                               0x17644 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/otp_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/otp_18xx_43xx.o
                               0x175d6 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/pinint_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/pinint_18xx_43xx.o
                               0x16915 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/pmc_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/pmc_18xx_43xx.o
                               0x16a33 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/ring_buffer.o
+ .debug_str     0x00020772        0x0 out/obj/ring_buffer.o
                                0x703c (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/ritimer_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/ritimer_18xx_43xx.o
                               0x16e2e (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/rtc_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/rtc_18xx_43xx.o
                               0x16d15 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/sct_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/sct_18xx_43xx.o
                               0x16fa6 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/sct_pwm_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/sct_pwm_18xx_43xx.o
                               0x1701c (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/sdif_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/sdif_18xx_43xx.o
                               0x19e29 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/sdio_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/sdio_18xx_43xx.o
                               0x1788f (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/sdmmc_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/sdmmc_18xx_43xx.o
                               0x1a866 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/spi_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/spi_18xx_43xx.o
                               0x17123 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/ssp_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/ssp_18xx_43xx.o
                               0x173b3 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/stopwatch_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/stopwatch_18xx_43xx.o
                               0x174ac (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/sysinit_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/sysinit_18xx_43xx.o
                               0x17673 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/timer_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/timer_18xx_43xx.o
                               0x16e7e (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/uart_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/uart_18xx_43xx.o
                               0x17833 (size before relaxing)
- .debug_str     0x0002075f        0x0 out/obj/wwdt_18xx_43xx.o
+ .debug_str     0x00020772        0x0 out/obj/wwdt_18xx_43xx.o
                               0x16997 (size before relaxing)
 
 .comment        0x00000000       0x45

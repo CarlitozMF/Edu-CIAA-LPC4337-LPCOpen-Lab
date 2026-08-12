@@ -11,7 +11,8 @@
 #ifndef MAIN_PROJECT_02_H
 #define MAIN_PROJECT_02_H
 
-#include "ciaa_board.h"
+#include "hardware.h"
+#include "sys_core.h"
 
 
 

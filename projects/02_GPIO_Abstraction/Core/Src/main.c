@@ -4,9 +4,7 @@
  * @brief Aplicación principal: Orquestación de I/O mediante SysTick y Drivers.
  */
 
-#include "hardware.h"
-#include "sys_core.h"
-#include "led.h"
+#include "main.h"
 
 int main(void) {
   

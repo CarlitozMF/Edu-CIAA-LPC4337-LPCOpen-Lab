@@ -1,4 +1,4 @@
-out/obj/main.o: Core/Src/main.c Core/Inc/hardware.h \
+out/obj/main.o: Core/Src/main.c Core/Inc/main.h Core/Inc/hardware.h \
  ../../libs/custom_drivers/gpio/gpio.h \
  ../../libs/lpc_open/lpc_chip_43xx/inc/chip.h \
  ../../libs/lpc_open/lpc_chip_43xx/inc/sys_config.h \
@@ -62,10 +62,11 @@ out/obj/main.o: Core/Src/main.c Core/Inc/hardware.h \
  ../../libs/lpc_open/lpc_chip_43xx/inc/iap_18xx_43xx.h \
  ../../libs/lpc_open/lpc_chip_43xx/inc/error.h \
  ../../libs/lpc_open/lpc_chip_43xx/inc/i2cm_18xx_43xx.h \
- ../../libs/custom_drivers/sys_core/sys_core.h \
- ../../libs/custom_drivers/systick/systick.h \
+ ../../libs/custom_drivers/led/led.h \
  ../../libs/custom_drivers/ciaa_board/ciaa_board.h \
- ../../libs/custom_drivers/led/led.h
+ ../../libs/custom_drivers/sys_core/sys_core.h \
+ ../../libs/custom_drivers/systick/systick.h
+Core/Inc/main.h:
 Core/Inc/hardware.h:
 ../../libs/custom_drivers/gpio/gpio.h:
 ../../libs/lpc_open/lpc_chip_43xx/inc/chip.h:
@@ -130,7 +131,7 @@ Core/Inc/hardware.h:
 ../../libs/lpc_open/lpc_chip_43xx/inc/iap_18xx_43xx.h:
 ../../libs/lpc_open/lpc_chip_43xx/inc/error.h:
 ../../libs/lpc_open/lpc_chip_43xx/inc/i2cm_18xx_43xx.h:
+../../libs/custom_drivers/led/led.h:
+../../libs/custom_drivers/ciaa_board/ciaa_board.h:
 ../../libs/custom_drivers/sys_core/sys_core.h:
 ../../libs/custom_drivers/systick/systick.h:
-../../libs/custom_drivers/ciaa_board/ciaa_board.h:
-../../libs/custom_drivers/led/led.h:
