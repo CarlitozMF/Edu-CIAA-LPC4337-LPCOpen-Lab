@@ -1,12 +1,10 @@
 {
     "configurations": [
         {
-            "name": "EDU-CIAA-PORTABLE",
+            "name": "EDU-CIAA-PORTABLE-LINUX",
             "includePath": [
-                "${workspaceFolder}/libs/**",
-                "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc",
-                "${workspaceFolder}/libs/cmsis_core/inc",
-                "${workspaceFolder}/projects/**"
+                "${workspaceFolder}/projects/**",
+                "${workspaceFolder}/libs/**"
             ],
             "defines": [
                 "CORE_M4",
@@ -15,10 +13,47 @@
                 "BOARD=edu_ciaa_nxp",
                 "__GNUC__"
             ],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
+            "compilerPath": "${workspaceFolder}/tools/gcc-arm/bin/arm-none-eabi-gcc",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
             "intelliSenseMode": "gcc-arm",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/libs",
+                    "${workspaceFolder}/projects"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            }
+        },
+        {
+            "name": "EDU-CIAA-PORTABLE-WINDOWS",
+            "includePath": [
+                "${workspaceFolder}/projects/**",
+                "${workspaceFolder}/libs/**"
+            ],
+            "defines": [
+                "CORE_M4",
+                "CHIP_LPC43XX",
+                "__USE_LPCOPEN",
+                "BOARD=edu_ciaa_nxp",
+                "__GNUC__"
+            ],
+            "compilerPath": "${workspaceFolder}/tools/gcc-arm/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-arm",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ],
             "browse": {
                 "path": [
                     "${workspaceFolder}/libs",

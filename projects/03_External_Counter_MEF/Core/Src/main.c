@@ -4,7 +4,7 @@
  * @brief Proyecto 03: Contador Industrial con MEF y Periféricos Externos.
  */
 
-#include "main_project_03.h"
+#include "main.h"
 #include "sys_core.h"
 
 /* --- Variables de Control de Aplicación --- */
@@ -22,11 +22,11 @@ static bool displayVisible = true;
 
 int main(void)
 {
-    /* 1. Inicialización Soberana (Capa 0 y 2) */
+    /* 1. Inicialización Capa 0 y 2 */
     Sys_Init();
 
     /* 2. Configuración de Periféricos Externos (Capa 1) */
-    // Inicializamos el arreglo de pines del display (definido en hw_config_03.h)
+    // Inicializamos el arreglo de pines del display (definido en hardware.h)
     for (int i = 0; i < 8; i++)
     {
         GPIO_Init(&display_pins[i], GPIO_OUTPUT);

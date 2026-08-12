@@ -1,23 +1,18 @@
 # =============================================================================
 # 🏗️  MAKEFILE INDIVIDUAL DE PROYECTO - EDU-CIAA (LPC4337)
 # =============================================================================
-# Autor: Carlitoz MF (UTN FRT)
-# Proyecto: 01_GPIO
+# Autor: Mamani Flores Carlos (UTN FRT)
 # =============================================================================
 
 # 📂 1. RUTAS RELATIVAS Y AUTO-DETECCIÓN
 # -----------------------------------------------------------------------------
-# Nombre del ejecutable/proyecto (Toma el nombre de la carpeta actual)
-PROJECT    := $(notdir $(CURDIR))
-
-# Ruta hacia la raíz del repositorio desde projects/XX_NAME/
+# Forzamos a PROJECT a tomar estrictamente la carpeta local sin usar paths absolutos
+PROJECT    := $(lastword $(subst /, ,$(subst \,/,$(CURDIR))))
 REPO_ROOT  := ../..
 
-# Subdirectorios del proyecto local
 CORE_DIR   := Core
 OUT        := out
 
-# Directorios compartidos globales
 LIBS_DIR   := $(REPO_ROOT)/libs
 MISC_DIR   := $(REPO_ROOT)/misc
 TOOLS_DIR  := $(REPO_ROOT)/tools
@@ -25,7 +20,6 @@ TOOLS_DIR  := $(REPO_ROOT)/tools
 # 🛠️  2. TOOLCHAIN (Detección de Sistema Operativo)
 # -----------------------------------------------------------------------------
 ifeq ($(OS),Windows_NT)
-    # Configuración para Windows (Entorno Git Bash / MSYS)
     BIN_PATH   := $(TOOLS_DIR)/gcc-arm/bin/
     OOCD       := $(TOOLS_DIR)/openocd/bin/openocd.exe
     OOCD_SCR   := $(TOOLS_DIR)/openocd/scripts
@@ -34,7 +28,6 @@ ifeq ($(OS),Windows_NT)
     MKDIR      := mkdir -p
     NULL_OUT   := > /dev/null 2>&1
 else
-    # Configuración para Linux / Mac
     BIN_PATH   := 
     OOCD       := openocd
     OOCD_SCR   := /usr/share/openocd/scripts
@@ -49,21 +42,15 @@ CC         := $(CROSS)gcc
 OBJCOPY    := $(CROSS)objcopy
 SIZE       := $(CROSS)size
 
-# 🎼 3. COMPOSICIÓN DE FUENTES DE ESTE PROYECTO
+# 🎼 3. COMPOSICIÓN DE FUENTES
 # -----------------------------------------------------------------------------
-# Fuentes propias del proyecto
 PROJ_SRC   := $(wildcard $(CORE_DIR)/Src/*.c)
-
-# Fuentes compartidas globales
 STARTUP    := $(LIBS_DIR)/startup/src/startup.c
 DRIVERS    := $(wildcard $(LIBS_DIR)/lpc_open/lpc_chip_43xx/src/*.c)
 
-# Custom Drivers específicos necesarios para ESTE proyecto
-# (Aquí incluyes solo los drivers que usa este proyecto específico)
 CUSTOM_DRV := $(wildcard $(LIBS_DIR)/custom_drivers/ciaa_board/*.c) \
               $(wildcard $(LIBS_DIR)/custom_drivers/gpio/*.c)
 
-# Unificación de fuentes
 SRC        := $(STARTUP) $(PROJ_SRC) $(CUSTOM_DRV) $(DRIVERS)
 
 # 🚩 4. BANDERAS DE INGENIERÍA
@@ -80,7 +67,6 @@ INCLUDES   := -I$(CORE_DIR)/Inc \
               -I$(LIBS_DIR)/lpc_open/lpc_chip_43xx/inc \
               -I$(LIBS_DIR)/cmsis_core/inc
 
-# Banderas de compilación con soporte de dependencias automáticas (-MMD -MP)
 CFLAGS     := $(ARCH_FLAGS) $(DEFINES) $(INCLUDES) -std=c99 -ggdb3 -Og \
               -fno-unwind-tables -fno-asynchronous-unwind-tables \
               -MMD -MP
@@ -88,52 +74,67 @@ CFLAGS     := $(ARCH_FLAGS) $(DEFINES) $(INCLUDES) -std=c99 -ggdb3 -Og \
 # 🔗 5. LDFLAGS
 # -----------------------------------------------------------------------------
 LDFLAGS    := $(ARCH_FLAGS) -nostartfiles -T"$(MISC_DIR)/link.ld" \
-              -Wl,-Map=$(OUT)/$(PROJECT).map --specs=nano.specs
+              -Wl,-Map="$(OUT)/$(PROJECT).map" --specs=nano.specs
 
 # =============================================================================
 # ⚡ REGLAS DE EJECUCIÓN
 # =============================================================================
 
-# Mapeo de objetos preservando la estructura de carpetas en out/
-OBJS := $(SRC:%.c=$(OUT)/%.o)
+# Objetos dentro de out/obj/
+OBJS := $(addprefix $(OUT)/obj/, $(notdir $(SRC:.c=.o)))
 DEPS := $(OBJS:.o=.d)
 
-all: $(OUT)/$(PROJECT).bin
+# VPATH le dice a Make dónde encontrar los .c usando solo nombres de archivo
+vpath %.c $(sort $(dir $(SRC)))
 
-$(OUT)/$(PROJECT).elf: $(OBJS)
+# Declaración explícita de archivos objetivo
+ELF_TARGET := $(OUT)/$(PROJECT).elf
+BIN_TARGET := $(OUT)/$(PROJECT).bin
+
+all: $(BIN_TARGET)
+
+$(ELF_TARGET): $(OBJS)
+	@echo ""
 	@echo "🔗 Enlazando Objetos: $(PROJECT)..."
-	@"$(CC)" $(LDFLAGS) $^ -o $@
+	@"$(CC)" $(LDFLAGS) $^ -o "$@"
+	@echo ""
 	@echo "📊 Reporte de Memoria:"
-	@"$(SIZE)" $@
+	@"$(SIZE)" "$@"
 
-# Regla de compilación estricta para archivos locales y externos (libs)
-$(OUT)/%.o: %.c
-	@$(MKDIR) $(dir $@)
+$(OUT)/obj/%.o: %.c
+	@$(MKDIR) "$(dir $@)"
 	@echo "🔨 Compilando: $<"
-	@"$(CC)" $(CFLAGS) -c $< -o $@
+	@"$(CC)" $(CFLAGS) -c $< -o "$@"
 
-$(OUT)/$(PROJECT).bin: $(OUT)/$(PROJECT).elf
+$(BIN_TARGET): $(ELF_TARGET)
+	@echo ""
 	@echo "📦 Empaquetando binario final..."
-	@"$(OBJCOPY)" -O binary $< $@
-	@echo "✅ ¡Listo! Binario generado en: $@"
+	@"$(OBJCOPY)" -O binary "$(ELF_TARGET)" "$@"
+	@echo "✨ ¡Listo! Binario generado en: $@"
+	@echo ""
 
 clean:
-	@echo "🧹 Limpiando binarios del proyecto: $(PROJECT)..."
-	@$(RM) $(OUT)
+	@echo ""
+	@echo "🧹 Limpiando laboratorio del proyecto: $(PROJECT)..."
+	@$(RM) "$(OUT)"
+	@echo "✅ Limpieza finalizada."
+	@echo ""
 
 flash: all
+	@echo ""
 	@echo "🚀 Grabando $(PROJECT) en la EDU-CIAA..."
 	@"$(OOCD)" -s "$(OOCD_SCR)" -f "$(MISC_DIR)/lpc4337.cfg" \
 		-c "init" -c "halt" \
-		-c "flash write_image erase $(OUT)/$(PROJECT).bin 0x1A000000 bin" \
+		-c "flash write_image erase $(BIN_TARGET) 0x1A000000 bin" \
 		-c "reset run" -c "shutdown" $(NULL_OUT)
 	@echo "✨ ¡Grabación Exitosa! El micro se está reiniciando..."
+	@echo ""
 
 debug: all
+	@echo ""
 	@echo "🐞 Iniciando servidor de depuración para $(PROJECT)..."
 	@"$(OOCD)" -s "$(OOCD_SCR)" -f "$(MISC_DIR)/lpc4337.cfg"
 
-# Inclusión de dependencias automáticas (.h -> .d)
 -include $(DEPS)
 
-.PHONY: all clean flash debugss
+.PHONY: all clean flash debug
