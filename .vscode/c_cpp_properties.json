@@ -3,7 +3,13 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/projects/**",
+                "${fileDirname}/../Inc",
+                "${fileDirname}",
+                "${workspaceFolder}/libs/custom_drivers/**",
+                "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc",
+                "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc/usbd_rom",
+                "${workspaceFolder}/libs/cmsis_core/inc",
+                "${workspaceFolder}/libs/startup/inc",
                 "${workspaceFolder}/libs/**"
             ],
             "defines": [
@@ -28,13 +34,19 @@
                     "${workspaceFolder}/libs",
                     "${workspaceFolder}/projects"
                 ],
-                "limitSymbolsToIncludedHeaders": false
+                "limitSymbolsToIncludedHeaders": true
             }
         },
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/projects/**",
+                "${fileDirname}/../Inc",
+                "${fileDirname}",
+                "${workspaceFolder}/libs/custom_drivers/**",
+                "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc",
+                "${workspaceFolder}/libs/lpc_open/lpc_chip_43xx/inc/usbd_rom",
+                "${workspaceFolder}/libs/cmsis_core/inc",
+                "${workspaceFolder}/libs/startup/inc",
                 "${workspaceFolder}/libs/**"
             ],
             "defines": [
@@ -59,7 +71,7 @@
                     "${workspaceFolder}/libs",
                     "${workspaceFolder}/projects"
                 ],
-                "limitSymbolsToIncludedHeaders": false
+                "limitSymbolsToIncludedHeaders": true
             }
         }
     ],

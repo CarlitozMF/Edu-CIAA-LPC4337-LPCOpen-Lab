@@ -1,33 +1,33 @@
 {
     "version": "2.0.0",
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "bash.exe",
+                "args": ["-c"]
+            }
+        }
+    },
+    "linux": {
+        "options": {
+            "shell": {
+                "executable": "/bin/bash",
+                "args": ["-c"]
+            }
+        }
+    },
     "tasks": [
         {
             "label": "🛠️ MAKE BUILD",
             "type": "shell",
             "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" -j4",
-            "windows": {
-                "options": {
-                    "shell": {
-                        "executable": "bash.exe",
-                        "args": ["-c"]
-                    }
-                }
-            },
-            "linux": {
-                "options": {
-                    "shell": {
-                        "executable": "/bin/bash",
-                        "args": ["-c"]
-                    }
-                }
-            },
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": "$gcc",
             "presentation": {
-                "echo": true,
+                "echo": false,
                 "reveal": "always",
                 "clear": true,
                 "showReuseMessage": false
@@ -37,60 +37,28 @@
             "label": "🚀 MAKE FLASH",
             "type": "shell",
             "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" flash",
-            "windows": {
-                "options": {
-                    "shell": {
-                        "executable": "bash.exe",
-                        "args": ["-c"]
-                    }
-                }
-            },
-            "linux": {
-                "options": {
-                    "shell": {
-                        "executable": "/bin/bash",
-                        "args": ["-c"]
-                    }
-                }
-            },
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": "$gcc",
             "presentation": {
-                "echo": true,
+                "echo": false,
                 "reveal": "always",
                 "focus": false,
                 "panel": "shared",
-                "showReuseMessage": false,
-                "clear": true
+                "clear": true,
+                "showReuseMessage": false
             }
         },
         {
             "label": "🧹 MAKE CLEAN",
             "type": "shell",
             "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" clean",
-            "windows": {
-                "options": {
-                    "shell": {
-                        "executable": "bash.exe",
-                        "args": ["-c"]
-                    }
-                }
-            },
-            "linux": {
-                "options": {
-                    "shell": {
-                        "executable": "/bin/bash",
-                        "args": ["-c"]
-                    }
-                }
-            },
             "group": "build",
             "problemMatcher": "$gcc",
             "presentation": {
-                "echo": true,
+                "echo": false,
                 "reveal": "always",
                 "clear": true,
                 "showReuseMessage": false
@@ -100,22 +68,6 @@
             "label": "🐞 MAKE DEBUG (Server)",
             "type": "shell",
             "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" debug",
-            "windows": {
-                "options": {
-                    "shell": {
-                        "executable": "bash.exe",
-                        "args": ["-c"]
-                    }
-                }
-            },
-            "linux": {
-                "options": {
-                    "shell": {
-                        "executable": "/bin/bash",
-                        "args": ["-c"]
-                    }
-                }
-            },
             "isBackground": true,
             "problemMatcher": {
                 "pattern": {
@@ -126,6 +78,12 @@
                     "beginsPattern": "Iniciando servidor",
                     "endsPattern": "Esperando conexión"
                 }
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "clear": true,
+                "showReuseMessage": false
             }
         }
     ]

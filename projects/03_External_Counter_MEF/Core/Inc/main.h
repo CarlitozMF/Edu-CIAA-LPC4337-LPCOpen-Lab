@@ -1,5 +1,5 @@
 /**
- * @file main_project_03.h
+ * @file main.h
  * @brief Definiciones de la MEF y Lógica de Aplicación para el Contador Externo.
  */
 
