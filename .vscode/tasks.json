@@ -3,7 +3,7 @@
     "windows": {
         "options": {
             "shell": {
-                "executable": "bash.exe",
+                "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
                 "args": ["-c"]
             }
         }
@@ -20,7 +20,7 @@
         {
             "label": "🛠️ MAKE BUILD",
             "type": "shell",
-            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" -j4",
+            "command": "export PATH=\"$PWD/tools/make:$PWD/tools/gcc-arm/bin:$PATH\"; dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" -j4",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -36,7 +36,7 @@
         {
             "label": "🚀 MAKE FLASH",
             "type": "shell",
-            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" flash",
+            "command": "export PATH=\"$PWD/tools/make:$PWD/tools/gcc-arm/bin:$PATH\"; dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" flash",
             "group": {
                 "kind": "test",
                 "isDefault": true
@@ -54,7 +54,7 @@
         {
             "label": "🧹 MAKE CLEAN",
             "type": "shell",
-            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" clean",
+            "command": "export PATH=\"$PWD/tools/make:$PWD/tools/gcc-arm/bin:$PATH\"; dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" clean",
             "group": "build",
             "problemMatcher": "$gcc",
             "presentation": {
@@ -67,7 +67,7 @@
         {
             "label": "🐞 MAKE DEBUG (Server)",
             "type": "shell",
-            "command": "dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" debug",
+            "command": "export PATH=\"$PWD/tools/make:$PWD/tools/gcc-arm/bin:$PATH\"; dir=\"${fileDirname}\"; while [ \"$dir\" != \"/\" ] && [ ! -f \"$dir/Makefile\" ]; do dir=$(dirname \"$dir\"); done; make --no-print-directory -C \"$dir\" debug",
             "isBackground": true,
             "problemMatcher": {
                 "pattern": {

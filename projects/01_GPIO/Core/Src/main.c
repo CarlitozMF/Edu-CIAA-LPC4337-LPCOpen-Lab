@@ -91,10 +91,10 @@ int main(void) {
 
     while(1) {
        // Ejemplo de parpadeo usando las macros de main.h
-        LEDG_ON();
+        LEDR_ON();
         delay(1000000); 
         
-        LEDG_OFF();
+        LEDR_OFF();
         delay(1000000);
     }
 
